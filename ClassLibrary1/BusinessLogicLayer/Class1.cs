@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibrary1
+namespace BusinessLogicLayer
 {
     public class Class1
     {
-        private int id { get; set; }
-        public int Sofie { get; set; }
     }
 }
