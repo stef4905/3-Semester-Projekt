@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer
+namespace BusinessLogicLayer
 {
-    public interface IDataAccess<T>
+    interface IController<T>
     {
         void Create(T entity);
         T Get(int id);

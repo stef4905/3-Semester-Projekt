@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using ModelLayer;
 using DataAccessLayer;
 using BusinessLogicLayer;
+using System.ServiceModel;
+using JobProject.Service;
 
 namespace Test
 {
@@ -13,30 +15,9 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            DbUser dbUser = new DbUser();
-
-            //User user = new User(1,"Gundhild den søde");
-            //dbUser.create(user);
-
-            //User newUser = dbUser.Get(1);
-            //Console.WriteLine(newUser.FName);
-          
-
-            //dbUser.Delete(1);
-
-            //User newTrab = new User(2, "Trab");
-            //dbUser.Update(newTrab);
-
-            List<User> UserList = dbUser.GetAll();
-            
-            Console.WriteLine(UserList.Count());
-
-            foreach (var user in UserList)
-            {
-
-                Console.WriteLine(user.FName);
-
-            }
+            ServiceHost host = new ServiceHost(typeof(JobProjectUserService));
+            host.Open();
+            Console.WriteLine("Host is running on: " + host.BaseAddresses.First());
             Console.ReadLine();
 
         }

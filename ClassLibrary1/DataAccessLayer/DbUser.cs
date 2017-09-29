@@ -13,7 +13,7 @@ namespace DataAccessLayer
     {
         DbConnection conn = new DbConnection();
         
-        public void create(User entity)
+        public void Create(User entity)
         {
             using (SqlConnection connection = conn.OpenConnection()) {
                 using (SqlCommand cmd = connection.CreateCommand()) {
