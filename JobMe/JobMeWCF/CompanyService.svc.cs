@@ -5,29 +5,25 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using ModelLayer;
+using BusinessLogicLayer;
 
 namespace JobMeWCF
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
-    public class Service1 : IService1
+    public class Service1 : ICompanyService
     {
-        public string GetData(int value)
-        {
-            return string.Format("You entered: {0}", value);
-        }
+        private CompanyCtr companyCtr = new CompanyCtr();
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        /// <summary>
+        /// Creates an object and executes the Create Method in the CompanyCtr Class
+        /// And puts the object into the database.
+        /// </summary>
+        /// <param name="company"></param>
+        public void Create(Company company)
         {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+            companyCtr.Create(company);
         }
     }
 }

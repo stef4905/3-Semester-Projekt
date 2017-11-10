@@ -10,8 +10,15 @@ namespace DataAccessLayer
 {
     public class DbCompany : IDataAccess<Company>
     {
-
+        /// <summary>
+        /// Opens a new connection to our database
+        /// </summary>
         DbConnection conn = new DbConnection();
+        /// <summary>
+        /// Creates an object and executes it into the database through the database connection.
+        /// Its protected against SQL Injections with Parameters.
+        /// </summary>
+        /// <param name="obj"></param>
         public void Create(Company obj)
         {
             using (SqlConnection connection = conn.OpenConnection())

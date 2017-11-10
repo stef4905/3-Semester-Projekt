@@ -9,7 +9,6 @@ namespace ModelLayer
     public class Company
     {
         public int id { get; set; }
-
         public string Email { get; set; }
         public string Password { get; set; }
         public int Phone { get; set; }
@@ -24,6 +23,12 @@ namespace ModelLayer
         public int CVR { get; set; }
         public BusinessType businessType { get; set; }
 
+        /// <summary>
+        /// Constructor for Company Class.
+        /// Sets the required parameters for the Company Class.
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="password"></param>
         public Company(string email, string password)
         {
             Email = email;
