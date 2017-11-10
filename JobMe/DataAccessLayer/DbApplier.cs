@@ -52,7 +52,7 @@ namespace DataAccessLayer
 
         public Applier Get(int id)
         {
-            throw new NotImplementedException();
+            using(SqlConnection connection = conn.)
         }
 
         public List<Applier> GetAll()
