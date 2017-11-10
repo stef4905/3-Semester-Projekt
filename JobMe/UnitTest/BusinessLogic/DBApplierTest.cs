@@ -1,14 +1,18 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace UnitTest
+namespace UnitTest.BusinessLogic
 {
     [TestClass]
-    public class UnitTest1
+    public class DBApplierTest
     {
         [TestMethod]
         public void TestMethod1()
         {
+            Mock Objects
+
+
+
         }
     }
 }

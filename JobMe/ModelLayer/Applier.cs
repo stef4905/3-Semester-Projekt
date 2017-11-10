@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace ModelLayer
 {
-    public class Class1
+   public class Applier
     {
+        public int Id { get; set; }
+
+
+
+        public Applier()
+        {
+
+        }
     }
 }
