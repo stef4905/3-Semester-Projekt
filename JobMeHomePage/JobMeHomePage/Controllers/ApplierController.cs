@@ -42,7 +42,7 @@ namespace JobMeHomePage.Controllers
             }
             else
             {
-                //Giv fejl omkring at password ikke stemmer overens
+                //Giv fejl omkring at password ikke stemmer overens!
             }
             
             return null;
