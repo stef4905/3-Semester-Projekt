@@ -61,13 +61,18 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ApplierService.svc" />
     <Content Include="CompanyService.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplierService.svc.cs">
+      <DependentUpon>ApplierService.svc</DependentUpon>
+    </Compile>
     <Compile Include="CompanyService.svc.cs">
       <DependentUpon>CompanyService.svc</DependentUpon>
     </Compile>
+    <Compile Include="IApplierService.cs" />
     <Compile Include="ICompanyService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
