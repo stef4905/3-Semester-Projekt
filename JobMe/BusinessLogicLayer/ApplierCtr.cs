@@ -1,4 +1,5 @@
-﻿using ModelLayer;
+﻿using DataAccessLayer;
+using ModelLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,11 +8,14 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer
 {
-    class ApplierCtr : IController<Applier>
+    public class ApplierCtr : IController<Applier>
     {
+        //Connection to database
+        private DbApplier dbApplier = new DbApplier();
+
         public void Create(Applier obj)
         {
-            throw new NotImplementedException();
+            dbApplier.Create(obj);
         }
 
         public void Delete(int id)
