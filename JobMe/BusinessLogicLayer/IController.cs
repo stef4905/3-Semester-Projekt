@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer
 {
-    public class Class1
+    interface IController<T>
     {
+        void Create(T obj);
+        T Get(int id);
+        List<T> GetAll();
+        void Update(T obj);
+        void Delete(int id);
     }
 }

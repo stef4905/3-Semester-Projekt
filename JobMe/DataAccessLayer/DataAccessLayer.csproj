@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DbApplier.cs" />
+    <Compile Include="DbCompany.cs" />
     <Compile Include="DbConnection.cs" />
     <Compile Include="IDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
