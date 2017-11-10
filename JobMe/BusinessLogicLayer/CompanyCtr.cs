@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataAccessLayer;
+using ModelLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,11 +8,18 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer
 {
-    class CompanyCtr : IController<T>
+    public class CompanyCtr : IController<Company>
     {
-        public void Create(T obj)
+
+        private DbCompany dbCompany = new DbCompany();
+
+        /// <summary>
+        /// Sends an object through the DataAccessLayer, and executes Create Method.
+        /// </summary>
+        /// <param name="obj"></param>
+        public void Create(Company obj)
         {
-            throw new NotImplementedException();
+            dbCompany.Create(obj);
         }
 
         public void Delete(int id)
@@ -18,17 +27,17 @@ namespace BusinessLogicLayer
             throw new NotImplementedException();
         }
 
-        public T Get(int id)
+        public Company Get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public List<T> GetAll()
+        public List<Company> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public void Update(T obj)
+        public void Update(Company obj)
         {
             throw new NotImplementedException();
         }
