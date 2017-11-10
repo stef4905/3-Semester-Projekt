@@ -8,10 +8,10 @@ namespace DataAccessLayer
 {
     public interface IDataAccess<T>
     {
-        void Create(T entity);
+        void Create(T obj);
         T Get(int id);
         List<T> GetAll();
-        void Update(T entity);
+        void Update(T obj);
         void Delete(int id);
     }
 }
