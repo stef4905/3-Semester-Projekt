@@ -9,7 +9,7 @@ namespace UnitTest.BusinessLogic
         [TestMethod]
         public void TestMethod1()
         {
-            Mock Objects
+            //Mock Objects
 
 
 

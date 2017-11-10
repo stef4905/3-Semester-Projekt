@@ -46,8 +46,7 @@
                         </ul>
                         <div class="tab-content">
                             <div id="Jobansoger" class="tab-pane fade in active">
-                                <h3>HOME</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                @Html.Partial("_CreateApplier","Applier")
                             </div>
                             <div id="Virksomhed" class="tab-pane fade">
                                 @Html.Partial("_CreateCompany", "Company")
@@ -61,7 +60,7 @@
                 </div>
 
             </div>
-        </div>
+  
 
 
         @RenderBody()
