@@ -30,7 +30,6 @@ namespace DataAccessLayer
                     cmd.ExecuteNonQuery();
                 }
             }
-
         }
 
         /// <summary>
@@ -39,20 +38,32 @@ namespace DataAccessLayer
         /// <param name="id">Is the Id of the Applier</param>
         public void Delete(int id)
         {
-            using (SqlConnection connection = conn.OpenConnection())
-            {
-                using (SqlCommand cmd = connection.CreateCommand())
-                {
-                    cmd.CommandText = "DELETE FROM Applier WHERE Id = @id";
-                    cmd.Parameters.AddWithValue("id", id);
-                    cmd.ExecuteNonQuery();
-                }
-            }
+            //using (SqlConnection connection = conn.OpenConnection())
+            //{
+            //    using (SqlCommand cmd = connection.CreateCommand())
+            //    {
+            //        cmd.CommandText = "DELETE FROM Applier WHERE Id = @id";
+            //        cmd.Parameters.AddWithValue("id", id);
+            //        cmd.ExecuteNonQuery();
+            //    }
+            //}
         }
 
         public Applier Get(int id)
         {
-            using(SqlConnection connection = conn.)
+            //using(SqlConnection connection = conn.OpenConnection())
+            //{
+            //    using (SqlCommand cmd = connection.CreateCommand())
+            //    {
+            //        cmd.CommandText = "SELECT * FROM Applier WHERE Id = @id";
+            //        cmd.Parameters.AddWithValue("id", id);
+            //        SqlDataReader reader = cmd.ExecuteReader();
+            //        bool isRead = reader.Read();
+            //        return new Applier(reader.getInt32(0), reader.GetString(1));
+
+            //    }
+            //}
+            throw new NotImplementedException();
         }
 
         public List<Applier> GetAll()
