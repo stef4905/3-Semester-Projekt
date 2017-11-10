@@ -1,24 +1,96 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    background: #f5efef;
 }
 
-/* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    margin-top: 69px;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+.color-white {
+    color: white;
+}
+/*Navbar*/
+.navbar-inverse {
+    background-color: #083056 !important;
+    border: none;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+    .navbar-inverse .navbar-brand {
+        color: #fff;
+    }
+
+    .navbar-inverse .navbar-nav > li > a {
+        color: #fff;
+    }
+
+
+        .navbar-inverse .navbar-nav > li > a:hover {
+            opacity: 0.51;
+        }
+
+.logo {
+    margin-top: 0%;
+    width: 20%;
+}
+
+.navbar-brand {
+    float: left;
+    height: 4px;
+    padding: 0px 15px;
+}
+
+.navbar-login {
+    width: 305px;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.navbar-login-session {
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.profile-picture {
+    width: 25px;
+    float: left;
+}
+
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: #083056;
+}
+
+
+/*navbar mobile*/
+@media screen and (max-width: 767px) {
+    .logo {
+        margin-top: -6%;
+    }
+
+    .profile-picture-big {
+        display: none;
+    }
+
+    .p-mobile {
+        color: #fff;
+    }
+}
+
+
+@media screen and (max-width: 614px) {
+    .logo {
+        margin-top: -8%;
+        width: 26%;
+    }
+}
+
+.btn-blue {
+    background: #2C5781;
+    color: #fff;
+}
+
+.btn-darkBlue {
+    background: #011223;
+    color: white;
 }
