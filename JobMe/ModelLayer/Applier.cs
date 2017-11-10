@@ -39,6 +39,7 @@ namespace ModelLayer
         [DataMember]
         public bool Status { get; set; }
 
+        
         public Applier(int id, string email, string password, int maxRadius)
         {
             Id = id;

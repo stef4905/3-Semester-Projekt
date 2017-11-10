@@ -6,11 +6,13 @@ using System.Web;
 using System.Web.Mvc;
 
 
+
 namespace JobMeHomePage.Controllers
 {
     public class ApplierController : Controller
     {
-        IApplierService client = new IApplierService();
+
+        ApplierServiceClient client = new ApplierServiceClient();
 
 
         // GET: Applier
@@ -28,17 +30,21 @@ namespace JobMeHomePage.Controllers
         [HttpPost]
         public ActionResult _CreateApplier(string Email, string Password, string PasswordControl)
         {
+            Applier applier = new Applier();
+            applier.Password = Password;
+            applier.Email = Email;
+
             //få de 2 passwords --- SKAL SIKRES!!!!
             if(Password == PasswordControl)
             {
-                client.
+                client.Create(applier);
+                return RedirectToAction("Index");
             }
             else
             {
-
+                //Giv fejl omkring at password ikke stemmer overens
             }
-            //Tjekke om de er ens
-            //Kalde WCF'en for at oprette bruger i Database
+            
             return null;
         }
     }

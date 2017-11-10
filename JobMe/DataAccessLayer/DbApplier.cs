@@ -27,7 +27,7 @@ namespace DataAccessLayer
                     cmd.CommandText = "INSERT INTO Applier (Email, Password, MaxRadius) VALUES (@Email, @Password, @MaxRadius)";
                     cmd.Parameters.AddWithValue("Email", obj.Email);
                     cmd.Parameters.AddWithValue("Password", obj.Password);
-                    cmd.Parameters.AddWithValue("MaxRadius", obj.MaxRadius);
+                    cmd.Parameters.AddWithValue("MaxRadius", 50);
                     cmd.ExecuteNonQuery();
                 }
             }
