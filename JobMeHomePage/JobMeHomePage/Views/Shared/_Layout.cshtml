@@ -23,14 +23,47 @@
             </div>
             <div class="navbar-collapse collapse navbar-right">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Opret", "Index", "Home")</li> <!-- Make link to Jobspage -->
-                    <!-- | indsætte her -->
-                    <li>@Html.ActionLink("Login", "About", "Home")</li> <!-- Make link til companies -->
-                </ul>
+                        <li><a href="#opretModal" data-toggle="modal" data-target="#opretModal">Opret</a></li> <!-- Make link to Jobspage -->
+                        <!-- | indsætte her -->
+                        <li>@Html.ActionLink("Login", "About", "Home")</li> <!-- Make link til companies -->
+</ul>
             </div>
         </div>
     </nav>
     <div class="container body-content">
+        <!-- Modal -->
+        <div class="modal fade" id="opretModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4>Opret Profil</h4>
+                    <div class="modal-body">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#Jobansoger">Jobansøger</a></li>
+                            <li><a href="#Virksomhed">Virksomhed</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="Jobansoger" class="tab-pane fade in active">
+                                <h3>HOME</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div id="Virksomhed" class="tab-pane fade">
+                                @Html.Partial("_CreateCompany", "Company")
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
         @RenderBody()
         <hr />
         <footer>
@@ -41,5 +74,16 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+
+<!-- Script for Modal Tabs -->
+    <script>
+$(document).ready(function(){
+    $(".nav-tabs a").click(function(){
+        $(this).tab('show');
+    });
+});
+    </script>
+
 </body>
 </html>
