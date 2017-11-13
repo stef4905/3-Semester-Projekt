@@ -19,16 +19,29 @@ namespace DataAccessLayer
         /// Its protected against SQL Injections with Parameters.
         /// </summary>
         /// <param name="obj"></param>
-        public void Create(Company obj)
+        public bool Create(Company obj)
         {
             using (SqlConnection connection = conn.OpenConnection())
             {
+
+
+                try
+                {
                 using (SqlCommand cmd = connection.CreateCommand())
                 {
                     cmd.CommandText = "Insert into Companies (Email, Password) values (@Email, @Password)";
                     cmd.Parameters.AddWithValue("Email", obj.Email);
                     cmd.Parameters.AddWithValue("Password", obj.Password);
                     cmd.ExecuteNonQuery();
+                    return true;
+                }                
+                
+                
+                }
+                catch (SqlException)
+                {
+                    return false;
+
                 }
             }
         }

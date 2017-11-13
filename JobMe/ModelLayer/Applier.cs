@@ -40,9 +40,9 @@ namespace ModelLayer
         public bool Status { get; set; }
 
         
-        public Applier(int id, string email, string password, int maxRadius)
+        public Applier(string email, string password, int maxRadius)
         {
-            Id = id;
+           
             Email = email;
             Password = password;
             MaxRadius = maxRadius;

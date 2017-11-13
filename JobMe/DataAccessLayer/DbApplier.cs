@@ -18,19 +18,32 @@ namespace DataAccessLayer
         /// Is a method that creates a Applier in the database with the variables Email & Password.
         /// </summary>
         /// <param name="obj">Is a Applier object</param>
-        public void Create(Applier obj)
+        public bool Create(Applier obj)
         {
             using (SqlConnection connection = conn.OpenConnection())
             {
                 using (SqlCommand cmd = connection.CreateCommand())
                 {
+                    try
+                    {
+
+                  
+                   
                     cmd.CommandText = "INSERT INTO Applier (Email, Password, MaxRadius) VALUES (@Email, @Password, @MaxRadius)";
                     cmd.Parameters.AddWithValue("Email", obj.Email);
                     cmd.Parameters.AddWithValue("Password", obj.Password);
                     cmd.Parameters.AddWithValue("MaxRadius", 50);
                     cmd.ExecuteNonQuery();
+                        return true;
+                    }
+                   catch (SqlException)
+                    {
+
+                        return false;
+                    }
                 }
             }
+            
         }
 
         /// <summary>
