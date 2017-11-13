@@ -67,6 +67,7 @@
     <None Include="Connected Services\ApplierServiceReference\service1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="SSL Certificate\JobMeSSL.pfx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLogicLayer\BusinessLogicLayer.csproj">
