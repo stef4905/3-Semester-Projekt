@@ -25,10 +25,6 @@ namespace DataAccessLayer.Tests
             //dbApplier.Create(actual);
 
             ////Assert.AreEqual(actual, expected);
-
-            var instance = new DbApplier();
-
-            var context = new Mock();
         }
     }
 }
