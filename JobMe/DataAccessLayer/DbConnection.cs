@@ -31,9 +31,6 @@ namespace DataAccessLayer
             return conn;
         }
 
-
-
-
         public DataTable ExecuteSelectQuery(string query, SqlParameter[] sqlParameter)
         {
             SqlCommand myCommand = new SqlCommand();

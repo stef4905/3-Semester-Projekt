@@ -14,10 +14,21 @@ namespace DataAccessLayer.Tests
     [TestClass()]
     public class DBApplierTest
     {
+        
+
         [TestMethod()]
-        public void CreateTest()
+        public void CreateTest(int id, string Email, string Password, int MaxRadius)
         {
-            
+            //Applier actual = new Applier(1, "test@test.dk", "1234", 50);
+            //DbApplier dbApplier = new DbApplier();
+
+            //dbApplier.Create(actual);
+
+            ////Assert.AreEqual(actual, expected);
+
+            var instance = new DbApplier();
+
+            var context = new Mock();
         }
     }
 }
