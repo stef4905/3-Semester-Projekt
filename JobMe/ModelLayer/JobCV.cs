@@ -8,6 +8,8 @@ namespace ModelLayer
 {
     class JobCV
     {
+        public int Id { get; set; }
         public string Title { get; set; }
+        public int ApplierId { get; set; }
     }
 }
