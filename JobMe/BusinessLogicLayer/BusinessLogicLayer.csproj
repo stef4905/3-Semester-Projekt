@@ -44,6 +44,7 @@
     <Compile Include="CompanyCtr.cs" />
     <Compile Include="IController.cs" />
     <Compile Include="JobCategoryCtr.cs" />
+    <Compile Include="JobCVCtr.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WorkHoursCtr.cs" />
   </ItemGroup>

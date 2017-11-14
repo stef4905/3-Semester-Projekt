@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,35 +9,48 @@ using DataAccessLayer;
 
 namespace BusinessLogicLayer
 {
-    public class JobCVCtr : IController<JobCV>
+    class JobCVCtr : ICollection<JobCV>
     {
+        public int Count => throw new NotImplementedException();
+        public bool IsReadOnly => throw new NotImplementedException();
+
         DBJobCV dbJobCV = new DBJobCV();
 
         /// <summary>
-        /// Creates a new JobCV in the database.
+        /// Add the object of an job CV into the database
         /// </summary>
-        /// <param name="obj"></param>
-        public void Create(JobCV obj)
+        /// <param name="item"></param>
+        public void Add(JobCV item)
         {
-            dbJobCV.Create(obj);
+            dbJobCV.Create(item);
         }
 
-        public void Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public JobCV Get(int id)
+        public void Clear()
         {
             throw new NotImplementedException();
         }
 
-        public List<JobCV> GetAll()
+        public bool Contains(JobCV item)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(JobCV obj)
+        public void CopyTo(JobCV[] array, int arrayIndex)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerator<JobCV> GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Remove(JobCV item)
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
         {
             throw new NotImplementedException();
         }
