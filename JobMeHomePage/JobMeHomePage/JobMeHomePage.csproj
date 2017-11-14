@@ -164,14 +164,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ApplierServiceReference\ModelLayer.xsd">
+    <None Include="Connected Services\ApplierServiceReference\ModelLayer1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ApplierServiceReference\service.wsdl" />
-    <None Include="Connected Services\ApplierServiceReference\service.xsd">
+    <None Include="Connected Services\ApplierServiceReference\service1.wsdl" />
+    <None Include="Connected Services\ApplierServiceReference\service2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ApplierServiceReference\service1.xsd">
+    <None Include="Connected Services\ApplierServiceReference\service21.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CompanyServiceReference\configuration91.svcinfo" />
@@ -182,6 +182,9 @@
     <Content Include="Connected Services\CompanyServiceReference\JobMeHomePage.CompanyServiceReference.JobCategory.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Connected Services\CompanyServiceReference\ModelLayer1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\CompanyServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -204,14 +207,11 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Connected Services\CompanyServiceReference\ModelLayer.xsd">
+    <None Include="Connected Services\CompanyServiceReference\service1.wsdl" />
+    <None Include="Connected Services\CompanyServiceReference\service2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\CompanyServiceReference\service.wsdl" />
-    <None Include="Connected Services\CompanyServiceReference\service.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CompanyServiceReference\service1.xsd">
+    <None Include="Connected Services\CompanyServiceReference\service21.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

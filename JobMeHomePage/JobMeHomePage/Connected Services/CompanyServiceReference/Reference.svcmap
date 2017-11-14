@@ -19,13 +19,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/WCFJobMe/Service1/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="http://localhost:8723/Design_Time_Addresses/WCFJobMe/Service1/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="31efc4f1-cd13-4cd9-9abd-a2bd89f11ae1" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCFJobMe/Service1/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="563a9b0e-ccc6-4d33-91c2-cff5a944556f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCFJobMe/Service1/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="6468be46-13b4-4656-bfba-40a9de990aa7" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCFJobMe/Service1/mex" />
-    <MetadataFile FileName="ModelLayer.xsd" MetadataType="Schema" ID="da60ec13-41d3-49c4-b483-8b27c35a392e" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCFJobMe/Service1/mex" />
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="264ef824-d35d-4453-bc7c-6277a2b9c584" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMe/Service1/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="d23a8a05-b468-4188-b50b-c7e22042cd4c" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMe/Service1/mex" />
+    <MetadataFile FileName="service21.xsd" MetadataType="Schema" ID="8c6b5889-3eeb-4372-a11d-23ea14526a99" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMe/Service1/mex" />
+    <MetadataFile FileName="ModelLayer1.xsd" MetadataType="Schema" ID="5442ad0d-93f1-4d10-9220-afd58fff7a27" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMe/Service1/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
