@@ -44,6 +44,8 @@
     <Compile Include="DbApplier.cs" />
     <Compile Include="DbCompany.cs" />
     <Compile Include="DbConnection.cs" />
+    <Compile Include="DbJobCategory.cs" />
+    <Compile Include="DbWorkHour.cs" />
     <Compile Include="IDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

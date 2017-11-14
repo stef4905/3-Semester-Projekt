@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using JobMeHomePage.CompanyServiceReference;
+using JobMeHomePage.Models;
+
 namespace JobMeHomePage.Controllers
 {
     public class CompanyController : Controller
@@ -39,6 +41,13 @@ namespace JobMeHomePage.Controllers
             }
             
             return null;
+        }
+
+        public ActionResult CreateJobPost()
+        {
+            VMWorkHoursJobCategory VM = new VMWorkHoursJobCategory();
+            VM.WorkHoursList = client.GetlAllWorkHours().ToList();
+            return View(VM);
         }
     }
 }
