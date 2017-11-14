@@ -244,10 +244,10 @@
     <Content Include="Views\Shared\_CreateCompany.cshtml" />
     <Content Include="Views\Shared\_CreateApplier.cshtml" />
     <Content Include="Views\Company\CreateJobPost.cshtml" />
+    <Content Include="Views\Applier\JobCV.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Applier\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
