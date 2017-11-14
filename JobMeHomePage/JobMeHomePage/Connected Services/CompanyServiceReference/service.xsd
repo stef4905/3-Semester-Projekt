@@ -25,4 +25,16 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetlAllWorkHours">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetlAllWorkHoursResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ModelLayer" minOccurs="0" name="GetlAllWorkHoursResult" nillable="true" type="q3:ArrayOfWorkHours" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

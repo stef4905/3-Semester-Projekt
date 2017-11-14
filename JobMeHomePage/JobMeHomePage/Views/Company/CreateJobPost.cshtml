@@ -1,4 +1,4 @@
-﻿
+﻿@model JobMeHomePage.Models.VMWorkHoursJobCategory
 
 @{
     ViewBag.Title = "CreateJobPost";
@@ -30,6 +30,15 @@
             <label for="endDate">Slut Dato:</label>
             <input type="date" name="EndDate" class="form-control" id="endDate"/>
         </div>
+    </div>
+    <div class="form-group">
+        <label for="workHours">Arbejdstid:</label>
+        <select class="form-control" name="WorkHours">
+            @foreach (var workHours in Model.WorkHoursList)
+            {
+                <option value="@workHours.Id">@workHours.Type</option>
+            }
+        </select>
     </div>
     
 

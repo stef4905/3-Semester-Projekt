@@ -637,6 +637,12 @@ namespace JobMeHomePage.CompanyServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/CreateJobPost", ReplyAction="http://tempuri.org/ICompanyService/CreateJobPostResponse")]
         System.Threading.Tasks.Task CreateJobPostAsync(JobMeHomePage.CompanyServiceReference.JobPost jobPost);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/GetlAllWorkHours", ReplyAction="http://tempuri.org/ICompanyService/GetlAllWorkHoursResponse")]
+        JobMeHomePage.CompanyServiceReference.WorkHours[] GetlAllWorkHours();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/GetlAllWorkHours", ReplyAction="http://tempuri.org/ICompanyService/GetlAllWorkHoursResponse")]
+        System.Threading.Tasks.Task<JobMeHomePage.CompanyServiceReference.WorkHours[]> GetlAllWorkHoursAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -680,6 +686,14 @@ namespace JobMeHomePage.CompanyServiceReference {
         
         public System.Threading.Tasks.Task CreateJobPostAsync(JobMeHomePage.CompanyServiceReference.JobPost jobPost) {
             return base.Channel.CreateJobPostAsync(jobPost);
+        }
+        
+        public JobMeHomePage.CompanyServiceReference.WorkHours[] GetlAllWorkHours() {
+            return base.Channel.GetlAllWorkHours();
+        }
+        
+        public System.Threading.Tasks.Task<JobMeHomePage.CompanyServiceReference.WorkHours[]> GetlAllWorkHoursAsync() {
+            return base.Channel.GetlAllWorkHoursAsync();
         }
     }
 }

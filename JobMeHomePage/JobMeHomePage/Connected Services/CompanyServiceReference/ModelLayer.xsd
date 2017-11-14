@@ -54,4 +54,10 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="WorkHours" nillable="true" type="tns:WorkHours" />
+  <xs:complexType name="ArrayOfWorkHours">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkHours" nillable="true" type="tns:WorkHours" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWorkHours" nillable="true" type="tns:ArrayOfWorkHours" />
 </xs:schema>

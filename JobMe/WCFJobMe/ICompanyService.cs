@@ -21,5 +21,7 @@ namespace WCFJobMe
         [OperationContract]
         List<WorkHours> GetlAllWorkHours();
 
+        [OperationContract]
+        List<JobCategory> GetAllJobCategories();
     }
 }

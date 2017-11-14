@@ -14,6 +14,8 @@ namespace WCFJobMe
     {
         private CompanyCtr companyCtr = new CompanyCtr();
         private WorkHoursCtr workHoursCtr = new WorkHoursCtr();
+        private JobCategoryCtr jobCategoryCtr = new JobCategoryCtr(); 
+
         /// <summary>
         /// Creates an object and executes the Create Method in the CompanyCtr Class
         /// And puts the object into the database.
@@ -33,6 +35,11 @@ namespace WCFJobMe
         public void CreateJobPost(JobPost jobPost)
         {
             companyCtr.CreateJobPost(jobPost);
+        }
+
+        public List<JobCategory> GetAllJobCategories()
+        {
+            return jobCategoryCtr.GetAll();
         }
 
         public List<WorkHours> GetlAllWorkHours()

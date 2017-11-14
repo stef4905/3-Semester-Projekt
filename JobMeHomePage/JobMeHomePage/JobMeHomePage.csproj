@@ -160,6 +160,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\VMWorkHoursJobCategory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -175,6 +176,9 @@
     </None>
     <None Include="Connected Services\CompanyServiceReference\configuration91.svcinfo" />
     <None Include="Connected Services\CompanyServiceReference\configuration.svcinfo" />
+    <Content Include="Connected Services\CompanyServiceReference\JobMeHomePage.CompanyServiceReference.WorkHours.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\CompanyServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -240,7 +244,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
     <Folder Include="Views\Applier\" />
   </ItemGroup>
   <ItemGroup>

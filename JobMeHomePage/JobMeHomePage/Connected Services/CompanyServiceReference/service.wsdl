@@ -19,6 +19,12 @@
   <wsdl:message name="ICompanyService_CreateJobPost_OutputMessage">
     <wsdl:part name="parameters" element="tns:CreateJobPostResponse" />
   </wsdl:message>
+  <wsdl:message name="ICompanyService_GetlAllWorkHours_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetlAllWorkHours" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyService_GetlAllWorkHours_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetlAllWorkHoursResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICompanyService">
     <wsdl:operation name="Create">
       <wsdl:input wsaw:Action="http://tempuri.org/ICompanyService/Create" message="tns:ICompanyService_Create_InputMessage" />
@@ -27,6 +33,10 @@
     <wsdl:operation name="CreateJobPost">
       <wsdl:input wsaw:Action="http://tempuri.org/ICompanyService/CreateJobPost" message="tns:ICompanyService_CreateJobPost_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICompanyService/CreateJobPostResponse" message="tns:ICompanyService_CreateJobPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetlAllWorkHours">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompanyService/GetlAllWorkHours" message="tns:ICompanyService_GetlAllWorkHours_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompanyService/GetlAllWorkHoursResponse" message="tns:ICompanyService_GetlAllWorkHours_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICompanyService" type="tns:ICompanyService">
@@ -42,6 +52,15 @@
     </wsdl:operation>
     <wsdl:operation name="CreateJobPost">
       <soap:operation soapAction="http://tempuri.org/ICompanyService/CreateJobPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetlAllWorkHours">
+      <soap:operation soapAction="http://tempuri.org/ICompanyService/GetlAllWorkHours" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
