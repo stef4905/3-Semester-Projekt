@@ -27,6 +27,10 @@ namespace DataAccessLayer
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Returns a A list of all JobCategories from the database
+        /// </summary>
+        /// <returns></returns>
         public List<JobCategory> GetAll()
         {
             List<JobCategory> jobCategoryList = new List<JobCategory>();

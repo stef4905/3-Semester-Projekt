@@ -37,11 +37,21 @@ namespace WCFJobMe
             companyCtr.CreateJobPost(jobPost);
         }
 
+        /// <summary>
+        /// Gets all objects and from the GetAll Method in the JobPostCtr Class
+        /// And gets all the object from the database.
+        /// </summary>
+        /// <returns></returns>
         public List<JobCategory> GetAllJobCategories()
         {
             return jobCategoryCtr.GetAll();
         }
 
+        /// <summary>
+        /// Gets all objects and from the GetAll Method in the WorkHoursCtr Class
+        /// And gets all the object from the database.
+        /// </summary>
+        /// <returns></returns>
         public List<WorkHours> GetlAllWorkHours()
         {
             return workHoursCtr.GetAll();

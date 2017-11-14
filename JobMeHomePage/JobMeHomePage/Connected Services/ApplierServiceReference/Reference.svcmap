@@ -19,13 +19,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/WCFJobMe/ApplierService/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="http://localhost:8723/Design_Time_Addresses/WCFJobMe/ApplierService/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="54bfadbe-eec9-442e-95e4-5927864573d8" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCFJobMe/ApplierService/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="4062d89e-9279-4b69-bdec-e6b9d1453cf1" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCFJobMe/ApplierService/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="904bc936-37b9-41d7-81e4-6bf0b0d89f51" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCFJobMe/ApplierService/mex" />
-    <MetadataFile FileName="ModelLayer.xsd" MetadataType="Schema" ID="091ce6bf-7b7b-4bd2-8453-672c6636bd81" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCFJobMe/ApplierService/mex" />
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="af68dac6-39f6-43b0-940e-85758785af68" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMe/ApplierService/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="817aa922-ae6c-452c-91f0-244300a83710" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMe/ApplierService/mex" />
+    <MetadataFile FileName="service21.xsd" MetadataType="Schema" ID="3dfa5360-e403-4206-9487-8269cf522748" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMe/ApplierService/mex" />
+    <MetadataFile FileName="ModelLayer1.xsd" MetadataType="Schema" ID="20d1ab9d-1544-4295-b805-c29df302d782" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMe/ApplierService/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
