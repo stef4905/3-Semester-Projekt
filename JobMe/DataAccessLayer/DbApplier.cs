@@ -25,10 +25,7 @@ namespace DataAccessLayer
                 using (SqlCommand cmd = connection.CreateCommand())
                 {
                     try
-                    {
-
-                  
-                   
+                    {                   
                     cmd.CommandText = "INSERT INTO Applier (Email, Password, MaxRadius) VALUES (@Email, @Password, @MaxRadius)";
                     cmd.Parameters.AddWithValue("Email", obj.Email);
                     cmd.Parameters.AddWithValue("Password", obj.Password);

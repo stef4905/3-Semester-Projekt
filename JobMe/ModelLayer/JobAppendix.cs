@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ModelLayer
 {
-    class JobAppendix
+    public class JobAppendix
     {
         public string Title { get; set; }
         public string FilePath { get; set; }

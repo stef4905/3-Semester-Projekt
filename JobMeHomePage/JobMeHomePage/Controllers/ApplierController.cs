@@ -47,5 +47,9 @@ namespace JobMeHomePage.Controllers
             
             return null;
         }
+
+        public ActionResult JobCV() {
+            return View();
+        }
     }
 }

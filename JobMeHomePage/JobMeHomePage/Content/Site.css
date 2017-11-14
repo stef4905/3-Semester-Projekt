@@ -107,3 +107,127 @@
 .nav-tabs {
     margin-bottom: 3%;
 }
+
+/*JobCV Design site*/
+
+#profile-col {
+	background-color: #e9e9e9;
+}
+
+#experience-col {
+	background-color: #ffffff;
+}
+
+#profileImage {
+	margin: auto;
+	display: block;
+	margin-top: 20px;
+}
+
+.firstName {
+	margin-top: 20px;
+	font-size: 30px;
+	color: cornflowerblue
+}
+
+.lastName {
+	font-size: 26px;
+}
+
+.profileInfoLeft {
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+#infoTitle {
+	color: cornflowerblue;
+}
+
+#infoContent {
+	margin-left: 0px;
+}
+
+#infoContentBold {
+	font-weight: 600;
+}
+
+#profileInfoRight {
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+#CVHeadlinge {
+	color: cornflowerblue;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.companyName {
+	margin-left: 15px;
+	font-weight: 600;
+	font-size: 18px;
+}
+
+.DateAndPosition {
+	margin-left: 15px;
+	font-size: 16px;
+}
+
+.jobDescription {
+	margin-left: 15px;
+	padding-bottom: 20px;
+	margin-right: 20px;
+}
+
+#boldText {
+	font-weight: 600;
+	display: inline;
+}
+
+#educationMargin {
+	margin-left: 0px;
+	padding-bottom: 20px;
+}
+
+.edicatopnStatus {
+	font-size: 15px;
+}
+
+.educationPlaceAndTitle {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.educationTimeDate {
+	text-align: right;
+	margin-right: 20px;
+}
+
+.educationResult {
+	text-align: right;
+	margin-right: 20px;
+}
+
+#certificateMargin {
+	margin-top: 5px;
+	margin-left: 0px;
+}
+
+#seperator {
+	height: 2px;
+	background-color: black;
+	opacity: 0.2;
+	margin-top: 20px;
+}
+
+#saveButton {
+	margin: auto;
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+
+
+
