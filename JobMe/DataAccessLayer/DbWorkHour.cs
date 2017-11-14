@@ -30,6 +30,10 @@ namespace DataAccessLayer
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Returns a A list of all JobCategories from the database
+        /// </summary>
+        /// <returns></returns>
         public List<WorkHours> GetAll()
         {
             List<WorkHours> workHoursList = new List<WorkHours>();

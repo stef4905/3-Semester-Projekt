@@ -26,6 +26,10 @@ namespace BusinessLogicLayer
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Is a method that calls the GetAll method from the DbAccesLayer
+        /// </summary>
+        /// <returns></returns>
         public List<JobCategory> GetAll()
         {
             return dbJobCategory.GetAll();
