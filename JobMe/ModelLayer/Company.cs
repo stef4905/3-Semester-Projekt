@@ -11,7 +11,7 @@ namespace ModelLayer
     public class Company
     {
         [DataMember]
-        public int id { get; set; }
+        public int Id { get; set; }
         [DataMember]
         public string Email { get; set; }
         [DataMember]

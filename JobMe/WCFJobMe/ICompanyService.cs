@@ -15,5 +15,8 @@ namespace WCFJobMe
         [OperationContract]
         void Create(Company company);
 
+        [OperationContract]
+        void CreateJobPost(JobPost jobPost);
+
     }
 }

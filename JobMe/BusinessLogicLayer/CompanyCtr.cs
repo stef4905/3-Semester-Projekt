@@ -14,12 +14,22 @@ namespace BusinessLogicLayer
         private DbCompany dbCompany = new DbCompany();
 
         /// <summary>
-        /// Sends an object through the DataAccessLayer, and executes Create Method!
+        /// Sends an object through the DataAccessLayer, and executes Create Method
         /// </summary>
         /// <param name="obj"></param>
         public void Create(Company obj)
         {
             dbCompany.Create(obj);
+        }
+
+
+        /// <summary>
+        /// Sends an Object throug the DataAccessLayer, and executes CreateJobPost Method
+        /// </summary>
+        /// <param name="obj"> Object for Jobpost </param>
+        public void CreateJobPost(JobPost obj)
+        {
+            dbCompany.createJobPost(obj);
         }
 
         public void Delete(int id)

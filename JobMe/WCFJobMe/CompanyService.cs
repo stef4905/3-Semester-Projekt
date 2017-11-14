@@ -24,6 +24,15 @@ namespace WCFJobMe
             companyCtr.Create(company);
         }
 
-      
+
+        /// <summary>
+        /// Creates an object and executes the CreateJobPost Method in the CompanyCtr Class
+        /// And puts the object into the database.
+        /// </summary>
+        /// <param name="jobPost"></param>
+        public void CreateJobPost(JobPost jobPost)
+        {
+            companyCtr.CreateJobPost(jobPost);
+        }
     }
 }
