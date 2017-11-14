@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ModelLayer
 {
-    class JobExperience
+    public class JobExperience
     {
         public string Title { get; set; }
         public DateTime StartDate { get; set; }
