@@ -13,7 +13,7 @@ namespace BusinessLogicLayer
         DBJobCV dbJobCV = new DBJobCV();
 
         /// <summary>
-        /// Creates a new JobCV in the database
+        /// Creates a new JobCV in the database.
         /// </summary>
         /// <param name="obj"></param>
         public void Create(JobCV obj)
