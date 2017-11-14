@@ -50,5 +50,6 @@ namespace ModelLayer
             Email = email;
             Password = password;
         }
+
     }
 }

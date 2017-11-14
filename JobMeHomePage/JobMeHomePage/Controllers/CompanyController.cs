@@ -47,7 +47,48 @@ namespace JobMeHomePage.Controllers
         {
             VMWorkHoursJobCategory VM = new VMWorkHoursJobCategory();
             VM.WorkHoursList = client.GetlAllWorkHours().ToList();
+            VM.JobCategoryList = client.GetAllJobCategories().ToList();
             return View(VM);
         }
+
+        [HttpPost]
+        public ActionResult CreateJobPost(string Title, string Description, DateTime StartDate, DateTime EndDate, string JobTitle, int WorkHours, string Address, Company Company, int JobCategory)
+        {
+            WorkHours workHours = new WorkHours {Id = WorkHours };
+
+            JobCategory jobCategory = new JobCategory { Id = JobCategory};
+            Company company = new Company { Id = 1};
+
+            JobPost jobPost = new JobPost
+            {
+                Title = Title,
+                Description = Description,
+                StartDate = StartDate.Date,
+                EndDate = EndDate.Date,
+                JobTitle = JobTitle,
+                workHours = workHours,
+                Address = Address,
+                company = company,
+                jobCategory = jobCategory
+                
+                
+            };
+            try
+            {
+                client.CreateJobPost(jobPost);
+                return RedirectToAction("Index"); 
+            }
+           
+
+            
+            
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
     }
 }

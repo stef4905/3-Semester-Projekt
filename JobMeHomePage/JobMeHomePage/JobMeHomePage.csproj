@@ -179,6 +179,9 @@
     <Content Include="Connected Services\CompanyServiceReference\JobMeHomePage.CompanyServiceReference.WorkHours.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\CompanyServiceReference\JobMeHomePage.CompanyServiceReference.JobCategory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\CompanyServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
