@@ -236,12 +236,12 @@
     <Content Include="Views\Shared\_LayoutProfile.cshtml" />
     <Content Include="Views\Shared\_CreateCompany.cshtml" />
     <Content Include="Views\Shared\_CreateApplier.cshtml" />
+    <Content Include="Views\Company\CreateJobPost.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Applier\" />
-    <Folder Include="Views\Company\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

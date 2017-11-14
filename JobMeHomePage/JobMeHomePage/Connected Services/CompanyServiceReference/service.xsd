@@ -13,4 +13,16 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="CreateJobPost">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ModelLayer" minOccurs="0" name="jobPost" nillable="true" type="q2:JobPost" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateJobPostResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

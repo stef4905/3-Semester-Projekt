@@ -1,0 +1,38 @@
+﻿
+
+@{
+    ViewBag.Title = "CreateJobPost";
+    Layout = "~/Views/Shared/_LayoutCompany.cshtml";
+}
+
+<h1>CreateJobPost</h1>
+
+<form action="/Company/CreateJobPost" method="post">
+    <div class="form-group">
+        <label for="titel">Titel:</label>
+        <input type="text" name="Titel" class="form-control" id="titel"/>
+    </div>    
+    <div class="form-group">
+        <label for="jobTitel">Job Titel:</label>
+        <input type="text" name="JobTitel" class="form-control" id="jobTitel"/>
+    </div>
+    <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea name="Description" class="form-control" id="description">Lav en kort beskrivelse af jobet...</textarea>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-6">
+            <label for="startDate">Start Dato:</label>
+            <input type="date" name="StartDate" class="form-control" id="startDate"/>
+        </div>
+        <div class="col-sm-6">
+            <label for="endDate">Slut Dato:</label>
+            <input type="date" name="EndDate" class="form-control" id="endDate"/>
+        </div>
+    </div>
+    
+
+
+
+</form>

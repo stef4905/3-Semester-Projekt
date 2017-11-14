@@ -40,5 +40,10 @@ namespace JobMeHomePage.Controllers
             
             return null;
         }
+
+        public ActionResult CreateJobPost()
+        {
+            return View();
+        }
     }
 }

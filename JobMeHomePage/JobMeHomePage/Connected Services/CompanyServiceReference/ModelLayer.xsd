@@ -10,12 +10,12 @@
       <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Homepage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="ImageURL" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MaxRadius" type="xs:int" />
       <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Phone" type="xs:int" />
       <xs:element minOccurs="0" name="businessType" nillable="true" type="tns:BusinessType" />
-      <xs:element minOccurs="0" name="id" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Company" nillable="true" type="tns:Company" />
@@ -25,4 +25,33 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="BusinessType" nillable="true" type="tns:BusinessType" />
+  <xs:complexType name="JobPost">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="JobTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="company" nillable="true" type="tns:Company" />
+      <xs:element minOccurs="0" name="jobCategory" nillable="true" type="tns:JobCategory" />
+      <xs:element minOccurs="0" name="workHours" nillable="true" type="tns:WorkHours" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JobPost" nillable="true" type="tns:JobPost" />
+  <xs:complexType name="JobCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JobCategory" nillable="true" type="tns:JobCategory" />
+  <xs:complexType name="WorkHours">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WorkHours" nillable="true" type="tns:WorkHours" />
 </xs:schema>
