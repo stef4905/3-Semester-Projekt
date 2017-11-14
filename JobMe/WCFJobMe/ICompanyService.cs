@@ -18,5 +18,8 @@ namespace WCFJobMe
         [OperationContract]
         void CreateJobPost(JobPost jobPost);
 
+        [OperationContract]
+        List<WorkHours> GetlAllWorkHours();
+
     }
 }
