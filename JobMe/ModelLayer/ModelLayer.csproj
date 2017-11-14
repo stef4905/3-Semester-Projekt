@@ -46,6 +46,7 @@
     <Compile Include="Company.cs" />
     <Compile Include="CVCategory.cs" />
     <Compile Include="JobAppendix.cs" />
+    <Compile Include="JobApplication.cs" />
     <Compile Include="JobCategory.cs" />
     <Compile Include="JobCV.cs" />
     <Compile Include="JobExperience.cs" />
