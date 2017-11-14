@@ -3,13 +3,13 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DataAccessLayer;
 using ModelLayer;
 
-namespace UnitTest.BusinessLogic
+namespace UnitTest.DataAccessLayer
 {
     [TestClass]
     public class DBApplierTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ApplierCreateDBTest()
         {
 
             //Arrange

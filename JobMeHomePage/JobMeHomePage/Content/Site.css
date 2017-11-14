@@ -94,3 +94,16 @@
     background: #011223;
     color: white;
 }
+
+
+.modal-content {
+    padding: 6%;
+}
+
+ .modal-content > h4 {
+        margin-left: 3%;
+    }
+
+.nav-tabs {
+    margin-bottom: 3%;
+}
