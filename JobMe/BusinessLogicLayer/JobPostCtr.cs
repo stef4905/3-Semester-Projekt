@@ -8,39 +8,36 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer
 {
-    public class CompanyCtr : IController<Company>
+    public class JobPostCtr : IController<JobPost>
     {
-
-        private DbCompany dbCompany = new DbCompany();
+        private DbJobPost dbJobPost = new DbJobPost();
 
         /// <summary>
-        /// Sends an object through the DataAccessLayer, and executes Create Method
+        /// Sends an Object throug the DataAccessLayer, and executes CreateJobPost Method
         /// </summary>
-        /// <param name="obj"></param>
-        public void Create(Company obj)
+        /// <param name="obj"> Object for Jobpost </param>
+
+        public void Create(JobPost obj)
         {
-            dbCompany.Create(obj);
+            dbJobPost.Create(obj);
         }
-
-
-
 
         public void Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Company Get(int id)
+        public JobPost Get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public List<Company> GetAll()
+        public List<JobPost> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Company obj)
+        public void Update(JobPost obj)
         {
             throw new NotImplementedException();
         }

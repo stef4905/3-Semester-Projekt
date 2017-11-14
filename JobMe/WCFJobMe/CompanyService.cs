@@ -14,7 +14,8 @@ namespace WCFJobMe
     {
         private CompanyCtr companyCtr = new CompanyCtr();
         private WorkHoursCtr workHoursCtr = new WorkHoursCtr();
-        private JobCategoryCtr jobCategoryCtr = new JobCategoryCtr(); 
+        private JobCategoryCtr jobCategoryCtr = new JobCategoryCtr();
+        private JobPostCtr jobPostCtr = new JobPostCtr();
 
         /// <summary>
         /// Creates an object and executes the Create Method in the CompanyCtr Class
@@ -34,7 +35,7 @@ namespace WCFJobMe
         /// <param name="jobPost"></param>
         public void CreateJobPost(JobPost jobPost)
         {
-            companyCtr.CreateJobPost(jobPost);
+            jobPostCtr.Create(jobPost);
         }
 
         /// <summary>
