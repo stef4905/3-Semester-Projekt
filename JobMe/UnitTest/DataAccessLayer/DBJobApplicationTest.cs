@@ -12,12 +12,14 @@ namespace UnitTest.DataAccessLayer
         public void CreateJobApplicationInDB()
         {
             //Arrange
-            
+            DbJobApplication dbJobApplication = new DbJobApplication();
+            JobApplication jobApplication = new JobApplication(1, "Title", "Description", 15);
 
             //Act
-
+            bool inserted = dbJobApplication.Create(jobApplication);
 
             //Assert
+            Assert.IsTrue(inserted);
         }
     }
 }

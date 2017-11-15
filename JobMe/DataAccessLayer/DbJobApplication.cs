@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace DataAccessLayer
 {
-    class DbJobApplication : IDataAccess<JobApplication>
+    public class DbJobApplication : IDataAccess<JobApplication>
     {
         DbConnection conn = new DbConnection();
         /// <summary>
