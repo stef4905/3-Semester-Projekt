@@ -60,7 +60,9 @@ namespace DataAccessLayer
         /// <returns></returns>
         public Company Get(int id)
         {
+            
             Company company = new Company();
+            DBBusinessType dbBusinessType = new DBBusinessType();
             using (SqlConnection connection = conn.OpenConnection())
             {
                 using (SqlCommand cmd = connection.CreateCommand())
@@ -83,23 +85,21 @@ namespace DataAccessLayer
                         company.Homepage = (string)reader["HomePage"];
                         company.CompanyName = (string)reader["CompanyName"];
                         company.CVR = (int)reader["CVR"];
-                        //Mangler at kunne trække BusinessType 
-                        //objekterne med sig.
-
-
+                        company.businessType = dbBusinessType.Get((int)reader["BusinessTypeId"]);
                     }
                 }
-
-                public List<Company> GetAll()
-                {
-                    throw new NotImplementedException();
-                }
-
-                public void Update(Company obj)
-                {
-                    throw new NotImplementedException();
-                }
             }
+            return company;
+        }
+
+        public List<Company> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Company obj)
+        {
+            throw new NotImplementedException();
         }
     }
 }

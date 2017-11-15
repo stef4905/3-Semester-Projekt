@@ -51,6 +51,14 @@ namespace ModelLayer
             Password = password;
         }
 
+        /// <summary>
+        /// Empty constructor
+        /// </summary>
+        public Company()
+        {
+
+        }
+
         public Company(int id, string email, string password, int phone, string address, string country, string imageURL, string description, string bannerURL, int maxRadius, string homepage, string companyName, int cVR, BusinessType businessType)
         {
             Id = id;
