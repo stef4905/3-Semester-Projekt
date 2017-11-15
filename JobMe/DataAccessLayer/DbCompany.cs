@@ -53,6 +53,11 @@ namespace DataAccessLayer
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Returns a Company Object from the database
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Company Get(int id)
         {
             Company company = new Company();
