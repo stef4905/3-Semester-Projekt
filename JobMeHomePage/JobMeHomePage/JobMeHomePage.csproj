@@ -280,6 +280,7 @@
     <Content Include="Views\Applier\JobApplication.cshtml" />
     <Content Include="Views\Applier\_JobApplication.cshtml" />
     <Content Include="Views\Applier\_JobCV.cshtml" />
+    <Content Include="Views\Company\JobPost.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

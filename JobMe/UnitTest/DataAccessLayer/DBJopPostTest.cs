@@ -51,5 +51,22 @@ namespace UnitTest
             //Assert
             Assert.IsTrue(jobPostList.Count > 1);
         }
+
+        /// <summary>
+        /// Test the Get() method on jobPost in DataAccessLayer.
+        /// Testing by validating that the method returns a object (Get(1)) that is not equal to null.
+        /// </summary>
+        [TestMethod]
+        public void GetJobById()
+        {
+            //Arrange
+            DbJobPost dbJobPost = new DbJobPost();
+
+            //Act
+            JobPost jobPost = dbJobPost.Get(1);
+
+            //Assert
+            Assert.IsTrue(jobPost != null);
+        }
     }
 }
