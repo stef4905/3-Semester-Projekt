@@ -4,14 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ModelLayer;
+using DataAccessLayer;
 
 namespace BusinessLogicLayer
 {
     class JobApplicationCtr : IController<JobApplication>
     {
+        private DbJobApplication dbJobApplication = new DbJobApplication();
         public void Create(JobApplication obj)
         {
-            throw new NotImplementedException();
+            dbJobApplication.Create(obj);
         }
 
         public void Delete(int id)

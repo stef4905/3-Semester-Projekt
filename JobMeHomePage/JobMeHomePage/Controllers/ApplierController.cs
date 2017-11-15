@@ -62,5 +62,11 @@ namespace JobMeHomePage.Controllers
             //Return user to profile site
 
         }
+
+
+        public ActionResult FindJobPosts()
+        {
+            return View();
+        }
     }
 }
