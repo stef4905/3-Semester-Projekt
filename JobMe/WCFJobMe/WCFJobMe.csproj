@@ -52,7 +52,9 @@
     </Compile>
     <Compile Include="IApplierService.cs" />
     <Compile Include="ICompanyService.cs" />
+    <Compile Include="IJobPostService.cs" />
     <Compile Include="ISecureService.cs" />
+    <Compile Include="JobPostService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CompanyService.cs" />
     <Compile Include="SecureService.cs" />

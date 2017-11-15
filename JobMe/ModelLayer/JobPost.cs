@@ -46,16 +46,20 @@ namespace ModelLayer
         /// <param name="jobCategory"></param>
         public JobPost(int id, string title, string description, DateTime startDate, DateTime endDate, string jobTitle, WorkHours workHours, string address, Company company, JobCategory jobCategory)
         {
-            Id = id;
-            Title = title;
-            Description = description;
-            StartDate = startDate;
-            EndDate = endDate;
-            JobTitle = jobTitle;
-            this.workHours = workHours;
-            Address = address;
-            this.company = company;
-            this.jobCategory = jobCategory;
+           this.Id = id;
+           this.Title = title;
+           this.Description = description;
+           this.StartDate = startDate;
+           this.EndDate = endDate;
+           this.JobTitle = jobTitle;
+           this.workHours = workHours;
+           this.Address = address;
+           this.company = company;
+           this.jobCategory = jobCategory;
+        }
+        public JobPost()
+        {
+
         }
     }
 
