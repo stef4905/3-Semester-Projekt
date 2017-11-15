@@ -90,7 +90,7 @@ namespace DataAccessLayer
                             workHours = dbWorkHour.Get((int)reader["WorkHoursId"]),
                             Address = (string)reader["Address"],
                             company = dbCompany.Get((int)reader["CompanyId"]),
-                            jobCategory = dbJobCategory.Get((int)reader["JobCateoryId"])
+                            jobCategory = dbJobCategory.Get((int)reader["JobCategoryId"])
 
 
                             
