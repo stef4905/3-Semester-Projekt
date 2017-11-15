@@ -288,3 +288,27 @@
     border-width: 15px;
 }
 
+/*Read jobpost*/
+#jobPostLeftContent {
+}
+
+#jobPostRightContent {
+	background-color: azure;
+}
+
+#jobPostCompanyPic {
+	margin: auto;
+	display: block;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+#jobPostTitle {
+	margin-top: 20px;
+	font-size: 24px;
+}
+
+.jobPostBasicInfo {
+	width: 100%;
+	font-style: italic;
+}
