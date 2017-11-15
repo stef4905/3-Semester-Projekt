@@ -154,12 +154,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\JobPostServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\ApplierController.cs" />
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\VMJobPostWorkHoursJobCategory.cs" />
     <Compile Include="Models\VMWorkHoursJobCategory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -195,6 +201,24 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\JobPostServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\JobPostServiceReference\configuration.svcinfo" />
+    <Content Include="Connected Services\JobPostServiceReference\JobMeHomePage.JobPostServiceReference.JobCategory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JobPostServiceReference\JobMeHomePage.JobPostServiceReference.JobPost.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JobPostServiceReference\JobMeHomePage.JobPostServiceReference.WorkHours.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\JobPostServiceReference\ModelLayer1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JobPostServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\image\JobMeHorizontal.png" />
@@ -212,6 +236,13 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CompanyServiceReference\service21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JobPostServiceReference\service1.wsdl" />
+    <None Include="Connected Services\JobPostServiceReference\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JobPostServiceReference\service21.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -272,6 +303,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ApplierServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\CompanyServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\JobPostServiceReference\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

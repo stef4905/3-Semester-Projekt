@@ -6,11 +6,13 @@ using System.Web.Mvc;
 using JobMeHomePage.CompanyServiceReference;
 using JobMeHomePage.Models;
 
+
 namespace JobMeHomePage.Controllers
 {
     public class CompanyController : Controller
     {
         CompanyServiceClient client = new CompanyServiceClient();
+        JobPostServiceReference.JobPostServiceClient jobClient = new JobPostServiceReference.JobPostServiceClient();
 
         // GET: Company
         public ActionResult Index()
