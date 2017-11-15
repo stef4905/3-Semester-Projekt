@@ -33,7 +33,7 @@ namespace ModelLayer
 
         /// <summary>
         /// Contructor for the JobPost calss
-        /// Sets the required parameters for the JobPost Class.
+        /// Sets the required parameters for the JobPost object.
         /// </summary>
         /// <param name="title"></param>
         /// <param name="description"></param>
@@ -46,7 +46,6 @@ namespace ModelLayer
         /// <param name="jobCategory"></param>
         public JobPost(string title, string description, DateTime startDate, DateTime endDate, string jobTitle, WorkHours workHours, string address, Company company, JobCategory jobCategory)
         {
-
             Title = title;
             Description = description;
             StartDate = startDate;

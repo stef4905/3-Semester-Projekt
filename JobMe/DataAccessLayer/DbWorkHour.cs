@@ -31,7 +31,7 @@ namespace DataAccessLayer
         }
 
         /// <summary>
-        /// Returns a A list of all JobCategories from the database
+        /// Returns a list of all JobCategories from the database
         /// </summary>
         /// <returns></returns>
         public List<WorkHours> GetAll()
@@ -52,7 +52,6 @@ namespace DataAccessLayer
                             Type = (string)reader["Type"]
                         };
                         workHoursList.Add(workHours);
-
                     }
                 }
             }
