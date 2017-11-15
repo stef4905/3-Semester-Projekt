@@ -34,7 +34,7 @@ namespace BusinessLogicLayer
 
         public List<JobPost> GetAll()
         {
-            throw new NotImplementedException();
+            return dbJobPost.GetAll();
         }
 
         public void Update(JobPost obj)

@@ -50,10 +50,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WCFJobMe\WCFJobMe.csproj">
-      <Project>{7254DEF3-A525-4B68-A56C-C0B9239A03EC}</Project>
-      <Name>WCFJobMe</Name>
+    <ProjectReference Include="..\WCFJobMeService\WCFJobMeService.csproj">
+      <Project>{4A9863A9-C170-4F2B-9082-A4907595EBA1}</Project>
+      <Name>WCFJobMeService</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

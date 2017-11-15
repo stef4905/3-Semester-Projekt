@@ -64,6 +64,10 @@ namespace DataAccessLayer
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Returns a list of all JobPost from the database
+        /// </summary>
+        /// <returns></returns>
         public List<JobPost> GetAll()
         {
             List<JobPost> jobPostList = new List<JobPost>();
