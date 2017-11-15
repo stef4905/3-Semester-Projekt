@@ -90,7 +90,7 @@
   </wsdl:binding>
   <wsdl:service name="JobPostService">
     <wsdl:port name="BasicHttpBinding_IJobPostService" binding="tns:BasicHttpBinding_IJobPostService">
-      <soap:address location="http://localhost:8723/Design_Time_Addresses/WCFJobMe/JobPostService/" />
+      <soap:address location="http://localhost:8723/Design_Time_Addresses/WCFJobMeService/JobPostService/" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

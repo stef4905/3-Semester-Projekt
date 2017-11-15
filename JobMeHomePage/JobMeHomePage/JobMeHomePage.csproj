@@ -144,11 +144,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Connected Services\ApplierServiceReference\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Connected Services\CompanyServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -170,16 +165,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ApplierServiceReference\ModelLayer1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ApplierServiceReference\service1.wsdl" />
-    <None Include="Connected Services\ApplierServiceReference\service2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ApplierServiceReference\service21.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Connected Services\CompanyServiceReference\configuration91.svcinfo" />
     <None Include="Connected Services\CompanyServiceReference\configuration.svcinfo" />
     <Content Include="Connected Services\CompanyServiceReference\JobMeHomePage.CompanyServiceReference.WorkHours.datasource">
@@ -192,12 +177,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CompanyServiceReference\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\ApplierServiceReference\configuration91.svcinfo" />
-    <None Include="Connected Services\ApplierServiceReference\configuration.svcinfo" />
-    <None Include="Connected Services\ApplierServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -302,7 +281,6 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\ApplierServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\CompanyServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\JobPostServiceReference\" />
   </ItemGroup>

@@ -19,13 +19,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8723/Design_Time_Addresses/WCFJobMe/JobPostService/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="http://localhost:8723/Design_Time_Addresses/WCFJobMeService/JobPostService/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="c83df973-2bf2-4b85-83b7-35af24bc84f1" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMe/JobPostService/mex" />
-    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="fb148a32-05ec-4eea-a4cb-a2fc18214d89" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMe/JobPostService/mex" />
-    <MetadataFile FileName="service21.xsd" MetadataType="Schema" ID="add49581-d554-4c8e-8279-4e18c59f8b75" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMe/JobPostService/mex" />
-    <MetadataFile FileName="ModelLayer1.xsd" MetadataType="Schema" ID="5b41f45e-728e-4cb5-bb63-b1c0938b1d21" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMe/JobPostService/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="eda33a63-0eb9-47eb-a73f-ec37ab165e01" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMeService/JobPostService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="0497e331-6949-45d1-bd68-88f8f4a0f31c" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMeService/JobPostService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="c29738d6-9778-4bac-b665-d646fe0e52f6" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMeService/JobPostService/mex" />
+    <MetadataFile FileName="ModelLayer.xsd" MetadataType="Schema" ID="6ae005b1-7b79-42f4-aae5-4e53dd4c1584" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMeService/JobPostService/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

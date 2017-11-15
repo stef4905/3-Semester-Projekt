@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d80e732f-262d-43b3-a14c-e081cd37d587" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cef5f266-6d43-4f43-ba4d-c46e108d66f0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,13 +19,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8723/Design_Time_Addresses/WCFJobMe/ApplierService/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="http://localhost:8723/Design_Time_Addresses/WCFJobMeService/ApplierService/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="af68dac6-39f6-43b0-940e-85758785af68" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMe/ApplierService/mex" />
-    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="817aa922-ae6c-452c-91f0-244300a83710" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMe/ApplierService/mex" />
-    <MetadataFile FileName="service21.xsd" MetadataType="Schema" ID="3dfa5360-e403-4206-9487-8269cf522748" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMe/ApplierService/mex" />
-    <MetadataFile FileName="ModelLayer1.xsd" MetadataType="Schema" ID="20d1ab9d-1544-4295-b805-c29df302d782" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMe/ApplierService/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="27bb9d82-b9e5-4dd6-af2b-bc12cd7a554c" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMeService/ApplierService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="7ab63c3f-30eb-479e-b157-7f16c93e9891" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMeService/ApplierService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="12f1ac20-8b69-4f81-bf33-dfff57a0d5ce" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMeService/ApplierService/mex" />
+    <MetadataFile FileName="ModelLayer.xsd" MetadataType="Schema" ID="ec27c7a1-c04f-481c-bdb9-3086fff29613" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMeService/ApplierService/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
