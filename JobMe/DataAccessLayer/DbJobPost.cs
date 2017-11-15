@@ -66,6 +66,7 @@ namespace DataAccessLayer
 
         public List<JobPost> GetAll()
         {
+            List<JobPost> jobPostList = new List<JobPost>();
             using (SqlConnection connection = conn.OpenConnection())
             {
                 using (SqlCommand cmd = connection.CreateCommand())
@@ -73,6 +74,8 @@ namespace DataAccessLayer
                     cmd.CommandText = "SELECT * FROM JobPost";
                     var reader = cmd.ExecuteReader();
                     DbWorkHour dbWorkHour = new DbWorkHour();
+                    DbCompany dbCompany = new DbCompany();
+                    DbJobCategory dbJobCategory = new DbJobCategory();
 
                     while (reader.Read())
                     {
@@ -86,15 +89,18 @@ namespace DataAccessLayer
                             JobTitle = (string)reader["JobTitle"],
                             workHours = dbWorkHour.Get((int)reader["WorkHoursId"]),
                             Address = (string)reader["Address"],
+                            company = dbCompany.Get((int)reader["CompanyId"]),
+                            jobCategory = dbJobCategory.Get((int)reader["JobCateoryId"])
 
-                            
-                            //Mangler at kunne trække Company, JobCategori & WorkHours 
+
+                            //Mangler at kunne trække Company, JobCategori 
                             //objekterne med sig.
-                            
                         };
+                        jobPostList.Add(jobPost);
                     }
                 }
             }
+            return jobPostList;
         }
 
         public void Update(JobPost obj)
