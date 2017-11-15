@@ -28,7 +28,7 @@ namespace UnitTest
 
             string iDate = "05/05/2018";
             DateTime oDate = Convert.ToDateTime(iDate);
-            JobPost jobPost = new JobPost("Test job1", "Et job for dig", DateTime.Now, oDate, "Wc Vasker", workHours, "Her", company, jobCategory);
+            JobPost jobPost = new JobPost(1, "Test job1", "Et job for dig", DateTime.Now, oDate, "Wc Vasker", workHours, "Her", company, jobCategory);
 
 
 

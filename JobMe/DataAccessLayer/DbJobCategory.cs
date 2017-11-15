@@ -22,6 +22,11 @@ namespace DataAccessLayer
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Returns a JobCategory Object from the database
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public JobCategory Get(int id)
         {
             JobCategory jobCategory = new JobCategory();

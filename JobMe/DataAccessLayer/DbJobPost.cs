@@ -93,8 +93,7 @@ namespace DataAccessLayer
                             jobCategory = dbJobCategory.Get((int)reader["JobCateoryId"])
 
 
-                            //Mangler at kunne trække Company, JobCategori 
-                            //objekterne med sig.
+                            
                         };
                         jobPostList.Add(jobPost);
                     }

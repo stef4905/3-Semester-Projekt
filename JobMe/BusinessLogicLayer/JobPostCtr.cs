@@ -29,7 +29,7 @@ namespace BusinessLogicLayer
 
         public JobPost Get(int id)
         {
-            throw new NotImplementedException();
+            return dbJobPost.Get(id);
         }
 
         public List<JobPost> GetAll()
