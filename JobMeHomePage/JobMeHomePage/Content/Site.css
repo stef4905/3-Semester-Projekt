@@ -235,13 +235,18 @@
 	margin-bottom: 20px;
 }
 
+#applicationMargin {
+    margin-right: 15px;
+}
 
+#applicationTitle {
+    margin-right: 15px;
+
+}
 
 
 
 /*Find JobPosts*/
-
-
 .stylish-input-group .input-group-addon {
     background: white !important;
 }
