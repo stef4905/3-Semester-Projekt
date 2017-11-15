@@ -107,9 +107,11 @@ namespace JobMeHomePage.Controllers
 
 
             }
-
-
-            return View();
+            VM.JobPostList = JobPostsList.ToList();
+            VM.JobCategoryList = jobClient.GetAllJobCategories().ToList();
+            VM.WorkHoursList = jobClient.GetlAllWorkHours().ToList();
+            ViewBag.SearchField = "Søgeord:" + search;
+            return View(VM);
         }
 
         public ActionResult JobApplication()
