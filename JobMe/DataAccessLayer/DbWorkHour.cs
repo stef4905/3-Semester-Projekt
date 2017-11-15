@@ -25,9 +25,29 @@ namespace DataAccessLayer
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Returns a WorkHours Object from the database
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public WorkHours Get(int id)
         {
-            throw new NotImplementedException();
+            WorkHours workHours = new WorkHours();
+            using (SqlConnection connection = conn.OpenConnection())
+            {
+                using (SqlCommand cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM WorkHours WHERE Id = @Id";
+                    cmd.Parameters.AddWithValue("Id", id);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        workHours.Id = (int)reader["Id"];
+                        workHours.Type = (string)reader["Type"];
+                    }
+                    return workHours;
+                }
+            }
         }
 
         /// <summary>
