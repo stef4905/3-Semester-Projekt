@@ -59,6 +59,11 @@ namespace DataAccessLayer
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Returns a JobPost Object from the database
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public JobPost Get(int id)
         {
             DbWorkHour dbWorkHour = new DbWorkHour();
