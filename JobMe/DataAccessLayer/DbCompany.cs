@@ -30,7 +30,7 @@ namespace DataAccessLayer
                 {
                     using (SqlCommand cmd = connection.CreateCommand())
                     {
-                        cmd.CommandText = "INSERT INTO Companies (Email, Password) VALUES (@Email, @Password)";
+                        cmd.CommandText = "INSERT INTO Company (Email, Password) VALUES (@Email, @Password)";
                         cmd.Parameters.AddWithValue("Email", obj.Email);
                         cmd.Parameters.AddWithValue("Password", obj.Password);
                         cmd.ExecuteNonQuery();
