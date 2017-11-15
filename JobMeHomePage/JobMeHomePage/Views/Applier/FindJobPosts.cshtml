@@ -4,5 +4,139 @@
     Layout = "~/Views/Shared/_LayoutProfile.cshtml";
 }
 
-<h2>FindJobPosts</h2>
 
+
+<h1>Find job</h1>
+<!-- #region Search -->
+
+<div class="row">
+
+    <div class="col-sm-6">
+        <div id="imaginary_container">
+            <div class="input-group stylish-input-group">
+                <input type="text" class="form-control" placeholder="Søg">
+                <span class="input-group-addon">
+                    <button type="submit">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <div class="input-group">
+
+                        <div class="input-group-addon"> Km</div>
+                        <select class="form-control" name="" id="km">
+                            <option value="">Max</option>
+                            <option value="">10</option>
+                            <option value="">20</option>
+                            <option value="">30</option>
+                            <option value="">40</option>
+                            <option value="">50</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <div class="input-group">
+
+                        <div class="input-group-addon"> Job kategori</div>
+                        <select class="form-control" name="" id="Category">
+                            <option value="">Alle</option>
+                            <option value="">Rengøring</option>
+                            <option value="">It</option>
+                            <option value="">30</option>
+                            <option value="">40</option>
+                            <option value="">50</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <div class="input-group">
+
+                        <div class="input-group-addon"> Tid</div>
+                        <select class="form-control" name="" id="workhours">
+                            <option value="">Alle</option>
+                            <option value="">Fuldtid</option>
+                            <option value="">Deltid</option>
+                            <option value="">Studie job</option>
+                            <option value="">40</option>
+                            <option value="">50</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+<!-- #region Searched items -->
+
+
+<div class="row">
+    <div class="col-sm-12 bg-white jobPost">
+        <div class="row">
+
+            <div class="col-xs-3">
+                <img class="img-responsive" src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c6/Danfoss.svg/1200px-Danfoss.svg.png">
+            </div>
+            <div class="col-xs-7">
+                <h4 class="company-Name"><strong>Fangende tekst</strong></h4><h5><strong>Company name</strong></h5><h4><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel sem lorem. Sed et interdum ipsum. Nullam nibh dolor, interdum sed tristique non, consectetur sed elit. Ut eu feugiat velit, ac tincidunt lectus. Sed at odio quis arcu euismod viverra. Integer non aliquam nibh. Duis eu libero dapibus, volutpat leo at, aliquet ligula.</small></h4>
+            </div>
+            <div class="col-xs-2 pull-right">
+
+                <button type="button" class="btn btn-link btn-lg">
+                    <span class="glyphicon glyphicon-ok"> </span>
+                </button>
+
+
+                <button type="button" class="btn btn-link btn-lg ">
+                    <span class="glyphicon glyphicon glyphicon-remove"> </span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col-sm-12 bg-white jobPost">
+        <div class="row">
+
+            <div class="col-xs-3">
+                <img class="img-responsive" src="https://www.tibco.com/sites/tibco/files/2016-12/Vestas%20Logo_color%20%281%29_0.png">
+            </div>
+            <div class="col-xs-7">
+                <h4 class="company-Name"><strong>Fangende tekst</strong></h4><h5><strong>Company name</strong></h5><h4><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel sem lorem. Sed et interdum ipsum. Nullam nibh dolor, interdum sed tristique non, consectetur sed elit. Ut eu feugiat velit, ac tincidunt lectus. Sed at odio quis arcu euismod viverra. Integer non aliquam nibh. Duis eu libero dapibus, volutpat leo at, aliquet ligula.</small></h4>
+            </div>
+            <div class="col-xs-2 pull-right">
+
+                <button type="button" class="btn btn-link btn-lg">
+                    <span class="glyphicon glyphicon-ok"> </span>
+                </button>
+
+
+                <button type="button" class="btn btn-link btn-lg ">
+                    <span class="glyphicon glyphicon glyphicon-remove"> </span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>

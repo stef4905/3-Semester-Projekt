@@ -24,7 +24,22 @@ namespace DataAccessLayer
 
         public JobCategory Get(int id)
         {
-            throw new NotImplementedException();
+            JobCategory jobCategory = new JobCategory();
+            using (SqlConnection connection = conn.OpenConnection())
+            {
+                using (SqlCommand cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM JobCategories WHERE Id = @Id";
+                    cmd.Parameters.AddWithValue("Id", id);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        jobCategory.Id = (int)reader["Id"];
+                        jobCategory.Title = (string)reader["Title"];
+                    }
+                    return jobCategory;
+                }
+            }
         }
 
         /// <summary>

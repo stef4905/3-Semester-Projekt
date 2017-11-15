@@ -13,7 +13,7 @@ namespace UnitTest.DataAccessLayer
         {
             //Arrange
             DbJobApplication dbJobApplication = new DbJobApplication();
-            JobApplication jobApplication = new JobApplication(1, "Title", "Description", 15);
+            JobApplication jobApplication = new JobApplication(5, "Title", "Description", 15);
 
             //Act
             bool inserted = dbJobApplication.Create(jobApplication);
