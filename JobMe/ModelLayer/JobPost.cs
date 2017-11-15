@@ -44,9 +44,9 @@ namespace ModelLayer
         /// <param name="address"></param>
         /// <param name="company"></param>
         /// <param name="jobCategory"></param>
-        public JobPost(string title, string description, DateTime startDate, DateTime endDate, string jobTitle, WorkHours workHours, string address, Company company, JobCategory jobCategory)
+        public JobPost(int id, string title, string description, DateTime startDate, DateTime endDate, string jobTitle, WorkHours workHours, string address, Company company, JobCategory jobCategory)
         {
-
+            Id = id;
             Title = title;
             Description = description;
             StartDate = startDate;

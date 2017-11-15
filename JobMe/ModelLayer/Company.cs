@@ -51,5 +51,22 @@ namespace ModelLayer
             Password = password;
         }
 
+        public Company(int id, string email, string password, int phone, string address, string country, string imageURL, string description, string bannerURL, int maxRadius, string homepage, string companyName, int cVR, BusinessType businessType)
+        {
+            Id = id;
+            Email = email;
+            Password = password;
+            Phone = phone;
+            Address = address;
+            Country = country;
+            ImageURL = imageURL;
+            Description = description;
+            BannerURL = bannerURL;
+            MaxRadius = maxRadius;
+            Homepage = homepage;
+            CompanyName = companyName;
+            CVR = cVR;
+            this.businessType = businessType;
+        }
     }
 }
