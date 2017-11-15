@@ -72,7 +72,6 @@ namespace DataAccessLayer
                             Type = (string)reader["Type"]
                         };
                         workHoursList.Add(workHours);
-
                     }
                 }
             }

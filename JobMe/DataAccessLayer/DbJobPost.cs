@@ -26,8 +26,6 @@ namespace DataAccessLayer
         {
             using (SqlConnection connection = conn.OpenConnection())
             {
-
-
                 try
                 {
                     using (SqlCommand cmd = connection.CreateCommand())
@@ -42,20 +40,16 @@ namespace DataAccessLayer
                         cmd.Parameters.AddWithValue("Address", obj.Address);
                         cmd.Parameters.AddWithValue("CompanyId", obj.company.Id);
                         cmd.Parameters.AddWithValue("JobCategoryId", obj.jobCategory.Id);
-
                         cmd.ExecuteNonQuery();
                         return true;
                     }
-
-
                 }
                 catch (SqlException)
                 {
                     return false;
-
                 }
             }
-            }
+         }
 
 
       
