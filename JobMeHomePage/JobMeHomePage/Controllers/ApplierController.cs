@@ -47,19 +47,22 @@ namespace JobMeHomePage.Controllers
             
             return null;
         }
-
-        public ActionResult _JobCV() {
-            //Get the jobcv from the profile currently logged in
+        public ActionResult JobCV()
+        {
+            return View();
+             //Get the jobcv from the profile currently logged in
             //Return view with the JobCV object
-            return PartialView();
-
-
             //If button "Gem oplysninger" is pressed get all information from the site
             //Assign the infomation to the JobCV object for the profile
             //Update in database
 
             //If button "Annuler/Gå tilbage" is pressed, dispose all changes
             //Return user to profile site
+        }
+        public ActionResult _JobCV() {
+           
+            return PartialView();
+           
 
         }
 
