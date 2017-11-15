@@ -88,7 +88,7 @@ namespace DataAccessLayer
                         jobPost.workHours = dbWorkHour.Get((int)reader["WorkHoursId"]);
                         jobPost.Address = (string)reader["Address"];
                         jobPost.company = dbCompany.Get((int)reader["CompanyId"]);
-                        jobPost.jobCategory = dbJobCategory.Get((int)reader["JobCategoryId"])
+                        jobPost.jobCategory = dbJobCategory.Get((int)reader["JobCategoryId"]);
                     };
                     return jobPost;
                 }
