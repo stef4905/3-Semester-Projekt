@@ -48,10 +48,10 @@ namespace JobMeHomePage.Controllers
             return null;
         }
 
-        public ActionResult JobCV() {
+        public ActionResult _JobCV() {
             //Get the jobcv from the profile currently logged in
             //Return view with the JobCV object
-            return View();
+            return PartialView();
 
 
             //If button "Gem oplysninger" is pressed get all information from the site
@@ -72,6 +72,11 @@ namespace JobMeHomePage.Controllers
         public ActionResult JobApplication()
         {
             return View();
+        }
+
+        public ActionResult _JobApplication()
+        {
+            return PartialView();
         }
     }
 }
