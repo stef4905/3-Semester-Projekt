@@ -84,7 +84,7 @@ namespace DataAccessLayer
                         {
                             Id = (int)reader["Id"],
                             Title = (string)reader["Title"],
-                            Description = (string)reader["Description"],
+                            Description = (string)reader["Description"], 
                             StartDate = (DateTime)reader["StartDate"],
                             EndDate = (DateTime)reader["EndDate"],
                             JobTitle = (string)reader["JobTitle"],
