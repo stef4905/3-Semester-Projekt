@@ -62,7 +62,7 @@
     <Compile Include="DataAccessLayer\DBApplierTest.cs" />
     <Compile Include="DataAccessLayer\DBCompanyTest.cs" />
     <Compile Include="DataAccessLayer\DBJobCVTest.cs" />
-    <Compile Include="DataAccessLayer\DBJobPostTest.cs" />
+    <Compile Include="DataAccessLayer\DBJobApplicationTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

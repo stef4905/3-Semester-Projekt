@@ -46,6 +46,7 @@
     <Compile Include="DbConnection.cs" />
     <Compile Include="DbJobApplication.cs" />
     <Compile Include="DbJobCategory.cs" />
+    <Compile Include="DbJobPost.cs" />
     <Compile Include="DbWorkHour.cs" />
     <Compile Include="IDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

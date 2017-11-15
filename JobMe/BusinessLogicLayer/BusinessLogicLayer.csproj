@@ -46,6 +46,7 @@
     <Compile Include="JobApplicationCtr.cs" />
     <Compile Include="JobCategoryCtr.cs" />
     <Compile Include="JobCVCtr.cs" />
+    <Compile Include="JobPostCtr.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WorkHoursCtr.cs" />
   </ItemGroup>
