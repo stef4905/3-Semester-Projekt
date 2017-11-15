@@ -20,10 +20,11 @@ namespace DataAccessLayer
                 {
                     try
                     {
-                        //cmd.CommandText = "INSERT INTO JobCV (Title, ApplierId) VALUES (@Title, @ApplierId)";
-                        //cmd.Parameters.AddWithValue("Title", obj.Title);
-                        //cmd.Parameters.AddWithValue("ApplierId", obj.ApplierId);
-                        //cmd.ExecuteNonQuery();
+                        cmd.CommandText = "INSERT INTO JobApplication (Title, Description, ApplierId) VALUES (@Title, @Description, @ApplierId)";
+                        cmd.Parameters.AddWithValue("Title", obj.Title);
+                        cmd.Parameters.AddWithValue("Description", obj.Title);
+                        cmd.Parameters.AddWithValue("ApplierId", obj.ApplierId);
+                        cmd.ExecuteNonQuery();
                         return true;
                     }
                     catch (SqlException)
