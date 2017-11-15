@@ -8,10 +8,199 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JobMeHomePage.CompanyServiceReference {
+namespace JobMeHomePage.JobPostServiceReference {
     using System.Runtime.Serialization;
     using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="JobPost", Namespace="http://schemas.datacontract.org/2004/07/ModelLayer")]
+    [System.SerializableAttribute()]
+    public partial class JobPost : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AddressField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime EndDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string JobTitleField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime StartDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TitleField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private JobMeHomePage.JobPostServiceReference.Company companyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private JobMeHomePage.JobPostServiceReference.JobCategory jobCategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private JobMeHomePage.JobPostServiceReference.WorkHours workHoursField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Address {
+            get {
+                return this.AddressField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AddressField, value) != true)) {
+                    this.AddressField = value;
+                    this.RaisePropertyChanged("Address");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime EndDate {
+            get {
+                return this.EndDateField;
+            }
+            set {
+                if ((this.EndDateField.Equals(value) != true)) {
+                    this.EndDateField = value;
+                    this.RaisePropertyChanged("EndDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string JobTitle {
+            get {
+                return this.JobTitleField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.JobTitleField, value) != true)) {
+                    this.JobTitleField = value;
+                    this.RaisePropertyChanged("JobTitle");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime StartDate {
+            get {
+                return this.StartDateField;
+            }
+            set {
+                if ((this.StartDateField.Equals(value) != true)) {
+                    this.StartDateField = value;
+                    this.RaisePropertyChanged("StartDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Title {
+            get {
+                return this.TitleField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TitleField, value) != true)) {
+                    this.TitleField = value;
+                    this.RaisePropertyChanged("Title");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public JobMeHomePage.JobPostServiceReference.Company company {
+            get {
+                return this.companyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.companyField, value) != true)) {
+                    this.companyField = value;
+                    this.RaisePropertyChanged("company");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public JobMeHomePage.JobPostServiceReference.JobCategory jobCategory {
+            get {
+                return this.jobCategoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.jobCategoryField, value) != true)) {
+                    this.jobCategoryField = value;
+                    this.RaisePropertyChanged("jobCategory");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public JobMeHomePage.JobPostServiceReference.WorkHours workHours {
+            get {
+                return this.workHoursField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.workHoursField, value) != true)) {
+                    this.workHoursField = value;
+                    this.RaisePropertyChanged("workHours");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
@@ -62,7 +251,7 @@ namespace JobMeHomePage.CompanyServiceReference {
         private int PhoneField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private JobMeHomePage.CompanyServiceReference.BusinessType businessTypeField;
+        private JobMeHomePage.JobPostServiceReference.BusinessType businessTypeField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -244,7 +433,7 @@ namespace JobMeHomePage.CompanyServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public JobMeHomePage.CompanyServiceReference.BusinessType businessType {
+        public JobMeHomePage.JobPostServiceReference.BusinessType businessType {
             get {
                 return this.businessTypeField;
             }
@@ -252,256 +441,6 @@ namespace JobMeHomePage.CompanyServiceReference {
                 if ((object.ReferenceEquals(this.businessTypeField, value) != true)) {
                     this.businessTypeField = value;
                     this.RaisePropertyChanged("businessType");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="BusinessType", Namespace="http://schemas.datacontract.org/2004/07/ModelLayer")]
-    [System.SerializableAttribute()]
-    public partial class BusinessType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TypeField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Type {
-            get {
-                return this.TypeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TypeField, value) != true)) {
-                    this.TypeField = value;
-                    this.RaisePropertyChanged("Type");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="JobPost", Namespace="http://schemas.datacontract.org/2004/07/ModelLayer")]
-    [System.SerializableAttribute()]
-    public partial class JobPost : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string AddressField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescriptionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime EndDateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string JobTitleField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime StartDateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TitleField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private JobMeHomePage.CompanyServiceReference.Company companyField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private JobMeHomePage.CompanyServiceReference.JobCategory jobCategoryField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private JobMeHomePage.CompanyServiceReference.WorkHours workHoursField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Address {
-            get {
-                return this.AddressField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.AddressField, value) != true)) {
-                    this.AddressField = value;
-                    this.RaisePropertyChanged("Address");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description {
-            get {
-                return this.DescriptionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
-                    this.DescriptionField = value;
-                    this.RaisePropertyChanged("Description");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime EndDate {
-            get {
-                return this.EndDateField;
-            }
-            set {
-                if ((this.EndDateField.Equals(value) != true)) {
-                    this.EndDateField = value;
-                    this.RaisePropertyChanged("EndDate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string JobTitle {
-            get {
-                return this.JobTitleField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.JobTitleField, value) != true)) {
-                    this.JobTitleField = value;
-                    this.RaisePropertyChanged("JobTitle");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime StartDate {
-            get {
-                return this.StartDateField;
-            }
-            set {
-                if ((this.StartDateField.Equals(value) != true)) {
-                    this.StartDateField = value;
-                    this.RaisePropertyChanged("StartDate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Title {
-            get {
-                return this.TitleField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TitleField, value) != true)) {
-                    this.TitleField = value;
-                    this.RaisePropertyChanged("Title");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public JobMeHomePage.CompanyServiceReference.Company company {
-            get {
-                return this.companyField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.companyField, value) != true)) {
-                    this.companyField = value;
-                    this.RaisePropertyChanged("company");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public JobMeHomePage.CompanyServiceReference.JobCategory jobCategory {
-            get {
-                return this.jobCategoryField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.jobCategoryField, value) != true)) {
-                    this.jobCategoryField = value;
-                    this.RaisePropertyChanged("jobCategory");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public JobMeHomePage.CompanyServiceReference.WorkHours workHours {
-            get {
-                return this.workHoursField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.workHoursField, value) != true)) {
-                    this.workHoursField = value;
-                    this.RaisePropertyChanged("workHours");
                 }
             }
         }
@@ -638,91 +577,152 @@ namespace JobMeHomePage.CompanyServiceReference {
         }
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CompanyServiceReference.ICompanyService")]
-    public interface ICompanyService {
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BusinessType", Namespace="http://schemas.datacontract.org/2004/07/ModelLayer")]
+    [System.SerializableAttribute()]
+    public partial class BusinessType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/Create", ReplyAction="http://tempuri.org/ICompanyService/CreateResponse")]
-        void Create(JobMeHomePage.CompanyServiceReference.Company company);
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/Create", ReplyAction="http://tempuri.org/ICompanyService/CreateResponse")]
-        System.Threading.Tasks.Task CreateAsync(JobMeHomePage.CompanyServiceReference.Company company);
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/CreateJobPost", ReplyAction="http://tempuri.org/ICompanyService/CreateJobPostResponse")]
-        void CreateJobPost(JobMeHomePage.CompanyServiceReference.JobPost jobPost);
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TypeField;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/CreateJobPost", ReplyAction="http://tempuri.org/ICompanyService/CreateJobPostResponse")]
-        System.Threading.Tasks.Task CreateJobPostAsync(JobMeHomePage.CompanyServiceReference.JobPost jobPost);
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/GetlAllWorkHours", ReplyAction="http://tempuri.org/ICompanyService/GetlAllWorkHoursResponse")]
-        JobMeHomePage.CompanyServiceReference.WorkHours[] GetlAllWorkHours();
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/GetlAllWorkHours", ReplyAction="http://tempuri.org/ICompanyService/GetlAllWorkHoursResponse")]
-        System.Threading.Tasks.Task<JobMeHomePage.CompanyServiceReference.WorkHours[]> GetlAllWorkHoursAsync();
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Type {
+            get {
+                return this.TypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TypeField, value) != true)) {
+                    this.TypeField = value;
+                    this.RaisePropertyChanged("Type");
+                }
+            }
+        }
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/GetAllJobCategories", ReplyAction="http://tempuri.org/ICompanyService/GetAllJobCategoriesResponse")]
-        JobMeHomePage.CompanyServiceReference.JobCategory[] GetAllJobCategories();
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/GetAllJobCategories", ReplyAction="http://tempuri.org/ICompanyService/GetAllJobCategoriesResponse")]
-        System.Threading.Tasks.Task<JobMeHomePage.CompanyServiceReference.JobCategory[]> GetAllJobCategoriesAsync();
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ICompanyServiceChannel : JobMeHomePage.CompanyServiceReference.ICompanyService, System.ServiceModel.IClientChannel {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="JobPostServiceReference.IJobPostService")]
+    public interface IJobPostService {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJobPostService/GetAllJobPost", ReplyAction="http://tempuri.org/IJobPostService/GetAllJobPostResponse")]
+        JobMeHomePage.JobPostServiceReference.JobPost[] GetAllJobPost();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJobPostService/GetAllJobPost", ReplyAction="http://tempuri.org/IJobPostService/GetAllJobPostResponse")]
+        System.Threading.Tasks.Task<JobMeHomePage.JobPostServiceReference.JobPost[]> GetAllJobPostAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJobPostService/CreateJobPost", ReplyAction="http://tempuri.org/IJobPostService/CreateJobPostResponse")]
+        void CreateJobPost(JobMeHomePage.JobPostServiceReference.JobPost jobPost);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJobPostService/CreateJobPost", ReplyAction="http://tempuri.org/IJobPostService/CreateJobPostResponse")]
+        System.Threading.Tasks.Task CreateJobPostAsync(JobMeHomePage.JobPostServiceReference.JobPost jobPost);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJobPostService/GetlAllWorkHours", ReplyAction="http://tempuri.org/IJobPostService/GetlAllWorkHoursResponse")]
+        JobMeHomePage.JobPostServiceReference.WorkHours[] GetlAllWorkHours();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJobPostService/GetlAllWorkHours", ReplyAction="http://tempuri.org/IJobPostService/GetlAllWorkHoursResponse")]
+        System.Threading.Tasks.Task<JobMeHomePage.JobPostServiceReference.WorkHours[]> GetlAllWorkHoursAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJobPostService/GetAllJobCategories", ReplyAction="http://tempuri.org/IJobPostService/GetAllJobCategoriesResponse")]
+        JobMeHomePage.JobPostServiceReference.JobCategory[] GetAllJobCategories();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJobPostService/GetAllJobCategories", ReplyAction="http://tempuri.org/IJobPostService/GetAllJobCategoriesResponse")]
+        System.Threading.Tasks.Task<JobMeHomePage.JobPostServiceReference.JobCategory[]> GetAllJobCategoriesAsync();
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface IJobPostServiceChannel : JobMeHomePage.JobPostServiceReference.IJobPostService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CompanyServiceClient : System.ServiceModel.ClientBase<JobMeHomePage.CompanyServiceReference.ICompanyService>, JobMeHomePage.CompanyServiceReference.ICompanyService {
+    public partial class JobPostServiceClient : System.ServiceModel.ClientBase<JobMeHomePage.JobPostServiceReference.IJobPostService>, JobMeHomePage.JobPostServiceReference.IJobPostService {
         
-        public CompanyServiceClient() {
+        public JobPostServiceClient() {
         }
         
-        public CompanyServiceClient(string endpointConfigurationName) : 
+        public JobPostServiceClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public CompanyServiceClient(string endpointConfigurationName, string remoteAddress) : 
+        public JobPostServiceClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public CompanyServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public JobPostServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public CompanyServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public JobPostServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
-        public void Create(JobMeHomePage.CompanyServiceReference.Company company) {
-            base.Channel.Create(company);
+        public JobMeHomePage.JobPostServiceReference.JobPost[] GetAllJobPost() {
+            return base.Channel.GetAllJobPost();
         }
         
-        public System.Threading.Tasks.Task CreateAsync(JobMeHomePage.CompanyServiceReference.Company company) {
-            return base.Channel.CreateAsync(company);
+        public System.Threading.Tasks.Task<JobMeHomePage.JobPostServiceReference.JobPost[]> GetAllJobPostAsync() {
+            return base.Channel.GetAllJobPostAsync();
         }
         
-        public void CreateJobPost(JobMeHomePage.CompanyServiceReference.JobPost jobPost) {
+        public void CreateJobPost(JobMeHomePage.JobPostServiceReference.JobPost jobPost) {
             base.Channel.CreateJobPost(jobPost);
         }
         
-        public System.Threading.Tasks.Task CreateJobPostAsync(JobMeHomePage.CompanyServiceReference.JobPost jobPost) {
+        public System.Threading.Tasks.Task CreateJobPostAsync(JobMeHomePage.JobPostServiceReference.JobPost jobPost) {
             return base.Channel.CreateJobPostAsync(jobPost);
         }
         
-        public JobMeHomePage.CompanyServiceReference.WorkHours[] GetlAllWorkHours() {
+        public JobMeHomePage.JobPostServiceReference.WorkHours[] GetlAllWorkHours() {
             return base.Channel.GetlAllWorkHours();
         }
         
-        public System.Threading.Tasks.Task<JobMeHomePage.CompanyServiceReference.WorkHours[]> GetlAllWorkHoursAsync() {
+        public System.Threading.Tasks.Task<JobMeHomePage.JobPostServiceReference.WorkHours[]> GetlAllWorkHoursAsync() {
             return base.Channel.GetlAllWorkHoursAsync();
         }
         
-        public JobMeHomePage.CompanyServiceReference.JobCategory[] GetAllJobCategories() {
+        public JobMeHomePage.JobPostServiceReference.JobCategory[] GetAllJobCategories() {
             return base.Channel.GetAllJobCategories();
         }
         
-        public System.Threading.Tasks.Task<JobMeHomePage.CompanyServiceReference.JobCategory[]> GetAllJobCategoriesAsync() {
+        public System.Threading.Tasks.Task<JobMeHomePage.JobPostServiceReference.JobCategory[]> GetAllJobCategoriesAsync() {
             return base.Channel.GetAllJobCategoriesAsync();
         }
     }
