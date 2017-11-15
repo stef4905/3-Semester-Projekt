@@ -11,6 +11,11 @@ namespace DataAccessLayer
     class DbJobApplication : IDataAccess<JobApplication>
     {
         DbConnection conn = new DbConnection();
+        /// <summary>
+        /// Create method!
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public bool Create(JobApplication obj)
 
         {
