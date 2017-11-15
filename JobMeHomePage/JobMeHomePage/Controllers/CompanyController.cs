@@ -92,5 +92,10 @@ namespace JobMeHomePage.Controllers
 
         }
 
+        public ActionResult JobPost()
+        {
+            return View();
+        }
+
     }
 }

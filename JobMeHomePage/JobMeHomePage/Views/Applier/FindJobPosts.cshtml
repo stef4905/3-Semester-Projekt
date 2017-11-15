@@ -1,13 +1,13 @@
 ﻿@model JobMeHomePage.Models.VMJobPostWorkHoursJobCategory
 @{
     ViewBag.Title = "FindJobPosts";
+   
     Layout = "~/Views/Shared/_LayoutProfile.cshtml";
 }
 
 
-
 <h1>Find job</h1>
-<!-- #region Search -->
+<!-- #region Search! -->
 <form action="/Applier/FindJobPosts" method="post">
     <div class="row">
 
@@ -36,7 +36,7 @@
 
                             <div class="input-group-addon"> Km</div>
                             <select class="form-control" name="km" id="km">
-                                <option value="5">5</option>
+                                <option value="0">50+</option>
                                 <option value="10">10</option>
                                 <option value="20">20</option>
                                 <option value="30">30</option>
@@ -87,6 +87,10 @@
     </div>
 </form>
 
+<h2>@ViewBag.SearchField</h2>
+
+
+
 <!-- #region Searched items -->
 
 
@@ -123,55 +127,4 @@
 
 
     }
-    <div class="col-sm-12 bg-white jobPost">
-        <div class="row">
-
-            <div class="col-xs-3">
-                <img class="img-responsive" src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c6/Danfoss.svg/1200px-Danfoss.svg.png">
-            </div>
-            <div class="col-xs-7">
-                <h4 class="company-Name"><strong>Fangende tekst</strong></h4><h5><strong>Company name</strong></h5><h4><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel sem lorem. Sed et interdum ipsum. Nullam nibh dolor, interdum sed tristique non, consectetur sed elit. Ut eu feugiat velit, ac tincidunt lectus. Sed at odio quis arcu euismod viverra. Integer non aliquam nibh. Duis eu libero dapibus, volutpat leo at, aliquet ligula.</small></h4>
-            </div>
-            <div class="col-xs-2 pull-right">
-
-                <button type="button" class="btn btn-link btn-lg">
-                    <span class="glyphicon glyphicon-ok"> </span>
-                </button>
-
-
-                <button type="button" class="btn btn-link btn-lg ">
-                    <span class="glyphicon glyphicon glyphicon-remove"> </span>
-                </button>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-
-
-<div class="row">
-    <div class="col-sm-12 bg-white jobPost">
-        <div class="row">
-
-            <div class="col-xs-3">
-                <img class="img-responsive" src="https://www.tibco.com/sites/tibco/files/2016-12/Vestas%20Logo_color%20%281%29_0.png">
-            </div>
-            <div class="col-xs-7">
-                <h4 class="company-Name"><strong>Fangende tekst</strong></h4><h5><strong>Company name</strong></h5><h4><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel sem lorem. Sed et interdum ipsum. Nullam nibh dolor, interdum sed tristique non, consectetur sed elit. Ut eu feugiat velit, ac tincidunt lectus. Sed at odio quis arcu euismod viverra. Integer non aliquam nibh. Duis eu libero dapibus, volutpat leo at, aliquet ligula.</small></h4>
-            </div>
-            <div class="col-xs-2 pull-right">
-
-                <button type="button" class="btn btn-link btn-lg">
-                    <span class="glyphicon glyphicon-ok"> </span>
-                </button>
-
-
-                <button type="button" class="btn btn-link btn-lg ">
-                    <span class="glyphicon glyphicon glyphicon-remove"> </span>
-                </button>
-            </div>
-
-        </div>
-    </div>
-</div>
+   

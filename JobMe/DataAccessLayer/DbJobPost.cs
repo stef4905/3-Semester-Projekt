@@ -49,19 +49,50 @@ namespace DataAccessLayer
                     return false;
                 }
             }
-         }
+        }
 
 
-      
-       
+
+
         public void Delete(int id)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Returns a JobPost Object from the database
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public JobPost Get(int id)
         {
-            throw new NotImplementedException();
+            DbWorkHour dbWorkHour = new DbWorkHour();
+            DbCompany dbCompany = new DbCompany();
+            DbJobCategory dbJobCategory = new DbJobCategory();
+            JobPost jobPost = new JobPost();
+            using (SqlConnection connection = conn.OpenConnection())
+            {
+                using (SqlCommand cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM JobPost WHERE Id = @Id";
+                    cmd.Parameters.AddWithValue("Id", id);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        jobPost.Id = (int)reader["Id"];
+                        jobPost.Title = (string)reader["Title"];
+                        jobPost.Description = (string)reader["Description"];
+                        jobPost.StartDate = (DateTime)reader["StartDate"];
+                        jobPost.EndDate = (DateTime)reader["EndDate"];
+                        jobPost.JobTitle = (string)reader["JobTitle"];
+                        jobPost.workHours = dbWorkHour.Get((int)reader["WorkHoursId"]);
+                        jobPost.Address = (string)reader["Address"];
+                        jobPost.company = dbCompany.Get((int)reader["CompanyId"]);
+                        jobPost.jobCategory = dbJobCategory.Get((int)reader["JobCategoryId"]);
+                    };
+                    return jobPost;
+                }
+            }
         }
 
         /// <summary>
@@ -73,12 +104,12 @@ namespace DataAccessLayer
             List<JobPost> jobPostList = new List<JobPost>();
             using (SqlConnection connection = conn.OpenConnection())
             {
-               
+
                 using (SqlCommand cmd = connection.CreateCommand())
                 {
                     cmd.CommandText = "SELECT * FROM JobPost";
                     SqlDataReader reader = cmd.ExecuteReader();
-                    
+
                     while (reader.Read())
                     {
                         DbWorkHour dbWorkHour = new DbWorkHour();
