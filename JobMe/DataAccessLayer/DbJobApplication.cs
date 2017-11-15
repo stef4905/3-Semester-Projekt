@@ -13,7 +13,7 @@ namespace DataAccessLayer
         DbConnection conn = new DbConnection();
 /// <summary>
 /// Creates a jobapplication, not quite sure if Id needs to be taken with.
-/// But it's sure nice to have for the companies with many applications.
+/// But it's sure nice to have for the companies with many applications!
 /// </summary>
 /// <param name="obj"></param>
 /// <returns></returns>
