@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="U2AJF8JOQxYdXLOkhzEhCRKhFn4=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="kqbWDvdcY+5I1+ITwWwuFLwAl7s=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IApplierService">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IApplierService" contract="ApplierServiceReference.IApplierService" bindingType="basicHttpBinding" address="http://localhost:8723/Design_Time_Addresses/WCFJobMe/ApplierService/" bindingConfiguration="BasicHttpBinding_IApplierService">
+    <endpoint name="BasicHttpBinding_IApplierService" contract="ApplierServiceReference.IApplierService" bindingType="basicHttpBinding" address="http://localhost:8723/Design_Time_Addresses/WCFJobMeService/ApplierService/" bindingConfiguration="BasicHttpBinding_IApplierService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:8723/Design_Time_Addresses/WCFJobMe/ApplierService/</serializedValue>
+          <serializedValue>http://localhost:8723/Design_Time_Addresses/WCFJobMeService/ApplierService/</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

@@ -33,7 +33,7 @@
   </wsdl:binding>
   <wsdl:service name="ApplierService">
     <wsdl:port name="BasicHttpBinding_IApplierService" binding="tns:BasicHttpBinding_IApplierService">
-      <soap:address location="http://localhost:8723/Design_Time_Addresses/WCFJobMe/ApplierService/" />
+      <soap:address location="http://localhost:8723/Design_Time_Addresses/WCFJobMeService/ApplierService/" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
