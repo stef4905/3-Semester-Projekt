@@ -26,8 +26,6 @@ namespace DataAccessLayer
         {
             using (SqlConnection connection = conn.OpenConnection())
             {
-
-
                 try
                 {
                     using (SqlCommand cmd = connection.CreateCommand())
@@ -42,20 +40,16 @@ namespace DataAccessLayer
                         cmd.Parameters.AddWithValue("Address", obj.Address);
                         cmd.Parameters.AddWithValue("CompanyId", obj.company.Id);
                         cmd.Parameters.AddWithValue("JobCategoryId", obj.jobCategory.Id);
-
                         cmd.ExecuteNonQuery();
                         return true;
                     }
-
-
                 }
                 catch (SqlException)
                 {
                     return false;
-
                 }
             }
-            }
+         }
 
 
       
@@ -72,7 +66,35 @@ namespace DataAccessLayer
 
         public List<JobPost> GetAll()
         {
-            throw new NotImplementedException();
+            using (SqlConnection connection = conn.OpenConnection())
+            {
+                using (SqlCommand cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM JobPost";
+                    var reader = cmd.ExecuteReader();
+                    DbWorkHour dbWorkHour = new DbWorkHour();
+
+                    while (reader.Read())
+                    {
+                        JobPost jobPost = new JobPost
+                        {
+                            Id = (int)reader["Id"],
+                            Title = (string)reader["Title"],
+                            Description = (string)reader["Description"],
+                            StartDate = (DateTime)reader["StartDate"],
+                            EndDate = (DateTime)reader["EndDate"],
+                            JobTitle = (string)reader["JobTitle"],
+                            workHours = dbWorkHour.Get((int)reader["WorkHoursId"]),
+                            Address = (string)reader["Address"],
+
+                            
+                            //Mangler at kunne trække Company, JobCategori & WorkHours 
+                            //objekterne med sig.
+                            
+                        };
+                    }
+                }
+            }
         }
 
         public void Update(JobPost obj)
