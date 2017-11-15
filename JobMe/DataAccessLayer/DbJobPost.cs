@@ -64,21 +64,26 @@ namespace DataAccessLayer
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Returns a list of all JobPost from the database
+        /// </summary>
+        /// <returns></returns>
         public List<JobPost> GetAll()
         {
             List<JobPost> jobPostList = new List<JobPost>();
             using (SqlConnection connection = conn.OpenConnection())
             {
+               
                 using (SqlCommand cmd = connection.CreateCommand())
                 {
                     cmd.CommandText = "SELECT * FROM JobPost";
-                    var reader = cmd.ExecuteReader();
-                    DbWorkHour dbWorkHour = new DbWorkHour();
-                    DbCompany dbCompany = new DbCompany();
-                    DbJobCategory dbJobCategory = new DbJobCategory();
-
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    
                     while (reader.Read())
                     {
+                        DbWorkHour dbWorkHour = new DbWorkHour();
+                        DbCompany dbCompany = new DbCompany();
+                        DbJobCategory dbJobCategory = new DbJobCategory();
                         JobPost jobPost = new JobPost
                         {
                             Id = (int)reader["Id"],
@@ -90,10 +95,7 @@ namespace DataAccessLayer
                             workHours = dbWorkHour.Get((int)reader["WorkHoursId"]),
                             Address = (string)reader["Address"],
                             company = dbCompany.Get((int)reader["CompanyId"]),
-                            jobCategory = dbJobCategory.Get((int)reader["JobCateoryId"])
-
-
-                            
+                            jobCategory = dbJobCategory.Get((int)reader["JobCategoryId"])
                         };
                         jobPostList.Add(jobPost);
                     }
