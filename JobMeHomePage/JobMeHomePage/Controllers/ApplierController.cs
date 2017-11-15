@@ -68,5 +68,10 @@ namespace JobMeHomePage.Controllers
         {
             return View();
         }
+
+        public ActionResult JobApplication()
+        {
+            return View();
+        }
     }
 }
