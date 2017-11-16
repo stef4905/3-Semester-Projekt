@@ -1,41 +1,42 @@
-﻿
+﻿@model JobMeHomePage.JobPostServiceReference.JobPost
 @{
     ViewBag.Title = "JobPost";
     Layout = "~/Views/Shared/_LayoutCompany.cshtml";
 }
 
 
-
 <!--#region jobPost infomation-->
 <div class="row">
-    <div class="col-sm-9" id="jobPostLeftContent">
-        <div class="row">
-            <div class="col-sm-8">
-                <!-- Basic contact info and jobpost info-->
-                <p id="jobPostTitle">Job titlen/beskrivelse</p>
-                <div class="jobPostBasicInfo">Annonce oprettet af (virksomhed) i (katagorien)</div>
-                <div class="jobPostBasicInfo">Ansættelse: Fultid</div>
-                <div class="jobPostBasicInfo">Ansøgnings periode: 15/11-2017 - 31/11-2017</div>
-                <div class="jobPostBasicInfo">Lokation: Østerbro 3H 1.8, 9000 Aalborg</div>
+	<div class="col-sm-9" id="jobPostLeftContent">
+		<div class="row">
+			<div class="col-sm-8">
+				<!-- Basic contact info and jobpost info-->
+				<p id="jobPostTitle">@Model.Title</p>
+				<div class="jobPostBasicInfo">Annonce oprettet af @Model.company.CompanyName i @Model.jobCategory.Title</div>
+				<div class="jobPostBasicInfo">Ansættelse: @Model.workHours.Type</div>
+				<div class="jobPostBasicInfo">Ansøgnings periode: @Model.StartDate - @Model.EndDate</div>
+				<div class="jobPostBasicInfo">Lokation: @Model.Address</div>
 
-            </div>
-            <div class="col-sm-4">
-                <!--Profile image from the company-->
-                <img src="https://www.ucn.dk/Files/Billeder/ucn/Om-UCN/Presse/ucn-logo-sort-500px.png" id="jobPostCompanyPic" height="75" />
-            </div>
-        </div>
-        <!--Seperator-->
-        <div class="row" id="seperator"></div>
+			</div>
+			<div class="col-sm-4">
+				<!--Profile image from the company-->
+				<img src="https://www.ucn.dk/Files/Billeder/ucn/Om-UCN/Presse/ucn-logo-sort-500px.png" id="jobPostCompanyPic" height="75" />
+			</div>
+		</div>
+		<!--Seperator-->
+		<div class="row" id="seperator"></div>
 
-        <div class="col-sm-2" id="descriptionText">Beskrivelse</div>
-        <div class="col-sm-10" id="descriptionBodyText">
-            Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. Sætningen blev gjordt kendt i 1960'erne med lanceringen af Letraset-ark, som indeholdt afsnit med Lorem Ipsum, og senere med layoutprogrammer som Aldus PageMaker, som også indeholdt en udgave af Lorem Ipsum.
-        </div>
-    </div>
-    <!--#endregion-->
-    <!--#region jobPost right infomation-->
-    <div class="col-sm-3" id="jobPostRightContent">
-        hej
-    </div>
+		<div class="col-sm-2" id="descriptionText">Beskrivelse</div>
+		<div class="col-sm-10" id="descriptionBodyText">
+			@Model.Description
+		</div>
+	</div>
+	<!--#endregion-->
+	<!--#region jobPost right infomation-->
+	<div class="col-sm-3" id="jobPostRightContent">
+		hej
+	</div>
 </div>
 <!--#endregion-->
+
+

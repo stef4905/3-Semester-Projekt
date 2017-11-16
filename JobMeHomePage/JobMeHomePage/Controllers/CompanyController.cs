@@ -92,9 +92,11 @@ namespace JobMeHomePage.Controllers
 
         }
 
-        public ActionResult JobPost()
+
+        public ActionResult JobPost(int id)
         {
-            return View();
+            JobPostServiceReference.JobPost jobPost = jobClient.Get(id);
+            return View(jobPost);
         }
 
     }
