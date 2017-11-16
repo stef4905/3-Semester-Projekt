@@ -23,9 +23,14 @@ namespace BusinessLogicLayer
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Returns the whole applier and Jobcategory list for the specific applier.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Applier Get(int id)
         {
-            throw new NotImplementedException();
+            return dbApplier.Get(id);
         }
 
         public List<Applier> GetAll()

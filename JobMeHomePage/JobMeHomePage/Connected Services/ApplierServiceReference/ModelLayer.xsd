@@ -16,7 +16,27 @@
       <xs:element minOccurs="0" name="MaxRadius" type="xs:int" />
       <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Status" type="xs:boolean" />
+      <xs:element minOccurs="0" name="jobCategoryList" nillable="true" type="tns:ArrayOfJobCategory" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Applier" nillable="true" type="tns:Applier" />
+  <xs:complexType name="ArrayOfJobCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="JobCategory" nillable="true" type="tns:JobCategory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfJobCategory" nillable="true" type="tns:ArrayOfJobCategory" />
+  <xs:complexType name="JobCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JobCategory" nillable="true" type="tns:JobCategory" />
+  <xs:complexType name="ArrayOfApplier">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Applier" nillable="true" type="tns:Applier" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfApplier" nillable="true" type="tns:ArrayOfApplier" />
 </xs:schema>

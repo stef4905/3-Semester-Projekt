@@ -25,5 +25,23 @@ namespace UnitTest.DataAccessLayer
             Assert.IsTrue(inserted);
 
         }
+
+        [TestMethod]
+
+        public void ApplierGetById()
+        {   
+            //Arrange
+            DbApplier dbApplier = new DbApplier();
+            Applier applier = new Applier();
+
+            //Act
+            applier = dbApplier.Get(2);
+
+            //Assert
+            Assert.AreEqual(applier.Id, 2);
+
+          
+
+        }
     }
 }

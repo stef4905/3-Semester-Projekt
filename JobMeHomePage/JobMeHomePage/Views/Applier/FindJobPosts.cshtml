@@ -1,7 +1,7 @@
 ﻿@model JobMeHomePage.Models.VMJobPostWorkHoursJobCategory
 @{
     ViewBag.Title = "FindJobPosts";
-   
+
     Layout = "~/Views/Shared/_LayoutProfile.cshtml";
 }
 
@@ -53,6 +53,7 @@
                             <div class="input-group-addon"> Job Type</div>
                             <select class="form-control" name="category" id="Category">
                                 <option value="0">Alle</option>
+
                                 @foreach (var Category in Model.JobCategoryList)
                                 {
                                     <option value="@Category.Id">@Category.Title</option>
@@ -94,12 +95,13 @@
 <!-- #region Searched items -->
 
 
-<div class="row">
+<div class="row ">
 
 
     @foreach (var JobPost in Model.JobPostList)
     {
-        <div class="col-sm-12 bg-white jobPost">
+
+        <div class="col-sm-12 bg-white jobPost content">
             <div class="row">
 
                 <div class="col-xs-3">
@@ -127,4 +129,35 @@
 
 
     }
-   
+</div>
+<div class="pagination"></div>
+
+@section scripts {
+
+    <script>
+            jQuery(function($) {
+                var items = $(".content");
+
+                var numItems = items.length;
+                var perPage = 10;
+
+                // only show the first 2 (or "first per_page") items initially
+                items.slice(perPage).hide();
+
+                // now setup pagination
+                $(".pagination").pagination({
+                    items: numItems,
+                    itemsOnPage: perPage,
+                    cssStyle: "light-theme",
+                    onPageClick: function(pageNumber) { // this is where the magic happens
+                        // someone changed page, lets hide/show trs appropriately
+                        var showFrom = perPage * (pageNumber - 1);
+                        var showTo = showFrom + perPage;
+
+                        items.hide() // first hide everything, then show for the new page
+                             .slice(showFrom, showTo).show();
+                    }
+                });
+            });
+      </script>
+    }

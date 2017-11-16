@@ -38,14 +38,22 @@ namespace ModelLayer
         public int Age { get; set; }
         [DataMember]
         public bool Status { get; set; }
+        [DataMember]
+        public List<JobCategory> jobCategoryList { get; set; }
 
-        
+
         public Applier(string email, string password, int maxRadius)
         {
            
             Email = email;
             Password = password;
             MaxRadius = maxRadius;
+        }
+
+        //Secondary empty constructor.
+        public Applier()
+        {
+
         }
     }
 }

@@ -144,6 +144,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Connected Services\ApplierServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\CompanyServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -165,20 +170,43 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\ApplierServiceReference\ModelLayer.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ApplierServiceReference\service.wsdl" />
+    <None Include="Connected Services\ApplierServiceReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ApplierServiceReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\CompanyServiceReference\configuration91.svcinfo" />
     <None Include="Connected Services\CompanyServiceReference\configuration.svcinfo" />
+    <None Include="Connected Services\ApplierServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\ApplierServiceReference\configuration.svcinfo" />
+    <None Include="Connected Services\ApplierServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Connected Services\CompanyServiceReference\JobMeHomePage.CompanyServiceReference.WorkHours.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\CompanyServiceReference\JobMeHomePage.CompanyServiceReference.JobCategory.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\CompanyServiceReference\ModelLayer1.xsd">
+    <None Include="Connected Services\CompanyServiceReference\ModelLayer.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CompanyServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\CompanyServiceReference\service.wsdl" />
+    <None Include="Connected Services\CompanyServiceReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CompanyServiceReference\service1.xsd">
+      <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\JobPostServiceReference\configuration91.svcinfo" />
     <None Include="Connected Services\JobPostServiceReference\configuration.svcinfo" />
@@ -191,42 +219,51 @@
     <Content Include="Connected Services\JobPostServiceReference\JobMeHomePage.JobPostServiceReference.WorkHours.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\JobPostServiceReference\ModelLayer1.xsd">
+    <None Include="Connected Services\JobPostServiceReference\ModelLayer.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\JobPostServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\image\JobMeHorizontal.png" />
+    <Content Include="Content\simplePagination.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Connected Services\CompanyServiceReference\service1.wsdl" />
-    <None Include="Connected Services\CompanyServiceReference\service2.xsd">
+    <None Include="Connected Services\JobPostServiceReference\service.wsdl" />
+    <None Include="Connected Services\JobPostServiceReference\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\CompanyServiceReference\service21.xsd">
+    <None Include="Connected Services\JobPostServiceReference\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\JobPostServiceReference\service1.wsdl" />
-    <None Include="Connected Services\JobPostServiceReference\service2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\JobPostServiceReference\service21.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-3.2.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.2.1.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
+    <Content Include="Scripts\jquery.simplePagination.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.2.1.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
@@ -265,22 +302,13 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ApplierServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\CompanyServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\JobPostServiceReference\" />
   </ItemGroup>

@@ -64,6 +64,9 @@ namespace JobMeHomePage.ApplierServiceReference {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool StatusField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private JobMeHomePage.ApplierServiceReference.JobCategory[] jobCategoryListField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -256,6 +259,80 @@ namespace JobMeHomePage.ApplierServiceReference {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public JobMeHomePage.ApplierServiceReference.JobCategory[] jobCategoryList {
+            get {
+                return this.jobCategoryListField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.jobCategoryListField, value) != true)) {
+                    this.jobCategoryListField = value;
+                    this.RaisePropertyChanged("jobCategoryList");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="JobCategory", Namespace="http://schemas.datacontract.org/2004/07/ModelLayer")]
+    [System.SerializableAttribute()]
+    public partial class JobCategory : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TitleField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Title {
+            get {
+                return this.TitleField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TitleField, value) != true)) {
+                    this.TitleField = value;
+                    this.RaisePropertyChanged("Title");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -275,6 +352,12 @@ namespace JobMeHomePage.ApplierServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplierService/Create", ReplyAction="http://tempuri.org/IApplierService/CreateResponse")]
         System.Threading.Tasks.Task CreateAsync(JobMeHomePage.ApplierServiceReference.Applier applier);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplierService/GetAllAppliers", ReplyAction="http://tempuri.org/IApplierService/GetAllAppliersResponse")]
+        JobMeHomePage.ApplierServiceReference.Applier[] GetAllAppliers();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplierService/GetAllAppliers", ReplyAction="http://tempuri.org/IApplierService/GetAllAppliersResponse")]
+        System.Threading.Tasks.Task<JobMeHomePage.ApplierServiceReference.Applier[]> GetAllAppliersAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -310,6 +393,14 @@ namespace JobMeHomePage.ApplierServiceReference {
         
         public System.Threading.Tasks.Task CreateAsync(JobMeHomePage.ApplierServiceReference.Applier applier) {
             return base.Channel.CreateAsync(applier);
+        }
+        
+        public JobMeHomePage.ApplierServiceReference.Applier[] GetAllAppliers() {
+            return base.Channel.GetAllAppliers();
+        }
+        
+        public System.Threading.Tasks.Task<JobMeHomePage.ApplierServiceReference.Applier[]> GetAllAppliersAsync() {
+            return base.Channel.GetAllAppliersAsync();
         }
     }
 }
