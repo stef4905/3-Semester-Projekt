@@ -312,3 +312,18 @@
 	width: 100%;
 	font-style: italic;
 }
+
+.seperatorJobBodyText {
+    height: 2px;
+    background-color: black;
+    opacity: 0.2;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.descriptionBodyText {
+   
+}
+.descriptionText{
+    
+}
