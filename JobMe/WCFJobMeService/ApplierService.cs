@@ -17,5 +17,10 @@ namespace WCFJobMeService
         {
             applierCtr.Create(applier);
         }
+
+        public List<Applier> GetAllAppliers()
+        {
+            return applierCtr.GetAll();
+        }
     }
 }

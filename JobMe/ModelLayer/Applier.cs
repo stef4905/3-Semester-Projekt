@@ -38,6 +38,7 @@ namespace ModelLayer
         public int Age { get; set; }
         [DataMember]
         public bool Status { get; set; }
+        [DataMember]
         public List<JobCategory> jobCategoryList { get; set; }
 
 

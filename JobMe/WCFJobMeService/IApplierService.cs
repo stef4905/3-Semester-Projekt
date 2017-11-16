@@ -15,6 +15,8 @@ namespace WCFJobMeService
         [OperationContract]
         void Create(Applier applier);
 
-
+        [OperationContract]
+        List<Applier> GetAllAppliers();
     }
+
 }
