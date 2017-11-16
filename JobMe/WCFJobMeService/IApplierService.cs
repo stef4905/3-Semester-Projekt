@@ -17,6 +17,9 @@ namespace WCFJobMeService
 
         [OperationContract]
         List<Applier> GetAllAppliers();
+
+        [OperationContract]
+        Applier GetApplier(int id);
     }
 
 }
