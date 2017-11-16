@@ -63,7 +63,7 @@ namespace DataAccessLayer
         /// Returns a JobPost Object from the database
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>jobPost</returns>
         public JobPost Get(int id)
         {
             DbWorkHour dbWorkHour = new DbWorkHour();
@@ -98,7 +98,7 @@ namespace DataAccessLayer
         /// <summary>
         /// Returns a list of all JobPost from the database
         /// </summary>
-        /// <returns></returns>
+        /// <returns>a jobPostList</returns>
         public List<JobPost> GetAll()
         {
             List<JobPost> jobPostList = new List<JobPost>();
