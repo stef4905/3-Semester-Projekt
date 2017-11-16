@@ -124,5 +124,16 @@ namespace JobMeHomePage.Controllers
         {
             return PartialView();
         }
+
+        public ActionResult ApplierProfile(int id)
+        {
+
+            Applier applier = client.GetApplier(id);
+
+            return View(applier);
+
+        }
+
+       
     }
 }

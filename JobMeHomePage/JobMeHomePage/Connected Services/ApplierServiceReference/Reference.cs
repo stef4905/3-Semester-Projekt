@@ -32,7 +32,13 @@ namespace JobMeHomePage.ApplierServiceReference {
         private string BannerURLField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime BirthdateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CountryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CurrentJobField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string DescriptionField;
@@ -117,6 +123,19 @@ namespace JobMeHomePage.ApplierServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Birthdate {
+            get {
+                return this.BirthdateField;
+            }
+            set {
+                if ((this.BirthdateField.Equals(value) != true)) {
+                    this.BirthdateField = value;
+                    this.RaisePropertyChanged("Birthdate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string Country {
             get {
                 return this.CountryField;
@@ -125,6 +144,19 @@ namespace JobMeHomePage.ApplierServiceReference {
                 if ((object.ReferenceEquals(this.CountryField, value) != true)) {
                     this.CountryField = value;
                     this.RaisePropertyChanged("Country");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CurrentJob {
+            get {
+                return this.CurrentJobField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CurrentJobField, value) != true)) {
+                    this.CurrentJobField = value;
+                    this.RaisePropertyChanged("CurrentJob");
                 }
             }
         }
@@ -358,6 +390,12 @@ namespace JobMeHomePage.ApplierServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplierService/GetAllAppliers", ReplyAction="http://tempuri.org/IApplierService/GetAllAppliersResponse")]
         System.Threading.Tasks.Task<JobMeHomePage.ApplierServiceReference.Applier[]> GetAllAppliersAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplierService/GetApplier", ReplyAction="http://tempuri.org/IApplierService/GetApplierResponse")]
+        JobMeHomePage.ApplierServiceReference.Applier GetApplier(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplierService/GetApplier", ReplyAction="http://tempuri.org/IApplierService/GetApplierResponse")]
+        System.Threading.Tasks.Task<JobMeHomePage.ApplierServiceReference.Applier> GetApplierAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -401,6 +439,14 @@ namespace JobMeHomePage.ApplierServiceReference {
         
         public System.Threading.Tasks.Task<JobMeHomePage.ApplierServiceReference.Applier[]> GetAllAppliersAsync() {
             return base.Channel.GetAllAppliersAsync();
+        }
+        
+        public JobMeHomePage.ApplierServiceReference.Applier GetApplier(int id) {
+            return base.Channel.GetApplier(id);
+        }
+        
+        public System.Threading.Tasks.Task<JobMeHomePage.ApplierServiceReference.Applier> GetApplierAsync(int id) {
+            return base.Channel.GetApplierAsync(id);
         }
     }
 }

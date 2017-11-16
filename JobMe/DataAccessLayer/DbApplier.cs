@@ -93,6 +93,8 @@ namespace DataAccessLayer
                         applier.LName = (string)reader["LName"];
                         applier.Age = (int)reader["Age"];
                         applier.Status = (bool)reader["Status"];
+                        applier.CurrentJob = (string)reader["CurrentJob"];
+                        applier.Birthdate = (DateTime)reader["Birthdate"];
                       }
                     //Closes the current reader for the applier.
                     reader.Close();
@@ -130,6 +132,15 @@ namespace DataAccessLayer
         public void Update(Applier entity)
         {
             throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Til login metode for applier. Se Ronni's Hashing example på Github.
+        /// </summary>
+        /// <returns></returns>
+        public Applier Login()
+        {
+            return null;
         }
     }
 }
