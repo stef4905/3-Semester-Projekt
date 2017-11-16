@@ -60,20 +60,65 @@ namespace DataAccessLayer
             //}
         }
 
+        /// <summary>
+        /// Is the method to Get the applier from the Database.
+        /// This includes all variables on Applier - except password.
+        /// This also includes jobcategory for the specific Applier.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Applier Get(int id)
         {
-            //using(SqlConnection connection = conn.OpenConnection())
-            //{
-            //    using (SqlCommand cmd = connection.CreateCommand())
-            //    {
-            //        cmd.CommandText = "SELECT * FROM Applier WHERE Id = @id";
-            //        cmd.Parameters.AddWithValue("id", id);
-            //        SqlDataReader reader = cmd.ExecuteReader();
-            //        bool isRead = reader.Read();
-            //        return new Applier(reader.getInt32(0), reader.GetString(1));
+            using (SqlConnection connection = conn.OpenConnection())
+            {
+                Applier applier = new Applier();
+                using (SqlCommand cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM Applier WHERE Id = @id";
+                    cmd.Parameters.AddWithValue("id", id);
+                    SqlDataReader reader = cmd.ExecuteReader();
+             
+                    
+                    if (reader.Read())
+                    {
+                        applier.Id = (int)reader["Id"];
+                        applier.Email = (string)reader["Email"];
+                        applier.Country = (string)reader["Country"];
+                        applier.Description = (string)reader["Description"];
+                        applier.BannerURL = (string)reader["BannerURL"];
+                        applier.ImageURL = (string)reader["ImageURL"];
+                        applier.MaxRadius = (int)reader["MaxRadius"];
+                        applier.HomePage = (string)reader["HomePage"];
+                        applier.FName = (string)reader["FName"];
+                        applier.LName = (string)reader["LName"];
+                        applier.Age = (int)reader["Age"];
+                        applier.Status = (bool)reader["Status"];
+                      }
+                    //Closes the current reader for the applier.
+                    reader.Close();
 
-            //    }
-            //}
+                    //Executes the JobCategory command for Applier.
+                    cmd.CommandText = "SELECT * FROM ApplierJobCategory WHERE ApplierId = @ApplierId";
+                    cmd.Parameters.AddWithValue("ApplierId", applier.Id);
+                    SqlDataReader readerA = cmd.ExecuteReader();
+
+                    List<JobCategory> jobcategoryList = new List<JobCategory>();
+                    while (readerA.Read())
+                    {
+                        DbJobCategory dbJobCategory = new DbJobCategory();
+
+                        JobCategory jobCategory = dbJobCategory.Get((int)readerA["JobcategoryId"]);
+
+                        jobcategoryList.Add(jobCategory);
+                    }
+                    //Sets the JobCategoryList equal to Applier JobCategoryList.
+                    applier.jobCategoryList = jobcategoryList;
+
+                    return applier;
+                    
+
+                }
+            }
             throw new NotImplementedException();
         }
 
