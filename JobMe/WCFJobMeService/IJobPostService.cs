@@ -23,5 +23,8 @@ namespace WCFJobMeService
 
         [OperationContract]
         List<JobCategory> GetAllJobCategories();
+
+        [OperationContract]
+        JobPost Get(int id);
     }
 }

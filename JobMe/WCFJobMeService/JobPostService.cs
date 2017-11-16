@@ -25,6 +25,11 @@ namespace WCFJobMeService
             jobPostCtr.Create(jobPost);
         }
 
+        public JobPost Get(int id)
+        {
+            return jobPostCtr.Get(id);
+        }
+
         /// <summary>
         /// Gets all objects and from the GetAll Method in the JobPostCtr Class
         /// And gets all the object from the database.

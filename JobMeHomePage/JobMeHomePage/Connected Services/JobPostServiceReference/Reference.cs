@@ -665,6 +665,12 @@ namespace JobMeHomePage.JobPostServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJobPostService/GetAllJobCategories", ReplyAction="http://tempuri.org/IJobPostService/GetAllJobCategoriesResponse")]
         System.Threading.Tasks.Task<JobMeHomePage.JobPostServiceReference.JobCategory[]> GetAllJobCategoriesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJobPostService/Get", ReplyAction="http://tempuri.org/IJobPostService/GetResponse")]
+        JobMeHomePage.JobPostServiceReference.JobPost Get(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJobPostService/Get", ReplyAction="http://tempuri.org/IJobPostService/GetResponse")]
+        System.Threading.Tasks.Task<JobMeHomePage.JobPostServiceReference.JobPost> GetAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -724,6 +730,14 @@ namespace JobMeHomePage.JobPostServiceReference {
         
         public System.Threading.Tasks.Task<JobMeHomePage.JobPostServiceReference.JobCategory[]> GetAllJobCategoriesAsync() {
             return base.Channel.GetAllJobCategoriesAsync();
+        }
+        
+        public JobMeHomePage.JobPostServiceReference.JobPost Get(int id) {
+            return base.Channel.Get(id);
+        }
+        
+        public System.Threading.Tasks.Task<JobMeHomePage.JobPostServiceReference.JobPost> GetAsync(int id) {
+            return base.Channel.GetAsync(id);
         }
     }
 }
