@@ -25,4 +25,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetApplier">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplierResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ModelLayer" minOccurs="0" name="GetApplierResult" nillable="true" type="q3:Applier" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

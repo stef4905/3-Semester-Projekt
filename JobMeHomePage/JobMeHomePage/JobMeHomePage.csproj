@@ -170,6 +170,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Connected Services\ApplierServiceReference\JobMeHomePage.ApplierServiceReference.Applier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\ApplierServiceReference\ModelLayer.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -297,6 +300,7 @@
     <Content Include="Views\Applier\_JobApplication.cshtml" />
     <Content Include="Views\Applier\_JobCV.cshtml" />
     <Content Include="Views\Company\JobPost.cshtml" />
+    <Content Include="Views\Applier\ApplierProfile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

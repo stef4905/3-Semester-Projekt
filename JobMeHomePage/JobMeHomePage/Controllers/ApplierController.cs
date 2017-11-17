@@ -92,7 +92,7 @@ namespace JobMeHomePage.Controllers
             f.company.CompanyName.ToLower().Contains(search.ToLower())))
             {
 
-                if (workHours == 0 && category == 00 && km == 0)
+                if (workHours == 0 && category == 0 && km == 0)
                 {
                     JobPostsList.Add(jobPosts);
 
@@ -124,5 +124,16 @@ namespace JobMeHomePage.Controllers
         {
             return PartialView();
         }
+
+        public ActionResult ApplierProfile(int id)
+        {
+
+            Applier applier = client.GetApplier(id);
+
+            return View(applier);
+
+        }
+
+       
     }
 }

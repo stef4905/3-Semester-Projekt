@@ -5,7 +5,9 @@
       <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Age" type="xs:int" />
       <xs:element minOccurs="0" name="BannerURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Birthdate" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrentJob" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="FName" nillable="true" type="xs:string" />

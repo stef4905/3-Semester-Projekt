@@ -39,6 +39,10 @@ namespace ModelLayer
         [DataMember]
         public bool Status { get; set; }
         [DataMember]
+        public string CurrentJob { get; set; }
+        [DataMember]
+        public DateTime Birthdate { get; set; }
+        [DataMember]
         public List<JobCategory> jobCategoryList { get; set; }
 
         /// <summary>
