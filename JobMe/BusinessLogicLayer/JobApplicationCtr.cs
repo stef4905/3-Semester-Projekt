@@ -11,6 +11,11 @@ namespace BusinessLogicLayer
     class JobApplicationCtr : IController<JobApplication>
     {
         private DbJobApplication dbJobApplication = new DbJobApplication();
+
+        /// <summary>
+        /// Creates a jobapplication by calling the method Jobapplication in DBAccesLayer
+        /// </summary>
+        /// <param name="obj"></param>
         public void Create(JobApplication obj)
         {
             dbJobApplication.Create(obj);

@@ -25,9 +25,9 @@ namespace ModelLayer
         /// <param name="title"></param>
         /// <param name="description"></param>
         /// <param name="applierId"></param>
-        public JobApplication(int id, string title, string description, int applierId)
+        public JobApplication(string title, string description, int applierId)
         {
-            this.Id = id;
+           
             this.Title = title;
             this.Description = description;
             this.ApplierId = applierId;

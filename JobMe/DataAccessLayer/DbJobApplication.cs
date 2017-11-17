@@ -12,8 +12,7 @@ namespace DataAccessLayer
     {
         DbConnection conn = new DbConnection();
 /// <summary>
-/// Creates a jobapplication, not quite sure if Id needs to be taken with.
-/// But it's sure nice to have for the companies with many applications!
+/// Creates a jobapplication in the database
 /// </summary>
 /// <param name="obj"></param>
 /// <returns></returns>
@@ -26,8 +25,7 @@ namespace DataAccessLayer
                 {
                     try
                     {
-                        cmd.CommandText = "INSERT INTO JobApplication (Id, Title, Description, ApplierId) VALUES (@Id, @Title, @Description, @ApplierId)";
-                        cmd.Parameters.AddWithValue("Id", obj.Id);
+                        cmd.CommandText = "INSERT INTO JobApplication (Title, Description, ApplierId) VALUES (@Title, @Description, @ApplierId)";
                         cmd.Parameters.AddWithValue("Title", obj.Title);
                         cmd.Parameters.AddWithValue("Description", obj.Title);
                         cmd.Parameters.AddWithValue("ApplierId", obj.ApplierId);
