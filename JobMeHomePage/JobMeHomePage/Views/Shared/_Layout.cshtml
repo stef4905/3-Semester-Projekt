@@ -7,8 +7,8 @@
 
 
     @Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")
-        <link href="~/Content/simplePagination.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/simplePagination.css" rel="stylesheet" />
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -24,10 +24,11 @@
             </div>
             <div class="navbar-collapse collapse navbar-right">
                 <ul class="nav navbar-nav">
-                        <li><a href="#opretModal" data-toggle="modal" data-target="#opretModal">Opret</a></li> <!-- Make link to Jobspage -->
-                        <!-- | indsætte her -->
-                        <li>@Html.ActionLink("Login", "About", "Home")</li> <!-- Make link til companies -->
-</ul>
+                    <li><a href="#opretModal" data-toggle="modal" data-target="#opretModal">Opret</a></li>
+
+                    <li><a href="#opretModal" data-toggle="modal" data-target="#loginModal">Opret</a></li>
+
+                </ul>
             </div>
         </div>
     </nav>
@@ -38,8 +39,8 @@
 
                 <!-- Modal content-->
                 <div class="modal-content">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4>Opret Profil</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4>Opret Profil</h4>
                     <div class="modal-body">
                         <ul class="nav nav-tabs">
                             <li class="active"><a href="#Jobansoger">Jobansøger</a></li>
@@ -47,19 +48,38 @@
                         </ul>
                         <div class="tab-content">
                             <div id="Jobansoger" class="tab-pane fade in active">
-                                @Html.Partial("_CreateApplier","Applier")
+                                @Html.Partial("_CreateApplier", "Applier")
                             </div>
                             <div id="Virksomhed" class="tab-pane fade">
                                 @Html.Partial("_CreateCompany", "Company")
                             </div>
                         </div>
                     </div>
-                    </div>
-                   
                 </div>
 
             </div>
-  
+
+        </div>
+
+        <div class="modal fade" id="loginModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4>Opret Profil</h4>
+                    <div class="modal-body">
+                     
+                                @Html.Partial("_Login", "Applier")
+                    
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+       
+
 
 
         @RenderBody()
@@ -73,15 +93,15 @@
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 
- 
 
-<!-- Script for Modal Tabs -->
+
+    <!-- Script for Modal Tabs -->
     <script>
-$(document).ready(function(){
-    $(".nav-tabs a").click(function(){
-        $(this).tab('show');
-    });
-});
+        $(document).ready(function () {
+            $(".nav-tabs a").click(function () {
+                $(this).tab('show');
+            });
+        });
     </script>
 
 </body>

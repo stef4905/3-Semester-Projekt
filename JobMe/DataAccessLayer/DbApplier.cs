@@ -154,7 +154,7 @@ namespace DataAccessLayer
                         if (reader.IsDBNull(reader.GetOrdinal("Description")))
                             applier.Description = null;
                         else
-                            applier.Description = applier.Description = (string)reader["Description"];
+                           applier.Description = (string)reader["Description"];
 
 
                     }

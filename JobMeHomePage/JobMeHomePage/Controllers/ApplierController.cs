@@ -12,12 +12,13 @@ namespace JobMeHomePage.Controllers
     public class ApplierController : Controller
     {
 
-        ApplierServiceClient client = new ApplierServiceClient();
+        ApplierServiceReference.ApplierServiceClient client = new ApplierServiceReference.ApplierServiceClient();
         JobPostServiceClient jobClient = new JobPostServiceClient();
 
         // GET: Applier
         public ActionResult Index()
         {
+            
             return View();
         }
 
@@ -63,6 +64,7 @@ namespace JobMeHomePage.Controllers
         public ActionResult _JobCV()
         {
 
+
             return PartialView();
 
 
@@ -76,7 +78,6 @@ namespace JobMeHomePage.Controllers
             VM.JobPostList = jobClient.GetAllJobPost().ToList();
             VM.JobCategoryList = jobClient.GetAllJobCategories().ToList();
             VM.WorkHoursList = jobClient.GetlAllWorkHours().ToList();
-
 
             return View(VM);
         }
@@ -111,7 +112,7 @@ namespace JobMeHomePage.Controllers
             VM.JobCategoryList = jobClient.GetAllJobCategories().ToList();
             VM.WorkHoursList = jobClient.GetlAllWorkHours().ToList();
             ViewBag.SearchField = "Søgeord:" + search;
-            
+
             return View(VM);
         }
 
@@ -133,7 +134,45 @@ namespace JobMeHomePage.Controllers
             return View(applier);
 
         }
+        public ActionResult _Login()
+        {
+            
 
+            return PartialView();
+        }
+
+        [HttpPost]
+        public ActionResult _Login(string email, string password)
+        {
+            //sende password ned med Hashing!!!
+
+
+
+
+
+           Applier applier = client.Login(email, password);
+
+            Session["applier"] = applier;
+
+         
+            
        
+            
+
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult _CurrentUser()
+        {
+            Applier applier = new Applier();
+
+            applier = Session["applier"] as Applier;
+
+            return PartialView(applier);
+        }
+
+
+
+
     }
 }

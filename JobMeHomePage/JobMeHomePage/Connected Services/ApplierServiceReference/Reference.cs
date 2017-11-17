@@ -396,6 +396,12 @@ namespace JobMeHomePage.ApplierServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplierService/GetApplier", ReplyAction="http://tempuri.org/IApplierService/GetApplierResponse")]
         System.Threading.Tasks.Task<JobMeHomePage.ApplierServiceReference.Applier> GetApplierAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplierService/Login", ReplyAction="http://tempuri.org/IApplierService/LoginResponse")]
+        JobMeHomePage.ApplierServiceReference.Applier Login(string email, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplierService/Login", ReplyAction="http://tempuri.org/IApplierService/LoginResponse")]
+        System.Threading.Tasks.Task<JobMeHomePage.ApplierServiceReference.Applier> LoginAsync(string email, string password);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -447,6 +453,14 @@ namespace JobMeHomePage.ApplierServiceReference {
         
         public System.Threading.Tasks.Task<JobMeHomePage.ApplierServiceReference.Applier> GetApplierAsync(int id) {
             return base.Channel.GetApplierAsync(id);
+        }
+        
+        public JobMeHomePage.ApplierServiceReference.Applier Login(string email, string password) {
+            return base.Channel.Login(email, password);
+        }
+        
+        public System.Threading.Tasks.Task<JobMeHomePage.ApplierServiceReference.Applier> LoginAsync(string email, string password) {
+            return base.Channel.LoginAsync(email, password);
         }
     }
 }
