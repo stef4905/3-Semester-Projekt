@@ -327,3 +327,19 @@
 .descriptionText{
     
 }
+
+/**Applierprofile */
+.ApplierProfile-Content {
+	font-size: 18px;
+}
+
+#Banner {
+	width: 100%;
+	max-height: 275px;
+	height: 100%;
+}
+
+#profile-image {
+	height: 100%;
+	max-height: 200px;
+}
