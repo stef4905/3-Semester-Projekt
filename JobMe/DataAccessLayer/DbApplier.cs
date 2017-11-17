@@ -122,7 +122,7 @@ namespace DataAccessLayer
             throw new NotImplementedException();
         }
 
-        public void Update(Applier entity)
+        public bool Update(Applier entity)
         {
             throw new NotImplementedException();
         }

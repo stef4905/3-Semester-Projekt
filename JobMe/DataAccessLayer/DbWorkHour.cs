@@ -78,7 +78,7 @@ namespace DataAccessLayer
             return workHoursList;
         }
 
-        public void Update(WorkHours obj)
+        public bool Update(WorkHours obj)
         {
             throw new NotImplementedException();
         }

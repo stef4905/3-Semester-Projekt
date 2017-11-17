@@ -56,7 +56,7 @@ namespace DataAccessLayer
             throw new NotImplementedException();
         }
 
-        public void Update(JobApplication obj)
+        public bool Update(JobApplication obj)
         {
             throw new NotImplementedException();
         }

@@ -11,6 +11,8 @@ namespace ModelLayer
     public class JobExperience
     {
         [DataMember]
+        public int Id { get; set; }
+        [DataMember]
         public string Title { get; set; }
         [DataMember]
         public DateTime StartDate { get; set; }
@@ -18,5 +20,7 @@ namespace ModelLayer
         public DateTime EndDate { get; set; }
         [DataMember]
         public string Description { get; set; }
+        [DataMember]
+        public int JobCVId { get; set; }
     }
 }
