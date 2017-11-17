@@ -20,6 +20,8 @@ namespace ModelLayer
         public DateTime StartDate { get; set; }
         [DataMember]
         public DateTime EndDate { get; set; }
+        [DataMember]
+        public int JobCVId { get; set; }
 
 
         /// <summary>
@@ -30,13 +32,15 @@ namespace ModelLayer
         /// <param name="institution"></param>
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
-        public ApplierEducation(int id, string educationName, string institution, DateTime startDate, DateTime endDate)
+        /// <param name="jobCVId"></param>
+        public ApplierEducation(int id, string educationName, string institution, DateTime startDate, DateTime endDate, int jobCVId)
         {
             this.id = id;
             this.EducationName = educationName;
             this.Institution = institution;
             this.StartDate = startDate;
             this.EndDate = endDate;
+            this.JobCVId = jobCVId;
         }
 
         /// <summary>

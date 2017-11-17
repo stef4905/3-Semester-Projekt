@@ -50,7 +50,7 @@ namespace DataAccessLayer
         }
 
         /// <summary>
-        /// Returns a single object of JobExperience by the given JoBCVId
+        /// Returns a single object of JobExperience by the given id
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -60,8 +60,8 @@ namespace DataAccessLayer
             {
                 using (SqlCommand cmd = connection.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM JobExperience WHERE JobCVId = @JobCVId";
-                    cmd.Parameters.AddWithValue("@JobCVId", id);
+                    cmd.CommandText = "SELECT * FROM JobExperience WHERE Id = @Id";
+                    cmd.Parameters.AddWithValue("Id", id);
                     SqlDataReader reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
@@ -85,6 +85,38 @@ namespace DataAccessLayer
         public List<JobExperience> GetAll()
         {
             throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Returns a list of all JobExperience with the corosponding JobCVId
+        /// </summary>
+        /// <param name="jobCVId"></param>
+        /// <returns></returns>
+        public List<JobExperience> GetAllByJobCVId(int jobCVId)
+        {
+            using (SqlConnection connection = conn.OpenConnection())
+            {
+                using (SqlCommand cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM JobExperience WHERE JobCVId = @JobCVId";
+                    cmd.Parameters.AddWithValue("JobCVId", jobCVId);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    List<JobExperience> ExperienceList = new List<JobExperience>();
+                    while (reader.Read())
+                    {
+                        JobExperience jobExperience = new JobExperience();
+                        jobExperience.Id = (int)reader["Id"];
+                        jobExperience.Title = (string)reader["Title"];
+                        jobExperience.StartDate = (DateTime)reader["StartDate"];
+                        jobExperience.EndDate = (DateTime)reader["EndDate"];
+                        jobExperience.Description = (string)reader["Description"];
+                        jobExperience.JobCVId = (int)reader["JobCVId"];
+                        ExperienceList.Add(jobExperience);
+                    }
+                    return ExperienceList;
+                }
+            }
         }
 
         /// <summary>
@@ -112,7 +144,7 @@ namespace DataAccessLayer
                     }
                     catch (SqlException)
                     {
-                        return false:
+                        return false;
                     }
                 }
             }

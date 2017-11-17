@@ -52,7 +52,7 @@ namespace DataAccessLayer
             throw new NotImplementedException();
         }
 
-        public void Update(BusinessType obj)
+        public bool Update(BusinessType obj)
         {
             throw new NotImplementedException();
         }

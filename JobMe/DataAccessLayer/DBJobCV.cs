@@ -57,7 +57,7 @@ namespace DataAccessLayer
             {
                 using (SqlCommand cmd = connection.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM ApplierEducation WHERE ApplierId = @ApplierId";
+                    cmd.CommandText = "SELECT * FROM JobCV WHERE ApplierId = @ApplierId";
                     cmd.Parameters.AddWithValue("@ApplierId", applierId);
                     SqlDataReader reader = cmd.ExecuteReader();
                     if (reader.Read())
@@ -80,9 +80,32 @@ namespace DataAccessLayer
             throw new NotImplementedException();
         }
 
-        public void Update(JobCV obj)
+        /// <summary>
+        /// Updates the given object JobCV in the database
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public bool Update(JobCV obj)
         {
-            throw new NotImplementedException();
+            using (SqlConnection connection = conn.OpenConnection())
+            {
+                using (SqlCommand cmd = connection.CreateCommand())
+                {
+                    try
+                    {
+                        cmd.CommandText = "UPDATE JobCV SET Title = @Title, ApplierId = @ApplierId WHERE Id = @Id ";
+                        cmd.Parameters.AddWithValue("Titlte", obj.Title);
+                        cmd.Parameters.AddWithValue("StartDate", obj.ApplierId);
+                        cmd.Parameters.AddWithValue("Id", obj.Id);
+                        cmd.ExecuteNonQuery();
+                        return true;
+                    }
+                    catch (SqlException)
+                    {
+                        return false;
+                    }
+                }
+            }
         }
     }
 }

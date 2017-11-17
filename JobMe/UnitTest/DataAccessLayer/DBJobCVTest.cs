@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DataAccessLayer;
 using ModelLayer;
+using BusinessLogicLayer;
 
 namespace UnitTest.DataAccessLayer
 {
@@ -20,6 +21,20 @@ namespace UnitTest.DataAccessLayer
 
             //Assert
             Assert.IsTrue(inserted);
+        }
+
+        [TestMethod]
+        public void GetTest()
+        {
+            //Arrange
+            JobCVCtr jobCVCtr = new JobCVCtr();
+
+            //Act
+            JobCV jobCv = jobCVCtr.Get(15);
+
+            //Assert
+            Assert.IsTrue(jobCv != null);
+
         }
     }
 }

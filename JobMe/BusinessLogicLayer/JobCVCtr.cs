@@ -9,50 +9,53 @@ using DataAccessLayer;
 
 namespace BusinessLogicLayer
 {
-    class JobCVCtr : ICollection<JobCV>
+    public class JobCVCtr : IController<JobCV>
     {
-        public int Count => throw new NotImplementedException();
-        public bool IsReadOnly => throw new NotImplementedException();
-
         DBJobCV dbJobCV = new DBJobCV();
+        JobExperienceCtr jobExperienceCtr = new JobExperienceCtr();
+        ApplierEducationCtr applierEducationCtr = new ApplierEducationCtr();
+        JobAppendixCtr jobAppendixCtr = new JobAppendixCtr();
 
-        /// <summary>
-        /// Add the object of an job CV into the database
-        /// </summary>
-        /// <param name="item"></param>
-        public void Add(JobCV item)
+        public void Create(JobCV obj)
         {
-            dbJobCV.Create(item);
+            dbJobCV.Create(obj);
         }
 
-        public void Clear()
+        public void Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        public bool Contains(JobCV item)
+        public JobCV Get(int applierId)
+        {
+            JobCV jobCV = dbJobCV.Get(applierId);
+            jobCV.JobExperienceList = jobExperienceCtr.GetAllByJobCVId(jobCV.Id);
+            jobCV.ApplierEducationList = applierEducationCtr.GetAllByJobCVId(jobCV.Id);
+            jobCV.JobAppendixList = jobAppendixCtr.GetAllByJobCVId(jobCV.Id);
+            return jobCV;
+        }
+
+        public List<JobCV> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public void CopyTo(JobCV[] array, int arrayIndex)
+        public void Update(JobCV obj)
         {
-            throw new NotImplementedException();
-        }
+            dbJobCV.Update(obj);
 
-        public IEnumerator<JobCV> GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Remove(JobCV item)
-        {
-            throw new NotImplementedException();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            throw new NotImplementedException();
+            foreach (var Experience in obj.JobExperienceList)
+            {
+                jobExperienceCtr.Update(Experience);
+            }
+            foreach (var Education in obj.ApplierEducationList)
+            {
+                applierEducationCtr.Update(Education);
+            }
+            foreach (var Appendix in obj.JobAppendixList)
+            {
+                jobAppendixCtr.Update(Appendix);
+            }
         }
     }
 }

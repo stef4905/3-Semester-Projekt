@@ -11,7 +11,7 @@ namespace DataAccessLayer
         bool Create(T obj);
         T Get(int id);
         List<T> GetAll();
-        void Update(T obj);
+        bool Update(T obj);
         void Delete(int id);
     }
 }

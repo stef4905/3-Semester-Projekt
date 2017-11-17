@@ -10,6 +10,7 @@ namespace DataAccessLayer
 {
     public class DbJobCategory : IDataAccess<JobCategory>
     {
+        //Is an instance of DBConnection
         DbConnection conn = new DbConnection();
 
         public bool Create(JobCategory obj)
@@ -75,7 +76,7 @@ namespace DataAccessLayer
             return jobCategoryList;
         }
 
-        public void Update(JobCategory obj)
+        public bool Update(JobCategory obj)
         {
             throw new NotImplementedException();
         }

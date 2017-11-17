@@ -135,7 +135,7 @@ namespace DataAccessLayer
             return jobPostList;
         }
 
-        public void Update(JobPost obj)
+        public bool Update(JobPost obj)
         {
             throw new NotImplementedException();
         }

@@ -97,7 +97,7 @@ namespace DataAccessLayer
             throw new NotImplementedException();
         }
 
-        public void Update(Company obj)
+        public bool Update(Company obj)
         {
             throw new NotImplementedException();
         }
