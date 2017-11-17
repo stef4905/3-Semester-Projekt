@@ -42,5 +42,10 @@ namespace BusinessLogicLayer
         {
             throw new NotImplementedException();
         }
+
+        public Applier Login(string Email, string Password)
+        {
+            return dbApplier.Login(Email, Password);
+        }
     }
 }

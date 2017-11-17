@@ -36,5 +36,23 @@ namespace UnitTest.DataAccessLayer
             //Assert
             Assert.AreEqual(applier.Id, 2);
         }
+
+
+        [TestMethod]
+
+        public void ApplierLogintest()
+        {
+            //Arrange
+            DbApplier dbApplier = new DbApplier();
+            Applier applier = new Applier();
+
+            //Act
+            applier = dbApplier.Login("stampe@gmail.com", "123456");
+
+            //Assert
+            Assert.AreEqual(applier.Email, "stampe@gmail.com");
+
+
+        }
     }
 }

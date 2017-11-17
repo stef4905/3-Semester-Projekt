@@ -41,5 +41,10 @@ namespace WCFJobMeService
         {
             return applierCtr.Get(id);
         }
+
+        public Applier Login(string email, string password)
+        {
+            return applierCtr.Login(email, password);
+        }
     }
 }

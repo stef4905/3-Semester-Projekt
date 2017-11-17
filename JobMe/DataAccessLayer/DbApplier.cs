@@ -25,21 +25,21 @@ namespace DataAccessLayer
                 using (SqlCommand cmd = connection.CreateCommand())
                 {
                     try
-                    {                   
-                    cmd.CommandText = "INSERT INTO Applier (Email, Password, MaxRadius) VALUES (@Email, @Password, @MaxRadius)";
-                    cmd.Parameters.AddWithValue("Email", obj.Email);
-                    cmd.Parameters.AddWithValue("Password", obj.Password);
-                    cmd.Parameters.AddWithValue("MaxRadius", 50);
-                    cmd.ExecuteNonQuery();
+                    {
+                        cmd.CommandText = "INSERT INTO Applier (Email, Password, MaxRadius) VALUES (@Email, @Password, @MaxRadius)";
+                        cmd.Parameters.AddWithValue("Email", obj.Email);
+                        cmd.Parameters.AddWithValue("Password", obj.Password);
+                        cmd.Parameters.AddWithValue("MaxRadius", 50);
+                        cmd.ExecuteNonQuery();
                         return true;
                     }
-                   catch (SqlException)
+                    catch (SqlException)
                     {
                         return false;
                     }
                 }
             }
-            
+
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace DataAccessLayer
                         applier.Status = (bool)reader["Status"];
                         applier.CurrentJob = (string)reader["CurrentJob"];
                         applier.Birthdate = (DateTime)reader["Birthdate"];
-                      }
+                    }
                     //Closes the current reader for the applier.
                     reader.Close();
 
@@ -131,9 +131,55 @@ namespace DataAccessLayer
         /// Til login metode for applier. Se Ronni's Hashing example på Github.
         /// </summary>
         /// <returns></returns>
-        public Applier Login()
+        public Applier Login(string email, string password)
         {
-            return null;
+            using (SqlConnection connection = conn.OpenConnection())
+            {
+                Applier applier = new Applier();
+
+
+                using (SqlCommand cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM Applier WHERE Email = @email AND Password = @password";
+                    cmd.Parameters.AddWithValue("email", email);
+                    cmd.Parameters.AddWithValue("password", password);
+
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        applier.Id = (int)reader["Id"];
+                        applier.Email = (string)reader["Email"];
+                        applier.Password = (string)reader["Password"];
+                        if (reader.IsDBNull(reader.GetOrdinal("Description")))
+                            applier.Description = null;
+                        else
+                            applier.Description = applier.Description = (string)reader["Description"];
+
+
+                    }
+                    reader.Close();
+
+
+                    if (applier.Email == email && applier.Password == password && applier.Description != null)
+                    {
+                        Applier Login = Get(applier.Id);
+                        return Login;
+                    }
+
+                    else
+                    {
+                        if (applier.Email == email && applier.Password == password)
+                        {
+                            return applier;
+                        }
+                    }
+
+                    return null;
+
+                }
+            }
         }
     }
 }
+
