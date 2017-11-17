@@ -35,7 +35,6 @@ namespace DataAccessLayer
                     }
                    catch (SqlException)
                     {
-
                         return false;
                     }
                 }
@@ -77,8 +76,6 @@ namespace DataAccessLayer
                     cmd.CommandText = "SELECT * FROM Applier WHERE Id = @id";
                     cmd.Parameters.AddWithValue("id", id);
                     SqlDataReader reader = cmd.ExecuteReader();
-             
-                    
                     if (reader.Read())
                     {
                         applier.Id = (int)reader["Id"];
@@ -101,7 +98,6 @@ namespace DataAccessLayer
                     cmd.CommandText = "SELECT * FROM ApplierJobCategory WHERE ApplierId = @ApplierId";
                     cmd.Parameters.AddWithValue("ApplierId", applier.Id);
                     SqlDataReader readerA = cmd.ExecuteReader();
-
                     List<JobCategory> jobcategoryList = new List<JobCategory>();
                     while (readerA.Read())
                     {
@@ -111,15 +107,12 @@ namespace DataAccessLayer
 
                         jobcategoryList.Add(jobCategory);
                     }
+
                     //Sets the JobCategoryList equal to Applier JobCategoryList.
                     applier.jobCategoryList = jobcategoryList;
-
                     return applier;
-                    
-
                 }
             }
-            throw new NotImplementedException();
         }
 
         public List<Applier> GetAll()

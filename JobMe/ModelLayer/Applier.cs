@@ -41,13 +41,17 @@ namespace ModelLayer
         [DataMember]
         public List<JobCategory> jobCategoryList { get; set; }
 
-
+        /// <summary>
+        /// Constructor for Applier with the needed parameters.
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="password"></param>
+        /// <param name="maxRadius"></param>
         public Applier(string email, string password, int maxRadius)
         {
-           
-            Email = email;
-            Password = password;
-            MaxRadius = maxRadius;
+            this.Email = email;
+            this.Password = password;
+            this.MaxRadius = maxRadius;
         }
 
         //Secondary empty constructor.

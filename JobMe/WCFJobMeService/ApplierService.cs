@@ -13,16 +13,30 @@ namespace WCFJobMeService
     {
         private ApplierCtr applierCtr = new ApplierCtr();
 
+
+        /// <summary>
+        /// Creates a new Applier in the database
+        /// </summary>
+        /// <param name="applier"></param>
         public void Create(Applier applier)
         {
             applierCtr.Create(applier);
         }
 
+        /// <summary>
+        /// Returns a list of all Appliers from the database
+        /// </summary>
+        /// <returns></returns>
         public List<Applier> GetAllAppliers()
         {
             return applierCtr.GetAll();
         }
 
+        /// <summary>
+        /// Returns a single Applier object with the given id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Applier GetApplier(int id)
         {
             return applierCtr.Get(id);

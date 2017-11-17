@@ -11,9 +11,7 @@ namespace UnitTest.DataAccessLayer
         [TestMethod]
         public void ApplierCreateDBTest()
         {
-
             //Arrange
-
             DbApplier dbApplier = new DbApplier();
             Applier applier = new Applier("Sofie", "123", 20);
 
@@ -21,9 +19,7 @@ namespace UnitTest.DataAccessLayer
             bool inserted = dbApplier.Create(applier);
 
             //Assert
-
             Assert.IsTrue(inserted);
-
         }
 
         [TestMethod]
@@ -39,9 +35,6 @@ namespace UnitTest.DataAccessLayer
 
             //Assert
             Assert.AreEqual(applier.Id, 2);
-
-          
-
         }
     }
 }
