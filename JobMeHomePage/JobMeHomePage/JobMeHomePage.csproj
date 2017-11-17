@@ -154,6 +154,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\JobCVServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\JobPostServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -162,6 +167,7 @@
     <Compile Include="Controllers\ApplierController.cs" />
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JobCVController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -211,8 +217,28 @@
     <None Include="Connected Services\CompanyServiceReference\service1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\JobCVServiceReference\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JobCVServiceReference\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JobCVServiceReference\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JobCVServiceReference\JobCVService.wsdl" />
+    <Content Include="Connected Services\JobCVServiceReference\JobMeHomePage.JobCVServiceReference.JobCV.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\JobPostServiceReference\configuration91.svcinfo" />
     <None Include="Connected Services\JobPostServiceReference\configuration.svcinfo" />
+    <None Include="Connected Services\JobCVServiceReference\item.disco" />
+    <None Include="Connected Services\JobCVServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\JobCVServiceReference\configuration.svcinfo" />
+    <None Include="Connected Services\JobCVServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Connected Services\JobPostServiceReference\JobMeHomePage.JobPostServiceReference.JobCategory.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -307,6 +333,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\JobCV\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -317,6 +344,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ApplierServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\CompanyServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\JobCVServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\JobPostServiceReference\" />
   </ItemGroup>
   <PropertyGroup>

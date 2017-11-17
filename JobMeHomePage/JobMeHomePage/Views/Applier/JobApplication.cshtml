@@ -1,4 +1,5 @@
-﻿
+﻿@model JobMeHomePage.ApplierServiceReference.Applier
+
 @{
     ViewBag.Title = "JobApplication";
     Layout = "~/Views/Shared/_LayoutProfile.cshtml";
@@ -25,7 +26,7 @@
                         <p id="infoContentBold">Nationalitet</p>
                     </div>
                     <div class="col-sm-6">
-                        <p>Danmark</p>
+                        <p>@Model.Country</p>
                     </div>
                 </div>
                 <div class="row" id="infoContent">
@@ -41,15 +42,15 @@
                         <p id="infoContentBold">Adresse</p>
                     </div>
                     <div class="col-sm-6">
-                        <p>Østerbro 3H 1.8</p>
+                        <p>@Model.Address</p>
                     </div>
                 </div>
                 <div class="row" id="infoContent">
                     <div class="col-sm-6">
-                        <p id="infoContentBold">Mobil</p>
+                        <p id="infoContentBold">email:</p>
                     </div>
                     <div class="col-sm-6">
-                        <p>12345678</p>
+                        <p>@Model.Email</p>
                     </div>
                 </div>
             </div>

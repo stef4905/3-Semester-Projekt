@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using JobMeHomePage.JobPostServiceReference;
 using JobMeHomePage.Models;
+using JobMeHomePage.JobCVServiceReference;
 
 namespace JobMeHomePage.Controllers
 {
@@ -14,6 +15,8 @@ namespace JobMeHomePage.Controllers
 
         ApplierServiceReference.ApplierServiceClient client = new ApplierServiceReference.ApplierServiceClient();
         JobPostServiceClient jobClient = new JobPostServiceClient();
+        JobCVServiceClient jobCVClient = new JobCVServiceClient();
+
 
         // GET: Applier
         public ActionResult Index()
@@ -60,14 +63,6 @@ namespace JobMeHomePage.Controllers
 
             //If button "Annuler/Gå tilbage" is pressed, dispose all changes
             //Return user to profile site
-        }
-        public ActionResult _JobCV()
-        {
-
-
-            return PartialView();
-
-
         }
 
 
@@ -116,15 +111,31 @@ namespace JobMeHomePage.Controllers
             return View(VM);
         }
 
-        public ActionResult JobApplication()
+
+        #region JobApplication
+        public ActionResult JobApplication(int id)
         {
-            return View();
+            Applier applier = client.GetApplier(id);
+            //Hovedside til jobapplikation og cv
+            _JobApplication(applier);
+            _JobCV(applier);
+            return View(applier);
         }
 
-        public ActionResult _JobApplication()
+        public ActionResult _JobApplication(Applier applier)
         {
+            
+            //Job applikation siden kun ikke lavet endnu i WCF
             return PartialView();
         }
+
+        public ActionResult _JobCV(Applier applier)
+        {
+            //Job CV sien kun
+            JobCV jobCV = jobCVClient.Get(applier.Id);
+            return PartialView(jobCV);
+        }
+        #endregion
 
         public ActionResult ApplierProfile(int id)
         {

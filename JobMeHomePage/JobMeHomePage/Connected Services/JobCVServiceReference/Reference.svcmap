@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6581f395-34d9-4a7f-8c7c-40f2f681744f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8723/Design_Time_Addresses/WCFJobMeService/JobCVService/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="8e1169eb-120b-40bb-9960-575d63614cfe" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMeService/JobCVService/?xsd=xsd1" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="e859d5c9-a048-4cb7-9fee-20b86d33e06e" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMeService/JobCVService/?xsd=xsd2" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="25863bad-fcc0-4c4b-bf38-e10739ff860d" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMeService/JobCVService/?xsd=xsd0" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="42637db3-fdcf-43e3-8ff7-2d8a8ccdac6b" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMeService/JobCVService/?disco" />
+    <MetadataFile FileName="JobCVService.wsdl" MetadataType="Wsdl" ID="5100e1c1-c875-4bde-aaee-e51d9b022bef" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMeService/JobCVService/?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
