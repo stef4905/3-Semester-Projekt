@@ -12,7 +12,7 @@ namespace UnitTest.DataAccessLayer
         public void CreateJobCVInDB()
         {
             //Arrange
-            JobCV jobCV = new JobCV(1, "Jensens bøfhus", 15);
+            JobCV jobCV = new JobCV(1, "Jensens bøfhus", 15, "Bio");
             DBJobCV dbJobCV = new DBJobCV();
 
             //Act

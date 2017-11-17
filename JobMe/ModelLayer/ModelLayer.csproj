@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Applier.cs" />
+    <Compile Include="ApplierEducation.cs" />
     <Compile Include="BusinessType.cs" />
     <Compile Include="Company.cs" />
     <Compile Include="CVCategory.cs" />

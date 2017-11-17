@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DbApplier.cs" />
+    <Compile Include="DBApplierEducation.cs" />
     <Compile Include="DBBusinessType.cs" />
     <Compile Include="DbCompany.cs" />
     <Compile Include="DbConnection.cs" />
@@ -50,6 +51,7 @@
     <Compile Include="DbJobPost.cs" />
     <Compile Include="DbWorkHour.cs" />
     <Compile Include="IDataAccess.cs" />
+    <Compile Include="DBJobExperience.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

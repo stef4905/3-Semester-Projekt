@@ -17,9 +17,13 @@ namespace ModelLayer
         [DataMember]
         public int ApplierId { get; set; }
         [DataMember]
+        public string Bio { get; set; }
+        [DataMember]
         public List<JobAppendix> JobAppendixList = new List<JobAppendix>();
         [DataMember]
         public List<JobExperience> JobExperienceList = new List<JobExperience>();
+        [DataMember]
+        public List<ApplierEducation> ApplierEducationList = new List<ApplierEducation>();
 
         /// <summary>
         /// Constructor for JobCV
@@ -27,11 +31,19 @@ namespace ModelLayer
         /// <param name="id"></param>
         /// <param name="title"></param>
         /// <param name="applierId"></param>
-        public JobCV(int id, string title, int applierId)
+        public JobCV(int id, string title, int applierId, string bio)
         {
             this.Id = id;
             this.Title = title;
             this.ApplierId = applierId;
+            this.Bio = bio;
+        }
+        /// <summary>
+        /// Empty Constructor
+        /// </summary>
+        public JobCV()
+        {
+
         }
     }
 }

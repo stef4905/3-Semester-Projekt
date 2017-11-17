@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace DataAccessLayer
 {
-    public class DBJobCV
+    public class DBJobCV : IDataAccess<JobCV>
     {
         //Is an instance of DBConnection
         DbConnection conn = new DbConnection();
@@ -38,6 +38,51 @@ namespace DataAccessLayer
                 }
             }
 
+        }
+
+        public void Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Return a single JobCV Object by the given Applier
+        /// </summary>
+        /// <param name="apllier"></param>
+        /// <returns></returns>
+        public JobCV Get(int applierId)
+        {
+           
+            using (SqlConnection connection = conn.OpenConnection())
+            {
+                using (SqlCommand cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM ApplierEducation WHERE ApplierId = @ApplierId";
+                    cmd.Parameters.AddWithValue("@ApplierId", applierId);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        JobCV jobCV = new JobCV();
+                        jobCV.Id = (int)reader["Id"];
+                        jobCV.Title = (string)reader["Title"];
+                        jobCV.Bio = (string)reader["Bio"];
+                        return jobCV;
+                    }
+                    else {
+                        return null;
+                    }
+                }  
+            }
+        }
+
+        public List<JobCV> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(JobCV obj)
+        {
+            throw new NotImplementedException();
         }
     }
 }
