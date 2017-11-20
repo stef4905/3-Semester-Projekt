@@ -50,8 +50,10 @@
     <Compile Include="CompanyService.cs" />
     <Compile Include="IApplierService.cs" />
     <Compile Include="ICompanyService.cs" />
+    <Compile Include="IJobApplicationService.cs" />
     <Compile Include="IJobCVService.cs" />
     <Compile Include="IJobPostService.cs" />
+    <Compile Include="JobApplicationService.cs" />
     <Compile Include="JobCVService.cs" />
     <Compile Include="JobPostService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

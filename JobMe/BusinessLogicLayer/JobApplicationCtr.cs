@@ -8,7 +8,7 @@ using DataAccessLayer;
 
 namespace BusinessLogicLayer
 {
-    class JobApplicationCtr : IController<JobApplication>
+    public class JobApplicationCtr : IController<JobApplication>
     {
         private DbJobApplication dbJobApplication = new DbJobApplication();
 
@@ -28,12 +28,17 @@ namespace BusinessLogicLayer
 
         public JobApplication Get(int id)
         {
-            throw new NotImplementedException();
+            return dbJobApplication.Get(id);
         }
 
         public List<JobApplication> GetAll()
         {
             throw new NotImplementedException();
+        }
+
+        public List<JobApplication> GetAllByApplierId(int applierId)
+        {
+            return dbJobApplication.GetAllByApplierId(applierId);
         }
 
         public void Update(JobApplication obj)

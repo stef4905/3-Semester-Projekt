@@ -22,12 +22,13 @@ namespace ModelLayer
         /// <summary>
         /// Job Application Model
         /// </summary>
+        /// <param name="id"></param>
         /// <param name="title"></param>
         /// <param name="description"></param>
         /// <param name="applierId"></param>
-        public JobApplication(string title, string description, int applierId)
+        public JobApplication(int id, string title, string description, int applierId)
         {
-           
+            this.Id = id;
             this.Title = title;
             this.Description = description;
             this.ApplierId = applierId;
