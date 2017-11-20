@@ -1,4 +1,4 @@
-﻿
+﻿@model JobMeHomePage.JobCVServiceReference.JobCV
 <!-- #region Deployement-->
 <div class="col-sm-12" id="experience-col">
 
@@ -7,17 +7,13 @@
             <p id="CVHeadlinge">Erhvervserfaring</p>
         </div>
 
-        <div class="companyName">Yellow Agency</div>
-        <div class="DateAndPosition">2013.02.03 - Present | <div id="boldText">Marketing Specialist</div></div>
-        <div class="jobDescription">Lorem ipsum dolor sit amet, tortor arcu adipiscing mi etiam mi, scelerisque eget, libero dolor leo vitae semper, in iaculis wisi ac at justo. Sollicitudin pulvinar id, enim massa, vestibulum amet vel luctus. Dignissim euismod lobortis vestibulum massa, proin ipsum ut velit, mollis mauris arcu elementum id duis justo, turpis ornare est dolor. Leo at litora pellentesque mauris in</div>
+		@foreach (var item in Model.JobExperienceList)
+		{
+			<div class="companyName">@item.Title</div>
+			<div class="DateAndPosition">@item.StartDate -  @item.EndDate | <div id="boldText">Marketing Specialist</div></div>
+			<div class="jobDescription">@item.Description</div>
 
-        <div class="companyName">Yellow Agency</div>
-        <div class="DateAndPosition">2013.02.03 - Present | <div id="boldText">Marketing Specialist</div></div>
-        <div class="jobDescription">Lorem ipsum dolor sit amet, tortor arcu adipiscing mi etiam mi, scelerisque eget, libero dolor leo vitae semper, in iaculis wisi ac at justo. Sollicitudin pulvinar id, enim massa, vestibulum amet vel luctus. Dignissim euismod lobortis vestibulum massa, proin ipsum ut velit, mollis mauris arcu elementum id duis justo, turpis ornare est dolor. Leo at litora pellentesque mauris in</div>
-
-        <div class="companyName">Yellow Agency</div>
-        <div class="DateAndPosition">2013.02.03 - Present | <div id="boldText">Marketing Specialist</div></div>
-        <div class="jobDescription">Lorem ipsum dolor sit amet, tortor arcu adipiscing mi etiam mi, scelerisque eget, libero dolor leo vitae semper, in iaculis wisi ac at justo. Sollicitudin pulvinar id, enim massa, vestibulum amet vel luctus. Dignissim euismod lobortis vestibulum massa, proin ipsum ut velit, mollis mauris arcu elementum id duis justo, turpis ornare est dolor. Leo at litora pellentesque mauris in</div>
+		}
 
         <div class="companyName">Yellow Agency</div>
         <div class="DateAndPosition">2013.02.03 - Present | <div id="boldText">Marketing Specialist</div></div>

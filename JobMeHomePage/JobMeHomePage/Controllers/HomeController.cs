@@ -26,5 +26,11 @@ namespace JobMeHomePage.Controllers
 
             return View();
         }
+
+        public ActionResult _Logout()
+        {
+            Session.Clear();
+            return RedirectToAction("Index");
+        }
     }
 }

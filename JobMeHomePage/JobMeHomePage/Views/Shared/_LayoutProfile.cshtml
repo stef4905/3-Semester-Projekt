@@ -26,7 +26,7 @@
                         <ul class="nav navbar-nav">
                             <li>@Html.ActionLink("Jobs", "FindJobPosts", "Applier")</li> <!-- Make link to Jobspage -->
                             <!-- | indsætte her -->
-                            <li>@Html.ActionLink("Virksomhed", "About", "Home")</li> <!-- Make link til companies -->
+                            <li>@Html.ActionLink("Virksomhed", "FindJobPosts", "Applier")</li> <!-- Make link til companies -->
                             <li class="dropdown">
                               @Html.Partial("_CurrentUser", Session["applier"])
                             </li>
