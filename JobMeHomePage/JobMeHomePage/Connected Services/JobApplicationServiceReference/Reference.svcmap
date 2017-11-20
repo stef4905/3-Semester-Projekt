@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="465f138b-fe85-4131-8bd3-c1a63ffe36cd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8723/Design_Time_Addresses/WCFJobMeService/JobApplicationService/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="69669922-1b5d-439b-a910-3af1dc926257" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMeService/JobApplicationService/?disco" />
+    <MetadataFile FileName="JobApplicationService.wsdl" MetadataType="Wsdl" ID="bce0bb0d-faf5-4336-8692-28951ee90e39" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMeService/JobApplicationService/?wsdl" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="4536b932-4f1e-41f3-8a60-8f8a5f0a148b" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMeService/JobApplicationService/?xsd=xsd0" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="14560cb0-8763-49e3-bcac-04d58eab2f91" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMeService/JobApplicationService/?xsd=xsd1" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="e2129797-d2a5-4540-bb76-f157664034f8" SourceId="1" SourceUrl="http://localhost:8723/Design_Time_Addresses/WCFJobMeService/JobApplicationService/?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

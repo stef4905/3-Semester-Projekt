@@ -48,12 +48,50 @@ namespace DataAccessLayer
 
         public JobApplication Get(int id)
         {
-            throw new NotImplementedException();
+            using (SqlConnection connection = conn.OpenConnection())
+            {
+                using (SqlCommand cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM JobApplication WHERE Id = @Id";
+                    cmd.Parameters.AddWithValue("Id", id);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        JobApplication jobApplication = new JobApplication((int)reader["Id"], (string)reader["Title"], (string)reader["Description"],(int)reader["ApplierId"]);
+                        return jobApplication;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+            }
         }
 
         public List<JobApplication> GetAll()
         {
             throw new NotImplementedException();
+        }
+
+        public List<JobApplication> GetAllByApplierId(int ApplierId)
+        {
+            using (SqlConnection connection = conn.OpenConnection())
+            {
+                using (SqlCommand cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM JobApplication WHERE ApplierId = @ApplierId";
+                    cmd.Parameters.AddWithValue("ApplierId", ApplierId);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    List<JobApplication> jobApplicationList = new List<JobApplication>();
+                    while (reader.Read())
+                    {
+                        JobApplication jobApplication = new JobApplication((int)reader["Id"],(string)reader["Title"], (string)reader["Description"], (int)reader["ApplierId"]);
+                        jobApplicationList.Add(jobApplication);
+                    }
+                    return jobApplicationList;
+                }
+            }
         }
 
         public bool Update(JobApplication obj)
