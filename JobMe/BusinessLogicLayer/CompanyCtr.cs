@@ -44,5 +44,10 @@ namespace BusinessLogicLayer
         {
             throw new NotImplementedException();
         }
+
+        public Company Login(string email, string password)
+        {
+            return dbCompany.Login(email, password);
+        }
     }
 }

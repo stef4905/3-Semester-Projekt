@@ -56,6 +56,11 @@ namespace WCFJobMeService
         {
             return workHoursCtr.GetAll();
         }
+
+        public Company Login(string email, string password)
+        {
+            return companyCtr.Login(email, password);
+        }
     }
 }
 

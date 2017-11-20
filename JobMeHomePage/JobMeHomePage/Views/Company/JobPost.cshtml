@@ -22,7 +22,15 @@
                 </div>
                 <div class="col-sm-4">
                     <!--Profile image from the company-->
-                    <img src="https://www.ucn.dk/Files/Billeder/ucn/Om-UCN/Presse/ucn-logo-sort-500px.png" id="jobPostCompanyPic" height="75" />
+                    @if (Model.company.ImageURL != null)
+                    {
+                        <img src="@Model.company.ImageURL" id="jobPostCompanyPic" class="img-responsive" />
+                    }
+                    else
+                    {
+                        <img src="/Content/image/JobMeHorizontal.png" id="jobPostCompanyPic" class="img-responsive" />
+                    }
+
                 </div>
             </div>
             <!--Seperator-->

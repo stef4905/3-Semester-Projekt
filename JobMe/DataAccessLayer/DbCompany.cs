@@ -60,7 +60,7 @@ namespace DataAccessLayer
         /// <returns></returns>
         public Company Get(int id)
         {
-            
+
             Company company = new Company();
             DBBusinessType dbBusinessType = new DBBusinessType();
             using (SqlConnection connection = conn.OpenConnection())
@@ -78,7 +78,6 @@ namespace DataAccessLayer
                         company.Phone = (int)reader["Phone"];
                         company.Address = (string)reader["Address"];
                         company.Country = (string)reader["Country"];
-                        company.ImageURL = (string)reader["ImageURL"];
                         company.Description = (string)reader["Description"];
                         company.BannerURL = (string)reader["BannerURL"];
                         company.MaxRadius = (int)reader["MaxRadius"];
@@ -86,6 +85,11 @@ namespace DataAccessLayer
                         company.CompanyName = (string)reader["CompanyName"];
                         company.CVR = (int)reader["CVR"];
                         company.businessType = dbBusinessType.Get((int)reader["BusinessTypeId"]);
+                        // Allows ImageURL to be null, if not null, reads the current company ImageURL.
+                        if (reader.IsDBNull(reader.GetOrdinal("ImageURL")))
+                            company.ImageURL = null;
+                        else
+                            company.ImageURL = (string)reader["ImageURL"];
                     }
                 }
             }
@@ -100,6 +104,57 @@ namespace DataAccessLayer
         public bool Update(Company obj)
         {
             throw new NotImplementedException();
+        }
+
+
+        public Company Login(string email, string password)
+        {
+            using (SqlConnection connection = conn.OpenConnection())
+            {
+                Company company = new Company();
+
+
+                using (SqlCommand cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM Company WHERE Email = @email AND Password = @password";
+                    cmd.Parameters.AddWithValue("email", email);
+                    cmd.Parameters.AddWithValue("password", password);
+
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        company.Id = (int)reader["Id"];
+                        company.Email = (string)reader["Email"];
+                        company.Password = (string)reader["Password"];
+                        if (reader.IsDBNull(reader.GetOrdinal("Description"))) // Kan evt ændres til status når den bliver sat værk.
+                            company.Description = null;
+                        else
+                            company.Description = (string)reader["Description"];
+
+
+                    }
+                    reader.Close();
+
+
+                    if (company.Email == email && company.Password == password && company.Description != null)
+                    {
+                        Company FullCompany = Get(company.Id);
+                        return FullCompany;
+                    }
+
+                    else
+                    {
+                        if (company.Email == email && company.Password == password)
+                        {
+                            return company;
+                        }
+                    }
+
+                    return null;
+
+                }
+            }
         }
     }
 }
