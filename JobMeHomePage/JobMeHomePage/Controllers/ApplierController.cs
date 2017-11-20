@@ -184,6 +184,7 @@ namespace JobMeHomePage.Controllers
         {
             Applier applier = new Applier();
 
+            //Mangler fagterm.
             applier = Session["applier"] as Applier;
 
             return PartialView(applier);
