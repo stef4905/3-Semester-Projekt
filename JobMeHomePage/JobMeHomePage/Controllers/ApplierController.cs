@@ -7,15 +7,17 @@ using System.Web.Mvc;
 using JobMeHomePage.JobPostServiceReference;
 using JobMeHomePage.Models;
 using JobMeHomePage.JobCVServiceReference;
+using JobMeHomePage.JobApplicationServiceReference;
 
 namespace JobMeHomePage.Controllers
 {
     public class ApplierController : Controller
     {
 
-        ApplierServiceReference.ApplierServiceClient client = new ApplierServiceReference.ApplierServiceClient();
+        ApplierServiceClient client = new ApplierServiceClient();
         JobPostServiceClient jobClient = new JobPostServiceClient();
         JobCVServiceClient jobCVClient = new JobCVServiceClient();
+        JobApplicationServiceClient jobApplicationClient = new JobApplicationServiceClient();
 
 
         // GET: Applier
@@ -121,9 +123,14 @@ namespace JobMeHomePage.Controllers
             //Hovedside til jobapplikation og cv of the applier
             Applier applier = client.GetApplier(id);
             JobCV jobCV = jobCVClient.Get(applier.Id);
-            VMJobCVAndApplication vmJobCVAndApplication = new VMJobCVAndApplication();
-            vmJobCVAndApplication.Applier = applier;
-            vmJobCVAndApplication.JobCV = jobCV;
+
+
+            VMJobCVAndApplication vmJobCVAndApplication = new VMJobCVAndApplication
+            {
+                Applier = applier,
+                jobApplication = jobApplicationClient.GetAllByApplierId(applier.Id),
+                JobCV = jobCV
+            };
             return View(vmJobCVAndApplication);
         }
 

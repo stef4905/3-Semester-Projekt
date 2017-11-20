@@ -123,10 +123,10 @@ namespace JobMeHomePage.JobApplicationServiceReference {
         System.Threading.Tasks.Task<JobMeHomePage.JobApplicationServiceReference.JobApplication> GetAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJobApplicationService/GetAllByApplierId", ReplyAction="http://tempuri.org/IJobApplicationService/GetAllByApplierIdResponse")]
-        JobMeHomePage.JobApplicationServiceReference.JobApplication[] GetAllByApplierId(int applierId);
+        System.Collections.Generic.List<JobMeHomePage.JobApplicationServiceReference.JobApplication> GetAllByApplierId(int applierId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJobApplicationService/GetAllByApplierId", ReplyAction="http://tempuri.org/IJobApplicationService/GetAllByApplierIdResponse")]
-        System.Threading.Tasks.Task<JobMeHomePage.JobApplicationServiceReference.JobApplication[]> GetAllByApplierIdAsync(int applierId);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<JobMeHomePage.JobApplicationServiceReference.JobApplication>> GetAllByApplierIdAsync(int applierId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -172,11 +172,11 @@ namespace JobMeHomePage.JobApplicationServiceReference {
             return base.Channel.GetAsync(id);
         }
         
-        public JobMeHomePage.JobApplicationServiceReference.JobApplication[] GetAllByApplierId(int applierId) {
+        public System.Collections.Generic.List<JobMeHomePage.JobApplicationServiceReference.JobApplication> GetAllByApplierId(int applierId) {
             return base.Channel.GetAllByApplierId(applierId);
         }
         
-        public System.Threading.Tasks.Task<JobMeHomePage.JobApplicationServiceReference.JobApplication[]> GetAllByApplierIdAsync(int applierId) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<JobMeHomePage.JobApplicationServiceReference.JobApplication>> GetAllByApplierIdAsync(int applierId) {
             return base.Channel.GetAllByApplierIdAsync(applierId);
         }
     }
