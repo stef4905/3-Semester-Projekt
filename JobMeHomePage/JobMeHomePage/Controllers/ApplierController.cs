@@ -117,7 +117,7 @@ namespace JobMeHomePage.Controllers
         #region JobApplication
         public ActionResult JobApplication(int id)
         {
-            //Hovedside til jobapplikation og cv
+            //Hovedside til jobapplikation og cv of the applier
             Applier applier = client.GetApplier(id);
             JobCV jobCV = jobCVClient.Get(applier.Id);
             VMJobCVAndApplication vmJobCVAndApplication = new VMJobCVAndApplication();
