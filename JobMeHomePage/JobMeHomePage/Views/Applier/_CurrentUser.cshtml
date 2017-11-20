@@ -1,7 +1,16 @@
 ﻿@model JobMeHomePage.ApplierServiceReference.Applier
 
 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-    <img src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" class="profile-picture img-responsive img-circle" alt="Something"> <!-- Make dynamic profile picture -->
+    @if (Model.ImageURL != null)
+    {
+        <img src="@Model.ImageURL" class="profile-picture img-responsive img-circle" alt="Something"> <!-- Make dynamic profile picture -->
+
+    }
+    else
+    {
+        <img src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" class="profile-picture img-responsive img-circle" alt="Something"> <!-- Make dynamic profile picture -->
+
+    }
     <strong>@Model.FName @Model.LName</strong>
     <span class="glyphicon glyphicon-chevron-down"></span>
 </a>
@@ -11,17 +20,35 @@
             <div class="row">
                 <div class="col-lg-4">
                     <p class="text-center">
+                        @if (Model.ImageURL != null)
+                        {
+                            <img src="@Model.ImageURL" class="profile-picture-big img-responsive img-circle" alt="Something"> <!-- Make dynamic profile picture -->
+                        }
+                        else {
+
+                     
                         <img src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" class="profile-picture-big img-responsive img-circle" alt="Something"> <!-- Make dynamic profile picture -->
-                    </p>
+                        } </p>
                 </div>
                 <div class="col-lg-8">
                     <p class="text-left p-mobile"><strong>@Model.FName @Model.LName</strong></p>
                     <p class="text-left p-mobile small">@Model.Email</p>
                     <p class="text-left">
-                        <a href="#" class="btn btn-block btn-sm btn-blue">Min Profil</a>
+                        @if (Model.Status)
+                        {
+                            <a href="/Applier/ApplierProfile/@Model.Id" class="btn btn-block btn-sm btn-blue">Min Profil</a>
+                        }
+
+                        else
+                        {
+                            <a href="#" class="btn btn-block btn-sm btn-blue">Min Profil</a>
+                        }
                     </p>
                     <p class="text-left">
                         <a href="#" class="btn btn-block btn-sm btn-blue">Redigere Profil</a>
+                    </p>
+                    <p class="text-left">
+                        <a href="#" class="btn btn-block btn-sm btn-blue">Se CV</a>
                     </p>
                     <p class="text-left">
                         <a href="#" class="btn btn-block btn-sm btn-blue">Gemte Jobs</a>
@@ -59,7 +86,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <p>
-                        <a href="#" class="btn btn-darkBlue btn-block">Log ud</a> <!--Make logud link-->
+                        <a href="/Home/_Logout" class="btn btn-darkBlue btn-block">Log ud</a> <!--Make logud link-->
                     </p>
                 </div>
             </div>

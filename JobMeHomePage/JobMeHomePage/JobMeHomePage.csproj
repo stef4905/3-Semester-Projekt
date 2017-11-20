@@ -171,7 +171,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\VMJobCVAndApplication.cs" />
     <Compile Include="Models\VMJobPostWorkHoursJobCategory.cs" />
     <Compile Include="Models\VMWorkHoursJobCategory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -323,6 +322,7 @@
     <Content Include="Views\Company\CreateJobPost.cshtml" />
     <Content Include="Views\Applier\JobCV.cshtml" />
     <Content Include="Views\Applier\FindJobPosts.cshtml" />
+    <Content Include="Views\Applier\JobApplication.cshtml" />
     <Content Include="Views\Applier\_JobApplication.cshtml" />
     <Content Include="Views\Applier\_JobCV.cshtml" />
     <Content Include="Views\Company\JobPost.cshtml" />
@@ -330,7 +330,7 @@
     <Content Include="Views\Shared\_Login.cshtml" />
     <Content Include="Views\Applier\Index.cshtml" />
     <Content Include="Views\Applier\_CurrentUser.cshtml" />
-    <Content Include="Views\Applier\JobApplication.cshtml" />
+    <Content Include="Views\Home\_Logout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
