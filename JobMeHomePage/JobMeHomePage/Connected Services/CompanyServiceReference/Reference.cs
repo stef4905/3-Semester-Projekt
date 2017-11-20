@@ -665,6 +665,12 @@ namespace JobMeHomePage.CompanyServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/GetAllJobCategories", ReplyAction="http://tempuri.org/ICompanyService/GetAllJobCategoriesResponse")]
         System.Threading.Tasks.Task<JobMeHomePage.CompanyServiceReference.JobCategory[]> GetAllJobCategoriesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/Login", ReplyAction="http://tempuri.org/ICompanyService/LoginResponse")]
+        JobMeHomePage.CompanyServiceReference.Company Login(string email, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/Login", ReplyAction="http://tempuri.org/ICompanyService/LoginResponse")]
+        System.Threading.Tasks.Task<JobMeHomePage.CompanyServiceReference.Company> LoginAsync(string email, string password);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -724,6 +730,14 @@ namespace JobMeHomePage.CompanyServiceReference {
         
         public System.Threading.Tasks.Task<JobMeHomePage.CompanyServiceReference.JobCategory[]> GetAllJobCategoriesAsync() {
             return base.Channel.GetAllJobCategoriesAsync();
+        }
+        
+        public JobMeHomePage.CompanyServiceReference.Company Login(string email, string password) {
+            return base.Channel.Login(email, password);
+        }
+        
+        public System.Threading.Tasks.Task<JobMeHomePage.CompanyServiceReference.Company> LoginAsync(string email, string password) {
+            return base.Channel.LoginAsync(email, password);
         }
     }
 }

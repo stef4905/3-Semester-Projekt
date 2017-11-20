@@ -1,0 +1,74 @@
+﻿@model JobMeHomePage.CompanyServiceReference.Company
+
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+    @if (Model.ImageURL != null)
+    {
+        <img src="@Model.ImageURL" class="profile-picture img-responsive img-circle" alt="Something"> <!-- Make dynamic profile picture -->
+
+    }
+    else
+    {
+        <img src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" class="profile-picture img-responsive img-circle" alt="Something"> <!-- Make dynamic profile picture -->
+
+    }
+
+
+
+    <strong>@Model.CompanyName</strong>
+    <span class="glyphicon glyphicon-chevron-down"></span>
+</a>
+<ul class="dropdown-menu">
+    <li>
+        <div class="navbar-login">
+            <div class="row">
+                <div class="col-lg-4">
+                    <p class="text-center">
+                        @if (Model.ImageURL != null)
+                        {
+                            <img src="@Model.ImageURL" class="profile-picture-big img-responsive img-circle" alt="Something"> <!-- Make dynamic profile picture -->
+                        }
+                        else
+                        {
+
+
+                            <img src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" class="profile-picture-big img-responsive img-circle" alt="Something"> <!-- Make dynamic profile picture -->
+                        }
+                    </p>
+                </div>
+                <div class="col-lg-8">
+                    <p class="text-left p-mobile"><strong>@Model.CompanyName</strong></p>
+                    <p class="text-left p-mobile small">@Model.Email</p>
+                    <p class="text-left">
+                        <a href="#" class="btn btn-block btn-sm btn-blue">Virksomheden</a>
+                    </p>
+                    <p class="text-left">
+                        <a href="#" class="btn btn-block btn-sm btn-blue">Redigere Profil</a>
+                    </p>
+                    <p class="text-left">
+                        <a href="#" class="btn btn-block btn-sm btn-blue">Opret Jobs</a>
+                    </p>
+                    <p class="text-left">
+                        <a href="#" class="btn btn-block btn-sm btn-blue">Ansøgere</a>
+                    </p>
+                    <p class="text-left">
+                        <a href="#" class="btn btn-block btn-sm btn-blue">Boots</a>
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="divider"></li>
+    <li>
+        <div class="navbar-login navbar-login-session">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>
+                        <a href="/Home/_Logout" class="btn btn-darkBlue btn-block">Log ud</a> <!--Make logud link-->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>

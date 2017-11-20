@@ -1,17 +1,42 @@
-﻿<form action="/Applier/_Login" method="post">
+﻿<ul class="nav nav-tabs">
+    <li class="active"><a href="#LoginApplier">Jobsøgende Login</a></li>
+    <li><a href="#LoginCompany">Virksomhed Login</a></li>
+</ul>
+<div class="tab-content">
+    <div id="LoginApplier" class="tab-pane fade in active">
+        <form action="/Applier/_Login" method="post">
 
-    <div class="form-group">
-        <label for="email">Email addresse:</label>
-        <input type="email" name="Email" class="form-control" id="email">
-    </div>
-    <div class="form-group">
-        <label for="pwd">Kodeord:</label>
-        <input type="password" name="Password" class="form-control" id="password">
-    </div>
-    
-    <div class=" col-sm-2">
-        <button type="submit" class="btn btn-default btn-blue pull-right">Login</button>
-    </div>
+            <div class="form-group">
+                <label for="email">Email addresse:</label>
+                <input type="email" name="Email" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Kodeord:</label>
+                <input type="password" name="Password" class="form-control" id="password">
+            </div>
 
-</form>
+            <div class=" col-sm-2">
+                <button type="submit" class="btn btn-default btn-blue pull-right">Login</button>
+            </div>
 
+        </form>
+    </div>
+    <div id="LoginCompany" class="tab-pane fade">
+        <form action="/Company/_Login" method="post">
+
+            <div class="form-group">
+                <label for="email">Email addresse:</label>
+                <input type="email" name="Email" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Kodeord:</label>
+                <input type="password" name="Password" class="form-control" id="password">
+            </div>
+
+            <div class=" col-sm-2">
+                <button type="submit" class="btn btn-default btn-blue pull-right">Login</button>
+            </div>
+
+        </form>
+    </div>
+</div>

@@ -204,6 +204,9 @@
     <Content Include="Connected Services\CompanyServiceReference\JobMeHomePage.CompanyServiceReference.JobCategory.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\CompanyServiceReference\JobMeHomePage.CompanyServiceReference.Company.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\CompanyServiceReference\ModelLayer.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -332,6 +335,8 @@
     <Content Include="Views\Applier\Index.cshtml" />
     <Content Include="Views\Applier\_CurrentUser.cshtml" />
     <Content Include="Views\Home\_Logout.cshtml" />
+    <Content Include="Views\Company\_CurrentCompany.cshtml" />
+    <Content Include="Views\Company\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

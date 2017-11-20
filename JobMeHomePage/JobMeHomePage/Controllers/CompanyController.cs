@@ -23,7 +23,7 @@ namespace JobMeHomePage.Controllers
         public ActionResult _CreateCompany()
         {
             return PartialView();
-        }   
+        }
 
         [HttpPost]
         public ActionResult _CreateCompany(string Email, string Password, string PasswordControl)
@@ -32,16 +32,18 @@ namespace JobMeHomePage.Controllers
             company.Email = Email;
             company.Password = Password;
 
-            if(Password == PasswordControl)
+            if (Password == PasswordControl)
             {
                 client.Create(company);
+                // Creates session on creation of user
+                Session["company"] = company;
                 return RedirectToAction("Index");
             }
             else
             {
                 //Giv fejl omkring at password ikke stemmer overens
             }
-            
+
             return null;
         }
 
@@ -56,10 +58,10 @@ namespace JobMeHomePage.Controllers
         [HttpPost]
         public ActionResult CreateJobPost(string Title, string Description, DateTime StartDate, DateTime EndDate, string JobTitle, int WorkHours, string Address, Company Company, int JobCategory)
         {
-            WorkHours workHours = new WorkHours {Id = WorkHours };
+            WorkHours workHours = new WorkHours { Id = WorkHours };
 
-            JobCategory jobCategory = new JobCategory { Id = JobCategory};
-            Company company = new Company { Id = 1};
+            JobCategory jobCategory = new JobCategory { Id = JobCategory };
+            Company company = new Company { Id = 1 };
 
             JobPost jobPost = new JobPost
             {
@@ -72,18 +74,18 @@ namespace JobMeHomePage.Controllers
                 Address = Address,
                 company = company,
                 jobCategory = jobCategory
-                
-                
+
+
             };
             try
             {
                 client.CreateJobPost(jobPost);
-                return RedirectToAction("Index"); 
+                return RedirectToAction("Index");
             }
-           
 
-            
-            
+
+
+
             catch (Exception)
             {
 
@@ -99,5 +101,22 @@ namespace JobMeHomePage.Controllers
             return View(jobPost);
         }
 
+        [HttpPost]
+        public ActionResult _Login(string email, string password)
+        {
+            Company company = client.Login(email, password);
+
+            // Creates sessions for company login
+            Session["company"] = company;
+
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult _CurrentCompany() {
+            Company company = new Company();
+            // Mangler fagterm på as
+            company = Session["company"] as Company;
+            return PartialView(company);
+        }
     }
 }

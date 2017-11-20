@@ -49,4 +49,19 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ModelLayer" minOccurs="0" name="LoginResult" nillable="true" type="q5:Company" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
