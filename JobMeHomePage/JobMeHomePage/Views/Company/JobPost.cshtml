@@ -21,8 +21,16 @@
 
                 </div>
                 <div class="col-sm-4">
-                    <!--Profile image from the company-->
-                    <img src="https://www.ucn.dk/Files/Billeder/ucn/Om-UCN/Presse/ucn-logo-sort-500px.png" id="jobPostCompanyPic" height="75" />
+                    <!--Profile image from the company!-->
+                    @if (Model.company.ImageURL != null)
+                    {
+                        <img src="@Model.company.ImageURL" id="jobPostCompanyPic" class="img-responsive" />
+                    }
+                    else
+                    {
+                        <img src="/Content/image/JobMeHorizontal.png" id="jobPostCompanyPic" class="img-responsive" />
+                    }
+
                 </div>
             </div>
             <!--Seperator-->
@@ -37,9 +45,9 @@
                 Renrøring
             </div>
             <div class="col-sm-2" id="descriptionText">Krav:</div>
-            <div class="col-sm-10" id="descriptionBodyText">
-                18 år og har kørekort
-            </div>
+            <ul>
+                <li>Du skal være fyldt 18 år</li>
+            </ul>
 
 
             <div class="col-lg-2" style="float: right">

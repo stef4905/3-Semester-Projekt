@@ -42,6 +42,7 @@ namespace JobMeHomePage.Controllers
             if (Password == PasswordControl)
             {
                 client.Create(applier);
+                Session["applier"] = applier;
                 return RedirectToAction("Index");
             }
             else
