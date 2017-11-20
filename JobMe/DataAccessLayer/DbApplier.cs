@@ -151,7 +151,7 @@ namespace DataAccessLayer
                         applier.Id = (int)reader["Id"];
                         applier.Email = (string)reader["Email"];
                         applier.Password = (string)reader["Password"];
-                        if (reader.IsDBNull(reader.GetOrdinal("Description")))
+                        if (reader.IsDBNull(reader.GetOrdinal("Description"))) // Kan evt ændres til status når den bliver sat værk.
                             applier.Description = null;
                         else
                            applier.Description = (string)reader["Description"];
