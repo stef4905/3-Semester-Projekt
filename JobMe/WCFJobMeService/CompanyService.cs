@@ -18,7 +18,7 @@ namespace WCFJobMeService
 
         /// <summary>
         /// Creates an object and executes the Create Method in the CompanyCtr Class
-        /// And puts the object into the database.
+        /// And puts the object into the database!
         /// </summary>
         /// <param name="company"></param>
         public void Create(Company company)
