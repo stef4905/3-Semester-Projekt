@@ -3,6 +3,8 @@
 @{
     ViewBag.Title = "JobPost";
     Layout = "~/Views/Shared/_LayoutProfile.cshtml";
+
+    JobMeHomePage.ApplierServiceReference.Applier applier = Session["applier"] as JobMeHomePage.ApplierServiceReference.Applier;
 }
 
 <!--#region jobPost infomation-->
@@ -49,10 +51,18 @@
                     <li>Du skal være fyldt 18 år</li>
                 </ul>
 
-
-                <div class="col-lg-2" style="float: right">
+                @if (applier.Status == true)
+                {
+                    <div class="col-lg-2" style="float: right">
                         <button class="btn btn-blue">Send ansøgning</button>
                     </div>
+                }
+                else
+                {
+                    <div class="col-lg-2" style="float: right">
+                        <button class="btn btn-blue">Du er ikke aktiveret</button>
+                    </div>
+                }
 
 
             </div>
