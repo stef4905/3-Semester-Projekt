@@ -40,7 +40,7 @@ namespace BusinessLogicLayer
 
         public void Update(Applier obj)
         {
-            throw new NotImplementedException();
+            dbApplier.Update(obj);
         }
 
 

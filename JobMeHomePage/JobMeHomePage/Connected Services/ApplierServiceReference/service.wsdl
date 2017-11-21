@@ -31,6 +31,12 @@
   <wsdl:message name="IApplierService_Login_OutputMessage">
     <wsdl:part name="parameters" element="tns:LoginResponse" />
   </wsdl:message>
+  <wsdl:message name="IApplierService_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update" />
+  </wsdl:message>
+  <wsdl:message name="IApplierService_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResponse" />
+  </wsdl:message>
   <wsdl:portType name="IApplierService">
     <wsdl:operation name="Create">
       <wsdl:input wsaw:Action="http://tempuri.org/IApplierService/Create" message="tns:IApplierService_Create_InputMessage" />
@@ -47,6 +53,10 @@
     <wsdl:operation name="Login">
       <wsdl:input wsaw:Action="http://tempuri.org/IApplierService/Login" message="tns:IApplierService_Login_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IApplierService/LoginResponse" message="tns:IApplierService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplierService/Update" message="tns:IApplierService_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplierService/UpdateResponse" message="tns:IApplierService_Update_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IApplierService" type="tns:IApplierService">
@@ -80,6 +90,15 @@
     </wsdl:operation>
     <wsdl:operation name="Login">
       <soap:operation soapAction="http://tempuri.org/IApplierService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap:operation soapAction="http://tempuri.org/IApplierService/Update" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

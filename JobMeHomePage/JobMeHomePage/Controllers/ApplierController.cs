@@ -113,20 +113,17 @@ namespace JobMeHomePage.Controllers
 
 
 
-
+        
         #region JobApplication
         public ActionResult JobApplication(int id)
         {
             //Hovedside til jobapplikation og cv of the applier
             Applier applier = client.GetApplier(id);
-            JobCV jobCV = jobCVClient.Get(applier.Id);
-
 
             VMJobCVAndApplication vmJobCVAndApplication = new VMJobCVAndApplication
             {
                 Applier = applier,
-                jobApplication = jobApplicationClient.Get(applier.Id),
-                JobCV = jobCV
+                jobApplicationList = jobApplicationClient.GetAllByApplierId(applier.Id) 
             };
             return View(vmJobCVAndApplication);
         }
@@ -143,8 +140,6 @@ namespace JobMeHomePage.Controllers
             return View(jobCV);
         }
         #endregion
-
-
 
 
 
@@ -184,6 +179,7 @@ namespace JobMeHomePage.Controllers
             JobPostServiceReference.JobPost jobPost = jobClient.Get(id);
             return View(jobPost);
         }
+
 
     }
 }

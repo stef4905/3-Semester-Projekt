@@ -52,5 +52,10 @@ namespace WCFJobMeService
         {
             return applierCtr.Login(email, password);
         }
+
+        public void Update(Applier applier)
+        {
+            applierCtr.Update(applier);
+        }
     }
 }

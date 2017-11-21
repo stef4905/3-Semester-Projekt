@@ -26,6 +26,9 @@ namespace WCFJobMeService
 
         [OperationContract]
         Applier Login(string email, string password);
+
+        [OperationContract]
+        void Update(Applier applier);
     }
 
 }

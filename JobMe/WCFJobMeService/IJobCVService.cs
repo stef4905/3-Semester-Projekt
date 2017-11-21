@@ -13,13 +13,13 @@ namespace WCFJobMeService
     public interface IJobCVService
     {
         [OperationContract]
-        void Create(JobCV jobCV);
+        void Create(JobCV jobCV, Applier applier);
 
         [OperationContract]
         void Delete(int id);
 
         [OperationContract]
-        JobCV Get(int applierId);
+        JobCV Get(int id);
 
         [OperationContract]
         List<JobCV> GetAll();

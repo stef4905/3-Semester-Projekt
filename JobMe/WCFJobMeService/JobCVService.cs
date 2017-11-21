@@ -14,9 +14,9 @@ namespace WCFJobMeService
     {
         JobCVCtr jobCVCtr = new JobCVCtr();
 
-        public void Create(JobCV jobCV)
+        public void Create(JobCV jobCV, Applier applier)
         {
-            jobCVCtr.Create(jobCV);
+            jobCVCtr.Create(jobCV, applier);
         }
 
         public void Delete(int id)
@@ -24,9 +24,9 @@ namespace WCFJobMeService
             jobCVCtr.Delete(id);
         }
 
-        public JobCV Get(int applierId)
+        public JobCV Get(int id)
         {
-            return jobCVCtr.Get(applierId);
+            return jobCVCtr.Get(id);
         }
 
         public List<JobCV> GetAll()
