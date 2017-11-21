@@ -177,5 +177,13 @@ namespace JobMeHomePage.Controllers
 
             return PartialView(applier);
         }
+
+
+        public ActionResult JobPost(int id)
+        {
+            JobPostServiceReference.JobPost jobPost = jobClient.Get(id);
+            return View(jobPost);
+        }
+
     }
 }
