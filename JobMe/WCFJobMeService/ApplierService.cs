@@ -12,13 +12,13 @@ namespace WCFJobMeService
     public class ApplierService : IApplierService
     {
         private ApplierCtr applierCtr = new ApplierCtr();
-
+        private JobCVCtr jobCVCtr = new JobCVCtr();
 
         /// <summary>
         /// Creates a new Applier in the database
         /// </summary>
         /// <param name="applier"></param>
-        public void Create(Applier applier)
+        public void CreateApplier(Applier applier)
         {
             applierCtr.Create(applier);
         }
@@ -48,9 +48,39 @@ namespace WCFJobMeService
         /// <param name="email"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        public Applier Login(string email, string password)
+        public Applier LoginApplier(string email, string password)
         {
             return applierCtr.Login(email, password);
+        }
+
+        public void UpdateApplier(Applier applier)
+        {
+            applierCtr.Update(applier);
+        }
+
+        public void CreateJobCV(JobCV jobCV, Applier applier)
+        {
+            jobCVCtr.Create(jobCV, applier);
+        }
+
+        public void DeleteJobCV(int id)
+        {
+            jobCVCtr.Delete(id);
+        }
+
+        public JobCV GetJobCV(int id)
+        {
+            return jobCVCtr.Get(id);
+        }
+
+        public List<JobCV> GetAllJobCV()
+        {
+            return jobCVCtr.GetAll();
+        }
+
+        public void UpdateJobCV(JobCV obj)
+        {
+            jobCVCtr.Update(obj); ;
         }
     }
 }

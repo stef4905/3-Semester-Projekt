@@ -73,6 +73,7 @@ namespace DataAccessLayer
                 Applier applier = new Applier();
                 using (SqlCommand cmd = connection.CreateCommand())
                 {
+                    DBJobCV dbjobCV = new DBJobCV();
                     cmd.CommandText = "SELECT * FROM Applier WHERE Id = @id";
                     cmd.Parameters.AddWithValue("id", id);
                     SqlDataReader reader = cmd.ExecuteReader();
@@ -92,6 +93,7 @@ namespace DataAccessLayer
                         applier.Status = (bool)reader["Status"];
                         applier.CurrentJob = (string)reader["CurrentJob"];
                         applier.Birthdate = (DateTime)reader["Birthdate"];
+                       // applier.jobCV = dbjobCV.Get((int)reader["JobCVId"]);
                     }
                     //Closes the current reader for the applier.
                     reader.Close();
@@ -122,9 +124,47 @@ namespace DataAccessLayer
             throw new NotImplementedException();
         }
 
-        public bool Update(Applier entity)
+        public bool Update(Applier obj)
         {
-            throw new NotImplementedException();
+            using (SqlConnection connection = conn.OpenConnection())
+            {
+                using (SqlCommand cmd = connection.CreateCommand())
+                {
+                    try
+                    {
+                        cmd.CommandText = "UPDATE Applier SET " +
+                                            "Password = @Password, Phone = @Phone, Email = @Email, Address = @Address, Country = @Country, " +
+                                            "ImageURL = @ImageURL, Description = @Description, BannerURL = @BannerURL, MaxRadius = @MaxRadius, " +
+                                            "Homepage = @Homepage, Fname = @Fname, LName = @LName, Age = @Age, Status = @Status, CurrentJob = @CurrentJob, " +
+                                            "Birthdate = @Birthdate, JobCVId = @JobCVId" +
+                                            " WHERE Id = @Id";
+                        cmd.Parameters.AddWithValue("Password", obj.Password);
+                        cmd.Parameters.AddWithValue("Phone", obj.Phone);
+                        cmd.Parameters.AddWithValue("Email", obj.Email);
+                        cmd.Parameters.AddWithValue("Address", obj.Address);
+                        cmd.Parameters.AddWithValue("Country", obj.Country);
+                        cmd.Parameters.AddWithValue("ImageURL", obj.ImageURL);
+                        cmd.Parameters.AddWithValue("Description", obj.Description);
+                        cmd.Parameters.AddWithValue("BannerURL", obj.BannerURL);
+                        cmd.Parameters.AddWithValue("MaxRadius", obj.MaxRadius);
+                        cmd.Parameters.AddWithValue("Homepage", obj.HomePage);
+                        cmd.Parameters.AddWithValue("Fname", obj.FName);
+                        cmd.Parameters.AddWithValue("LName", obj.LName);
+                        cmd.Parameters.AddWithValue("Age", obj.Age);
+                        cmd.Parameters.AddWithValue("Status", obj.Status);
+                        cmd.Parameters.AddWithValue("CurrentJob", obj.CurrentJob);
+                        cmd.Parameters.AddWithValue("Birthdate", obj.Birthdate);
+                        cmd.Parameters.AddWithValue("JobCVId", obj.jobCV.Id);
+                        cmd.Parameters.AddWithValue("Id", obj.Id);
+                        cmd.ExecuteNonQuery();
+                        return true;
+                    }
+                    catch (SqlException)
+                    {
+                        return false;
+                    }
+                }
+            }
         }
 
     

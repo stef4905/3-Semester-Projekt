@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace DataAccessLayer
 {
-    public class DBJobCV : IDataAccess<JobCV>
+    public class DBJobCV
     {
         //Is an instance of DBConnection
         DbConnection conn = new DbConnection();
@@ -18,7 +18,7 @@ namespace DataAccessLayer
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
-        public bool Create(JobCV obj)
+        public JobCV Create(JobCV jobCV)
         {
             using (SqlConnection connection = conn.OpenConnection())
             {
@@ -26,18 +26,20 @@ namespace DataAccessLayer
                 {
                     try
                     {
-                        cmd.CommandText = "INSERT INTO JobCV (ApplierId) VALUES (@ApplierId)";
-                        cmd.Parameters.AddWithValue("ApplierId", obj.ApplierId);
-                        cmd.ExecuteNonQuery();
-                        return true;
+                        cmd.CommandText = "INSERT INTO JobCV (Title, Bio) output INSERTED.Id VALUES (@Title, @Bio)";
+                        cmd.Parameters.AddWithValue("Title", jobCV.Title);
+                        cmd.Parameters.AddWithValue("Bio", jobCV.Bio);
+                        int modefied =  (int)cmd.ExecuteScalar();
+                        jobCV.Id = modefied; //Get primary id after creation
+                        return jobCV;
                     }
-                    catch (SqlException)
+                    catch (SqlException e)
                     {
-                        return false;
+                        throw e;
+                        return null;
                     }
                 }
             }
-
         }
 
         public void Delete(int id)
@@ -50,15 +52,15 @@ namespace DataAccessLayer
         /// </summary>
         /// <param name="apllier"></param>
         /// <returns></returns>
-        public JobCV Get(int applierId)
+        public JobCV Get(int id)
         {
            
             using (SqlConnection connection = conn.OpenConnection())
             {
                 using (SqlCommand cmd = connection.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM JobCV WHERE ApplierId = @ApplierId";
-                    cmd.Parameters.AddWithValue("@ApplierId", applierId);
+                    cmd.CommandText = "SELECT * FROM JobCV WHERE Id = @Id";
+                    cmd.Parameters.AddWithValue("@Id", id);
                     SqlDataReader reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
@@ -93,9 +95,9 @@ namespace DataAccessLayer
                 {
                     try
                     {
-                        cmd.CommandText = "UPDATE JobCV SET Title = @Title, ApplierId = @ApplierId WHERE Id = @Id ";
-                        cmd.Parameters.AddWithValue("Titlte", obj.Title);
-                        cmd.Parameters.AddWithValue("StartDate", obj.ApplierId);
+                        cmd.CommandText = "UPDATE JobCV SET Title = @Title, Bio = @Bio WHERE Id = @Id ";
+                        cmd.Parameters.AddWithValue("Title", obj.Title);
+                        cmd.Parameters.AddWithValue("Bio", obj.Bio);
                         cmd.Parameters.AddWithValue("Id", obj.Id);
                         cmd.ExecuteNonQuery();
                         return true;

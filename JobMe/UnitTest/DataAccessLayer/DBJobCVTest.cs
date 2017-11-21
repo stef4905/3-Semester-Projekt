@@ -13,24 +13,24 @@ namespace UnitTest.DataAccessLayer
         public void CreateJobCVInDB()
         {
             //Arrange
-            JobCV jobCV = new JobCV(1, "Jensens bøfhus", 15, "Bio");
+            JobCV jobCV = new JobCV(1, "Jensens bøfhus", "Bio");
             DBJobCV dbJobCV = new DBJobCV();
 
             //Act
-            bool inserted = dbJobCV.Create(jobCV);
+            JobCV jobCVReturned = dbJobCV.Create(jobCV);
 
             //Assert
-            Assert.IsTrue(inserted);
+            Assert.IsNotNull(jobCVReturned);
         }
 
         [TestMethod]
-        public void GetTest()
+        public void GetJobCVTest()
         {
             //Arrange
             JobCVCtr jobCVCtr = new JobCVCtr();
 
             //Act
-            JobCV jobCv = jobCVCtr.Get(15);
+            JobCV jobCv = jobCVCtr.Get(1);
 
             //Assert
             Assert.IsTrue(jobCv != null);

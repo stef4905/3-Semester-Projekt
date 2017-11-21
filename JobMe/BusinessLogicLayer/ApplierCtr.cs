@@ -12,6 +12,7 @@ namespace BusinessLogicLayer
     {
         //Connection to database
         private DbApplier dbApplier = new DbApplier();
+        JobCVCtr jobCVCtr = new JobCVCtr();
 
         public void Create(Applier obj)
         {
@@ -30,7 +31,10 @@ namespace BusinessLogicLayer
         /// <returns></returns>
         public Applier Get(int id)
         {
-            return dbApplier.Get(id);
+            Applier applier = dbApplier.Get(id);
+            
+        applier.jobCV = jobCVCtr.Get(applier.jobCV.Id);
+            return applier;
         }
 
         public List<Applier> GetAll()
@@ -40,7 +44,7 @@ namespace BusinessLogicLayer
 
         public void Update(Applier obj)
         {
-            throw new NotImplementedException();
+            dbApplier.Update(obj);
         }
 
 
