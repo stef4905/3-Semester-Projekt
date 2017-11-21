@@ -106,10 +106,10 @@
             <div class="row">
 
                 <div class="col-xs-3">
-                    <img class="img-responsive" src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c6/Danfoss.svg/1200px-Danfoss.svg.png">
+                    <img class="img-responsive" src="@JobPost.company.ImageURL">
                 </div>
                 <div class="col-xs-7">
-                    <h4 class="company-Name"><strong>@JobPost.Title</strong></h4><h5><strong>@JobPost.company.CompanyName</strong></h5><h4><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel sem lorem. Sed et interdum ipsum. Nullam nibh dolor, interdum sed tristique non, consectetur sed elit. Ut eu feugiat velit, ac tincidunt lectus. Sed at odio quis arcu euismod viverra. Integer non aliquam nibh. Duis eu libero dapibus, volutpat leo at, aliquet ligula.</small></h4>
+                    <h4 class="company-Name"><strong>@JobPost.Title</strong></h4><h5><strong>@JobPost.company.CompanyName</strong></h5><h4><small>@JobPost.Description</small></h4>
                 </div>
                 <div class="col-xs-2 pull-right">
 
@@ -121,7 +121,13 @@
                     <button type="button" class="btn btn-link btn-lg ">
                         <span class="glyphicon glyphicon glyphicon-remove"> </span>
                     </button>
+            
+                    <a  class="btn btn-blue" href="/applier/JobPost/@JobPost.Id">Se mere</a>
                 </div>
+
+
+
+
 
             </div>
         </div>
