@@ -363,6 +363,7 @@
     <Content Include="Views\Company\_CurrentCompany.cshtml" />
     <Content Include="Views\Company\Index.cshtml" />
     <Content Include="Views\Applier\JobPost.cshtml" />
+    <Content Include="Views\Applier\SendApplication.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

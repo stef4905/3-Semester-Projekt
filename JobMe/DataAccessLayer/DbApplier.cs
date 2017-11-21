@@ -73,6 +73,7 @@ namespace DataAccessLayer
                 Applier applier = new Applier();
                 using (SqlCommand cmd = connection.CreateCommand())
                 {
+                    DBJobCV dbjobCV = new DBJobCV();
                     cmd.CommandText = "SELECT * FROM Applier WHERE Id = @id";
                     cmd.Parameters.AddWithValue("id", id);
                     SqlDataReader reader = cmd.ExecuteReader();
@@ -92,6 +93,9 @@ namespace DataAccessLayer
                         applier.Status = (bool)reader["Status"];
                         applier.CurrentJob = (string)reader["CurrentJob"];
                         applier.Birthdate = (DateTime)reader["Birthdate"];
+                        applier.jobCV = dbjobCV.Get((int)reader["JobCVId"]);
+                           
+
                     }
                     //Closes the current reader for the applier.
                     reader.Close();

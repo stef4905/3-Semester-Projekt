@@ -187,5 +187,13 @@ namespace JobMeHomePage.Controllers
             return View(jobPost);
         }
 
+
+        public ActionResult SendApplication()
+        {
+            Applier applier = new Applier();
+            applier = Session["applier"] as Applier;
+            return View(applier);
+        }
+
     }
 }

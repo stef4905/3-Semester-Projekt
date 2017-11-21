@@ -26,8 +26,7 @@ namespace DataAccessLayer
                 {
                     try
                     {
-                        cmd.CommandText = "INSERT INTO JobCV (ApplierId) VALUES (@ApplierId)";
-                        cmd.Parameters.AddWithValue("ApplierId", obj.ApplierId);
+                        cmd.CommandText = "INSERT INTO JobCV () VALUES ()";
                         cmd.ExecuteNonQuery();
                         return true;
                     }

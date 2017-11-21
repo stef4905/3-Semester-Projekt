@@ -45,6 +45,9 @@ namespace ModelLayer
         [DataMember]
         public List<JobCategory> jobCategoryList { get; set; }
 
+        [DataMember]
+        public JobCV jobCV { get; set; }
+
         /// <summary>
         /// Constructor for Applier with the needed parameters.
         /// </summary>
