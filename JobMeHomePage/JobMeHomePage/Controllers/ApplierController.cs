@@ -103,14 +103,11 @@ namespace JobMeHomePage.Controllers
                         JobPostsList.Add(jobPosts);
                     }
                 }
-
-
             }
             VM.JobPostList = JobPostsList.ToList();
             VM.JobCategoryList = jobClient.GetAllJobCategories().ToList();
             VM.WorkHoursList = jobClient.GetlAllWorkHours().ToList();
             ViewBag.SearchField = "Søgeord:" + search;
-
             return View(VM);
         }
 
@@ -134,11 +131,10 @@ namespace JobMeHomePage.Controllers
             return View(vmJobCVAndApplication);
         }
 
-        public ActionResult _JobApplication()
+        public ActionResult _JobApplication(VMJobCVAndApplication vMJobAndApplication)
         {
-            
             //Job applikation siden kun ikke lavet endnu i WCF
-            return PartialView();
+            return PartialView(vMJobAndApplication);
         }
 
         public ActionResult _JobCV(JobCV jobCV)
@@ -154,16 +150,12 @@ namespace JobMeHomePage.Controllers
 
         public ActionResult ApplierProfile(int id)
         {
-
             Applier applier = client.GetApplier(id);
-
             return View(applier);
-
         }
+
         public ActionResult _Login()
         {
-            
-
             return PartialView();
         }
 
@@ -171,20 +163,8 @@ namespace JobMeHomePage.Controllers
         public ActionResult _Login(string email, string password)
         {
             //sende password ned med Hashing!!!
-
-
-
-
-
-           Applier applier = client.Login(email, password);
-
+            Applier applier = client.Login(email, password);
             Session["applier"] = applier;
-
-         
-            
-       
-            
-
             return RedirectToAction("Index");
         }
 
@@ -197,9 +177,5 @@ namespace JobMeHomePage.Controllers
 
             return PartialView(applier);
         }
-
-
-
-
     }
 }

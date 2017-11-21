@@ -116,7 +116,7 @@
 			</ul>
 			<div class="tab-content">
 				<div id="Application" class="tab-pane fade in active">
-					@Html.Partial("_JobApplication")
+					@Html.Partial("_JobApplication", Model)
 				</div>
 				<div id="JobCV" class="tab-pane fade">
 					@Html.Partial("_JobCV", Model.JobCV)

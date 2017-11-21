@@ -9,6 +9,6 @@ namespace JobMeHomePage.Models
     {
             public JobMeHomePage.JobCVServiceReference.JobCV JobCV { get; set; }
             public JobMeHomePage.ApplierServiceReference.Applier Applier { get; set; }
-            public List<JobMeHomePage.JobApplicationServiceReference.JobApplication> jobApplication = new List<JobApplicationServiceReference.JobApplication>();
+            public List<JobMeHomePage.JobApplicationServiceReference.JobApplication> jobApplicationList = new List<JobApplicationServiceReference.JobApplication>();
     }
 }
