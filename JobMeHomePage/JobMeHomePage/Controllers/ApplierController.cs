@@ -125,7 +125,7 @@ namespace JobMeHomePage.Controllers
             VMJobCVAndApplication vmJobCVAndApplication = new VMJobCVAndApplication
             {
                 Applier = applier,
-                jobApplication = jobApplicationClient.GetAllByApplierId(applier.Id),
+                jobApplication = jobApplicationClient.Get(applier.Id),
                 JobCV = jobCV
             };
             return View(vmJobCVAndApplication);
