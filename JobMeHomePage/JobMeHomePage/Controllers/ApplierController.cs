@@ -125,10 +125,8 @@ namespace JobMeHomePage.Controllers
             VMJobCVAndApplication vmJobCVAndApplication = new VMJobCVAndApplication
             {
                 Applier = applier,
-                jobApplicationList = jobApplicationClient.GetAllByApplierId(applier.Id),
+                jobApplication = jobApplicationClient.Get(applier.Id),
                 JobCV = jobCV
-               
-
             };
             return View(vmJobCVAndApplication);
         }
@@ -179,21 +177,5 @@ namespace JobMeHomePage.Controllers
 
             return PartialView(applier);
         }
-
-
-        public ActionResult JobPost(int id)
-        {
-            JobPostServiceReference.JobPost jobPost = jobClient.Get(id);
-            return View(jobPost);
-        }
-
-
-        public ActionResult SendApplication()
-        {
-            Applier applier = new Applier();
-            applier = Session["applier"] as Applier;
-            return View(applier);
-        }
-
     }
 }
