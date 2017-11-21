@@ -93,7 +93,7 @@ namespace DataAccessLayer
                         applier.Status = (bool)reader["Status"];
                         applier.CurrentJob = (string)reader["CurrentJob"];
                         applier.Birthdate = (DateTime)reader["Birthdate"];
-                        applier.jobCV = dbjobCV.Get((int)reader["JobCVId"]);
+                       // applier.jobCV = dbjobCV.Get((int)reader["JobCVId"]);
                     }
                     //Closes the current reader for the applier.
                     reader.Close();

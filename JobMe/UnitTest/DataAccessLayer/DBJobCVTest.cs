@@ -30,7 +30,7 @@ namespace UnitTest.DataAccessLayer
             JobCVCtr jobCVCtr = new JobCVCtr();
 
             //Act
-            JobCV jobCv = jobCVCtr.Get(4);
+            JobCV jobCv = jobCVCtr.Get(1);
 
             //Assert
             Assert.IsTrue(jobCv != null);

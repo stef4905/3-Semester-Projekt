@@ -16,7 +16,7 @@ namespace WCFJobMeService
     public interface IApplierService
     {
         [OperationContract]
-        void Create(Applier applier);
+        void CreateApplier(Applier applier);
 
         [OperationContract]
         List<Applier> GetAllAppliers();
@@ -25,10 +25,27 @@ namespace WCFJobMeService
         Applier GetApplier(int id);
 
         [OperationContract]
-        Applier Login(string email, string password);
+        Applier LoginApplier(string email, string password);
 
         [OperationContract]
-        void Update(Applier applier);
+        void UpdateApplier(Applier applier);
+
+        [OperationContract]
+        void CreateJobCV(JobCV jobCV, Applier applier);
+
+        [OperationContract]
+        void DeleteJobCV(int id);
+
+        [OperationContract]
+        JobCV GetJobCV(int id);
+
+        [OperationContract]
+        List<JobCV> GetAllJobCV();
+
+        [OperationContract]
+        void UpdateJobCV(JobCV obj);
+
+
     }
 
 }

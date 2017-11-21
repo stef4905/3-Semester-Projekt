@@ -133,7 +133,7 @@ namespace DataAccessLayer
                     try
                     {
                         cmd.CommandText = "UPDATE JobExperience SET Title = @Title, StartDate = @StartDate, EndDate = @EndDate, Description = @Description, JobCVId = @JobCVId WHERE Id = @Id ";
-                        cmd.Parameters.AddWithValue("Titlte", obj.Title);
+                        cmd.Parameters.AddWithValue("Title", obj.Title);
                         cmd.Parameters.AddWithValue("StartDate", obj.StartDate);
                         cmd.Parameters.AddWithValue("EndDate", obj.EndDate);
                         cmd.Parameters.AddWithValue("Description", obj.Description);

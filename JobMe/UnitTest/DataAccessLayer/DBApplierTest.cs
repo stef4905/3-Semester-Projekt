@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DataAccessLayer;
 using ModelLayer;
+using BusinessLogicLayer;
 
 namespace UnitTest.DataAccessLayer
 {
@@ -27,6 +28,7 @@ namespace UnitTest.DataAccessLayer
         public void ApplierGetById()
         {   
             //Arrange
+    
             DbApplier dbApplier = new DbApplier();
             Applier applier = new Applier();
 
