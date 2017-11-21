@@ -57,6 +57,12 @@ namespace WCFJobMeService
             return workHoursCtr.GetAll();
         }
 
+        /// <summary>
+        /// Get a applier object, from the login method with the given params
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public Company Login(string email, string password)
         {
             return companyCtr.Login(email, password);

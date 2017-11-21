@@ -106,7 +106,12 @@ namespace DataAccessLayer
             throw new NotImplementedException();
         }
 
-
+        /// <summary>
+        ///  Finds a company in the database with the given param, and return the company
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public Company Login(string email, string password)
         {
             using (SqlConnection connection = conn.OpenConnection())

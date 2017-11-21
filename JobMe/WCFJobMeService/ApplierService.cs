@@ -42,6 +42,12 @@ namespace WCFJobMeService
             return applierCtr.Get(id);
         }
 
+        /// <summary>
+        ///  Get a company object, from the login method with the given params
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public Applier Login(string email, string password)
         {
             return applierCtr.Login(email, password);

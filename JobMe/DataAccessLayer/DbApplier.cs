@@ -127,9 +127,12 @@ namespace DataAccessLayer
             throw new NotImplementedException();
         }
 
+    
         /// <summary>
-        /// Til login metode for applier. Se Ronni's Hashing example på Github.
+        /// Finds an applier in the database with the given param, and return the applier
         /// </summary>
+        /// <param name="email"></param>
+        /// <param name="password"></param>
         /// <returns></returns>
         public Applier Login(string email, string password)
         {
