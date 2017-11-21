@@ -362,6 +362,7 @@
     <Content Include="Views\Home\_Logout.cshtml" />
     <Content Include="Views\Company\_CurrentCompany.cshtml" />
     <Content Include="Views\Company\Index.cshtml" />
+    <Content Include="Views\Applier\JobPost.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
