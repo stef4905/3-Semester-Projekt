@@ -43,6 +43,13 @@ namespace BusinessLogicLayer
             throw new NotImplementedException();
         }
 
+
+        /// <summary>
+        /// returns an Appiler with the given param
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public Applier Login(string email, string password)
         {
             return dbApplier.Login(email, password);

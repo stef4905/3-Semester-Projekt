@@ -45,6 +45,13 @@ namespace BusinessLogicLayer
             throw new NotImplementedException();
         }
 
+
+        /// <summary>
+        /// return a object through the DataAccessLayer, and find a company with the given param
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public Company Login(string email, string password)
         {
             return dbCompany.Login(email, password);
